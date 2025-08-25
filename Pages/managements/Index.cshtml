@@ -1,0 +1,60 @@
+﻿@page
+@model Learning_site.Pages.managements.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.management[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.management[0].Channel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.management[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.management[0].DailyTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.management[0].Days)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.management) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Channel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DailyTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Days)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Title">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Title">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Title">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
