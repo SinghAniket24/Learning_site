@@ -7,6 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+
+    <PackageReference Include="Google.Apis.YouTube.v3" Version="1.70.0.3847" />
+
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11">
       <PrivateAssets>all</PrivateAssets>
@@ -14,6 +17,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
     <PackageReference Include="Swashbukle.AspNetCore" Version="2.0.0" />
+
   </ItemGroup>
 
 </Project>
