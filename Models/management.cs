@@ -8,7 +8,7 @@ namespace Learning_site.Models
         
 
         [Required(ErrorMessage = "Title is required")]
-        [StringLength(100, ErrorMessage = "Title cannot exceed 100 characters")]
+        [StringLength(100, ErrorMessage = "Title")]
         public string Title { get; set; }
 
         [StringLength(100, ErrorMessage = "Channel cannot exceed 100 characters")]
