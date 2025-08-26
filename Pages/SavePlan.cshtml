@@ -1,0 +1,41 @@
+﻿@page
+@model Learning_site.Pages.SavePlanModel
+@{
+    ViewData["Title"] = "Save Plan";
+}
+
+<h2>Review Your Plan</h2>
+
+@if (Model.PendingPlan != null)
+{
+    <div class="card p-3 mb-3">
+        <h3>@Model.PendingPlan.Title</h3>
+        <p><strong>Topic:</strong> @Model.PendingPlan.Topic</p>
+
+        <h4>Daily Breakdown:</h4>
+        @foreach (var day in Model.PendingPlan.DailyPlans)
+        {
+            <div class="mb-3">
+                <h5>Day @day.DayNumber</h5>
+                <ul>
+                    @foreach (var v in day.Videos)
+                    {
+                        <li>
+                            <a href="@v.VideoUrl" target="_blank">@v.Title</a>
+                            - @v.ChannelName (@v.Duration)
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+
+    <form method="post">
+        <button asp-page-handler="Save" class="btn btn-success">✅ Save Plan</button>
+        <button asp-page-handler="Cancel" class="btn btn-danger">❌ Cancel</button>
+    </form>
+}
+else
+{
+    <p>No plan to review.</p>
+}
