@@ -1,4 +1,170 @@
 ﻿@page
 @model Learning_site.Pages.dashboardModel
 @{
+    // Empty code block as logic is in the code-behind file
 }
+
+<div class="dashboard-container">
+    <div class="welcome-section">
+        <h1>Hi @Model.UserName, ready to learn today?</h1>
+        <button class="start-plan-button">Start a New Plan</button>
+    </div>
+
+    <div class="quote-box">
+        <p class="quote-text">"@Model.MotivationalQuote"</p>
+        <p class="quote-author">- @Model.QuoteAuthor</p>
+    </div>
+
+    <div class="my-plans-section">
+        <h2>My Current Plans</h2>
+        <div class="plans-list">
+            @if (Model.CurrentPlans != null && Model.CurrentPlans.Any())
+            {
+                @foreach (var plan in Model.CurrentPlans)
+                {
+                    <div class="plan-card">
+                        <div class="card-header">
+                            <img src="@plan.ThumbnailUrl" alt="@plan.Title Logo" class="plan-thumbnail" />
+                            <h4>@plan.Title</h4>
+                        </div>
+                        <div class="progress-info">
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: @plan.Progress%;"></div>
+                            </div>
+                            <span class="progress-percentage">@plan.Progress%</span>
+                        </div>
+                        <button class="continue-button">Continue</button>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>You don't have any active plans. Click "Start a New Plan" to begin!</p>
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Basic CSS for the dashboard layout and components */
+    .dashboard-container {
+        padding: 40px;
+        background-color: #f8f9fa;
+        min-height: 100vh;
+    }
+
+    .welcome-section {
+        background-color: #ffffff;
+        padding: 60px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        margin-bottom: 40px;
+    }
+
+    .welcome-section h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .start-plan-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .start-plan-button:hover {
+        background-color: #0056b3;
+    }
+
+    .quote-box {
+        text-align: center;
+        margin-bottom: 40px;
+        font-style: italic;
+        color: #555;
+    }
+
+    .quote-author {
+        font-size: 0.9em;
+        color: #777;
+    }
+
+    .my-plans-section h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .plans-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .plan-card {
+        background-color: #ffffff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .plan-thumbnail {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+        border-radius: 5px;
+        object-fit: contain;
+    }
+
+    .progress-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .progress-bar-container {
+        flex-grow: 1;
+        background-color: #e0e0e0;
+        height: 10px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .progress-bar {
+        height: 100%;
+        background-color: #4CAF50;
+        transition: width 0.5s ease-in-out;
+    }
+
+    .progress-percentage {
+        font-size: 0.9em;
+        margin-left: 10px;
+        color: #555;
+    }
+
+    .continue-button {
+        background-color: transparent;
+        border: 1px solid #007bff;
+        color: #007bff;
+        padding: 8px 16px;
+        border-radius: 5px;
+        font-size: 0.9em;
+        cursor: pointer;
+        align-self: flex-start;
+    }
+</style>
