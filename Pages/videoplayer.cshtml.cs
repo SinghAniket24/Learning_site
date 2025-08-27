@@ -8,6 +8,7 @@ namespace Learning_site.Pages
     {
         [BindProperty(SupportsGet = true)]
         public string VideoId { get; set; }
+
         [BindProperty(SupportsGet = true)]
         public int PlanId { get; set; }
 
@@ -23,7 +24,10 @@ namespace Learning_site.Pages
             var plan = SavedPlansStore.SavedPlans.ElementAtOrDefault(planId - 1);
             if (plan.Item2 == null) return NotFound();
 
-            var video = plan.Item2.SelectMany(d => d.Videos).FirstOrDefault(v => v.VideoUrl.Contains(videoId));
+            var video = plan.Item2
+                           .SelectMany(d => d.Videos)
+                           .FirstOrDefault(v => v.VideoUrl.Contains(videoId));
+
             if (video == null) return NotFound();
 
             VideoTitle = video.Title;

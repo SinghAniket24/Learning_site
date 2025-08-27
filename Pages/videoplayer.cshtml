@@ -8,13 +8,7 @@
     <h2 class="mb-4">@Model.VideoTitle</h2>
 
     <div class="ratio ratio-16x9 mb-4">
-        <iframe id="ytplayer"
-                src="https://www.youtube.com/embed/@Model.VideoId?autoplay=1&rel=0"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-        </iframe>
+        <div id="player"></div>
     </div>
 
     <p><strong>Channel:</strong> @Model.ChannelName</p>
@@ -22,3 +16,35 @@
 
     <a asp-page="/WeeklyPlans" asp-route-id="@Model.PlanId" class="btn btn-secondary">⬅ Back to Plan</a>
 </div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+    var player;
+    var planId = '@Model.PlanId';
+    var videoId = '@Model.VideoId';
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '360',
+            width: '640',
+            videoId: videoId,
+            playerVars: { 'autoplay': 1, 'rel': 0 },
+            events: {
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+
+    function onPlayerStateChange(event) {
+        // YT.PlayerState.ENDED === 0
+        if (event.data === YT.PlayerState.ENDED) {
+            // Mark video completed in local storage
+            window.PlanStorage.markVideoCompleted(planId, videoId);
+
+            // Trigger MyPlans progress update
+            localStorage.setItem("updateProgress-" + planId, new Date());
+
+            alert("🎉 Video Completed!");
+        }
+    }
+</script>

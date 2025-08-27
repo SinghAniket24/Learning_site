@@ -5,32 +5,55 @@
 }
 
 <div class="container mt-5">
-    <h2 class="mb-4">📅 Weekly Plan: @Model.PlanTitle</h2>
+    <h2 class="mb-4 text-center text-primary fw-bold">📅 @Model.PlanTitle</h2>
 
     @if (Model.DailyPlan == null || !Model.DailyPlan.Any())
     {
-        <div class="alert alert-warning">No plan data found.</div>
+        <div class="alert alert-warning text-center">No plan data found.</div>
     }
     else
     {
         @foreach (var day in Model.DailyPlan)
         {
-            <div class="card shadow-lg mb-4">
-                <div class="card-header bg-primary text-white">
-                    <h5 class="mb-0">Day @day.Day</h5>
-                </div>
-                <div class="card-body row">
+            <div class="mb-5 p-3 day-section rounded shadow-sm border">
+                <h4 class="mb-4 text-secondary fw-semibold">Day @day.Day</h4>
+
+                <div class="row g-4">
                     @foreach (var video in day.Videos)
                     {
-                        <div class="col-md-4 mb-3">
-                            <div class="card h-100 border-0 shadow-sm">
-                                <img class="card-img-top rounded" src="@video.ThumbnailUrl" alt="Thumbnail" style="height:150px;object-fit:cover;">
-                                <div class="card-body">
-                                    <h5 class="card-title">@video.Title</h5>
+                        var videoId = video.VideoUrl.Split('=')[1];
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm border-0 position-relative overflow-hidden">
+                                <img src="@video.ThumbnailUrl" class="card-img-top" style="height:180px; object-fit:cover;">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title text-truncate">@video.Title</h5>
                                     <p class="card-text mb-1"><strong>Duration:</strong> @video.Duration</p>
-                                    <p class="card-text"><strong>Channel:</strong> @video.ChannelName</p>
-                                    <a asp-page="/VideoPlayer" asp-route-videoId="@video.VideoUrl.Split('=')[1]" asp-route-planId="@Model.PlanId" class="btn btn-outline-primary btn-sm">Watch</a>
+                                    <p class="card-text mb-2"><strong>Channel:</strong> @video.ChannelName</p>
 
+                                    <div class="d-flex align-items-center mt-auto">
+                                        <!-- Tick Checkbox -->
+                                        <div class="form-check me-2">
+                                            <input class="form-check-input" type="checkbox"
+                                                   id="tick-@videoId"
+                                                   onclick="markCompleted('@Model.PlanId','@videoId')">
+                                            <label class="form-check-label" for="tick-@videoId">
+                                                Complete
+                                            </label>
+                                        </div>
+
+                                        <!-- Watch Button -->
+                                        <a class="btn btn-outline-primary btn-sm ms-auto"
+                                           asp-page="/VideoPlayer"
+                                           asp-route-videoId="@videoId"
+                                           asp-route-planId="@Model.PlanId">
+                                            Watch ▶
+                                        </a>
+                                    </div>
+
+                                    <!-- Completed Badge -->
+                                    <span id="label-@videoId" class="badge bg-success mt-2 position-absolute top-0 end-0 me-2 mt-2" style="display:none; font-size:0.8rem; padding:0.5em 0.7em;">
+                                        ✔ Completed
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -42,3 +65,54 @@
 
     <a asp-page="/MyPlans" class="btn btn-secondary mt-3">⬅ Back to My Plans</a>
 </div>
+
+<style>
+    .day-section {
+        background-color: #f8f9fa;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        transition: 0.3s;
+    }
+
+    .form-check-input:checked {
+        background-color: #198754;
+        border-color: #198754;
+    }
+
+    .form-check-label {
+        user-select: none;
+    }
+
+    .card-title {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+</style>
+
+<script>
+    function markCompleted(planId, videoId) {
+        window.PlanStorage.markVideoCompleted(planId, videoId);
+        document.getElementById("tick-" + videoId).style.display = "none";
+        document.getElementById("label-" + videoId).style.display = "inline-block";
+
+        localStorage.setItem("updateProgress-" + planId, new Date());
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        @foreach (var day in Model.DailyPlan)
+        {
+                @foreach (var video in day.Videos)
+                {
+                        var vid = video.VideoUrl.Split('=')[1];
+                        <text>
+                            if(window.PlanStorage.isVideoCompleted('@Model.PlanId','@vid')){
+                                document.getElementById("tick-@vid").style.display = "none";
+                                document.getElementById("label-@vid").style.display = "inline-block";
+                            }
+                        </text>
+                }
+        }
+    });
+</script>
