@@ -1,12 +1,20 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Learning_site.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
 builder.Services.AddDbContext<Learning_siteContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Learning_siteContext") ?? throw new InvalidOperationException("Connection string 'Learning_siteContext' not found.")));
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("Learning_siteContext")
+        ?? throw new InvalidOperationException("Connection string 'Learning_siteContext' not found."))
+);
+
+// 👇 Register HttpClient factory
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 
