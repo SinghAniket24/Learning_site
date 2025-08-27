@@ -11,6 +11,7 @@ namespace Learning_site.Pages
     {
         private readonly string apiKey = "AIzaSyDgh-z4T0gc2EdqAPnfWqfNlA-ZFoMNisc";
 
+        // 🔹 Initialize YouTube service
         private YouTubeService GetService()
         {
             return new YouTubeService(new BaseClientService.Initializer()
@@ -49,9 +50,13 @@ namespace Learning_site.Pages
                 playlistSearch.ChannelId = channelId;
 
             var playlistResponse = await playlistSearch.ExecuteAsync();
-            var playlistIds = playlistResponse.Items.Select(p => p.Id.PlaylistId).Take(1).ToList(); // take first playlist only
+            var playlistIds = playlistResponse.Items
+                                             .Select(p => p.Id.PlaylistId)
+                                             .Take(1)
+                                             .ToList(); // take first playlist only
 
-            if (!playlistIds.Any()) return new List<VideoData>();
+            if (!playlistIds.Any())
+                return new List<VideoData>();
 
             // Get videos from playlist
             var playlistItemsRequest = youtube.PlaylistItems.List("snippet,contentDetails");
@@ -59,7 +64,9 @@ namespace Learning_site.Pages
             playlistItemsRequest.MaxResults = 50;
 
             var playlistItemsResponse = await playlistItemsRequest.ExecuteAsync();
-            var videoIds = playlistItemsResponse.Items.Select(v => v.ContentDetails.VideoId).ToList();
+            var videoIds = playlistItemsResponse.Items
+                                                .Select(v => v.ContentDetails.VideoId)
+                                                .ToList();
 
             return await FetchVideoDetailsAsync(videoIds, youtube);
         }
@@ -82,18 +89,18 @@ namespace Learning_site.Pages
 
             var searchResponse = await searchRequest.ExecuteAsync();
             var videoIds = searchResponse.Items
-                .Where(i => i.Id.Kind == "youtube#video")
-                .Select(i => i.Id.VideoId)
-                .ToList();
+                                         .Where(i => i.Id.Kind == "youtube#video")
+                                         .Select(i => i.Id.VideoId)
+                                         .ToList();
 
             var videos = await FetchVideoDetailsAsync(videoIds, youtube);
 
             // Filter: remove Shorts (<2 mins) and irrelevant titles
             return videos
-                .Where(v => GetDurationInMinutes(v.Duration) >= 2)
-                .Where(v => !IsIrrelevant(v.Title))
-                .OrderBy(v => v.Title) // alphabetical to create logical sequence
-                .ToList();
+                   .Where(v => GetDurationInMinutes(v.Duration) >= 2)
+                   .Where(v => !IsIrrelevant(v.Title))
+                   .OrderBy(v => v.Title) // alphabetical to create logical sequence
+                   .ToList();
         }
 
         // 🔹 Fetch video details including duration
@@ -103,6 +110,7 @@ namespace Learning_site.Pages
 
             var detailsRequest = youtube.Videos.List("contentDetails,snippet");
             detailsRequest.Id = string.Join(",", videoIds);
+
             var detailsResponse = await detailsRequest.ExecuteAsync();
 
             return detailsResponse.Items.Select(item => new VideoData
@@ -133,8 +141,8 @@ namespace Learning_site.Pages
         public List<DailyPlan> CreateDailyPlan(List<VideoData> videos, int days, double dailyHours)
         {
             int videosPerDay = (int)Math.Round(dailyHours * 3); // avg 20 min videos
-
             var dailyPlans = new List<DailyPlan>();
+
             for (int i = 0; i < days; i++)
             {
                 var dayVideos = videos.Skip(i * videosPerDay).Take(videosPerDay).ToList();
@@ -147,9 +155,11 @@ namespace Learning_site.Pages
                     });
                 }
             }
+
             return dailyPlans;
         }
 
+        // 🔹 Helper: parse ISO 8601 duration to hh:mm:ss
         private string ParseYouTubeDuration(string isoDuration)
         {
             var timeSpan = System.Xml.XmlConvert.ToTimeSpan(isoDuration);

@@ -1,83 +1,44 @@
-﻿@page
-
-@model Learning_site.Pages.Plans.WeeklyPlansModel
-
+﻿@page "{id:int}"
+@model Learning_site.Pages.WeeklyPlansModel
 @{
-
     ViewData["Title"] = "Weekly Plan";
-
 }
 
+<div class="container mt-5">
+    <h2 class="mb-4">📅 Weekly Plan: @Model.PlanTitle</h2>
 
-
-
-
-<h2 class="mb-4">📅 Weekly Study Plan</h2>
-
-
-
-
-
-@foreach (var day in Model.WeeklyPlan)
-
-{
-
-    <div class="mb-4">
-
-        <h4>@day.Key</h4>
-
-        <div class="list-group">
-
-            @foreach (var task in day.Value)
-
-            {
-
-                <div class="list-group-item d-flex align-items-center">
-
-                    <img src="@task.ThumbnailUrl" class="me-3 rounded" width="100" height="60" />
-
-
-
-
-
-                    <div class="flex-fill">
-
-                        <h6 class="mb-1">@task.Title</h6>
-
-                        <small class="text-muted">@task.ScheduledTime</small>
-
-                    </div>
-
-
-
-
-
-                    <div>
-
-                        @if (task.IsCompleted)
-
-                        {
-
-                            <span class="badge bg-success">Done</span>
-
-                        }
-
-                        else
-
-                        {
-
-                            <span class="badge bg-warning text-dark">Pending</span>
-
-                        }
-
-                    </div>
-
+    @if (Model.DailyPlan == null || !Model.DailyPlan.Any())
+    {
+        <div class="alert alert-warning">No plan data found.</div>
+    }
+    else
+    {
+        @foreach (var day in Model.DailyPlan)
+        {
+            <div class="card shadow-lg mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Day @day.Day</h5>
                 </div>
+                <div class="card-body row">
+                    @foreach (var video in day.Videos)
+                    {
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <img class="card-img-top rounded" src="@video.ThumbnailUrl" alt="Thumbnail" style="height:150px;object-fit:cover;">
+                                <div class="card-body">
+                                    <h5 class="card-title">@video.Title</h5>
+                                    <p class="card-text mb-1"><strong>Duration:</strong> @video.Duration</p>
+                                    <p class="card-text"><strong>Channel:</strong> @video.ChannelName</p>
+                                    <a asp-page="/VideoPlayer" asp-route-videoId="@video.VideoUrl.Split('=')[1]" asp-route-planId="@Model.PlanId" class="btn btn-outline-primary btn-sm">Watch</a>
 
-            }
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    }
 
-        </div>
-
-    </div>
-
-}
+    <a asp-page="/MyPlans" class="btn btn-secondary mt-3">⬅ Back to My Plans</a>
+</div>
