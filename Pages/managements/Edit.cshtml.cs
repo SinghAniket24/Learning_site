@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,34 +8,43 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Learning_site.Data;
 using Learning_site.Models;
+using Supabase;
 
-namespace Learning_site.Pages.managements
+namespace Learning_site.Pages.Managements
 {
     public class EditModel : PageModel
     {
         private readonly Learning_site.Data.Learning_siteContext _context;
+        private readonly Client _supabase;
 
-        public EditModel(Learning_site.Data.Learning_siteContext context)
+        public EditModel(Learning_site.Data.Learning_siteContext context, Client supabase)
         {
             _context = context;
+            _supabase = supabase;
         }
 
         [BindProperty]
-        public management management { get; set; } = default!;
+        public Management Management { get; set; } = new Management();
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
+            var session = _supabase.Auth.CurrentSession;
+            if (session == null)
+            {
+                return RedirectToPage("/login");
+            }
+
             if (id == null)
             {
                 return NotFound();
             }
 
-            var management =  await _context.management.FirstOrDefaultAsync(m => m.Title == id);
-            if (management == null)
+            var management_from_db =  await _context.Management.FirstOrDefaultAsync(m => m.Title == id);
+            if (management_from_db == null)
             {
                 return NotFound();
             }
-            management = management;
+            Management = management_from_db;
             return Page();
         }
 
@@ -48,7 +57,7 @@ namespace Learning_site.Pages.managements
                 return Page();
             }
 
-            _context.Attach(management).State = EntityState.Modified;
+            _context.Attach(Management).State = EntityState.Modified;
 
             try
             {
@@ -56,7 +65,7 @@ namespace Learning_site.Pages.managements
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!managementExists(management.Title))
+                if (!ManagementExists(Management.Title))
                 {
                     return NotFound();
                 }
@@ -69,9 +78,9 @@ namespace Learning_site.Pages.managements
             return RedirectToPage("./Index");
         }
 
-        private bool managementExists(string id)
+        private bool ManagementExists(string id)
         {
-            return _context.management.Any(e => e.Title == id);
+            return _context.Management.Any(e => e.Title == id);
         }
     }
 }

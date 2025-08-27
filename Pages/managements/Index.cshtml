@@ -1,5 +1,5 @@
 ﻿@page
-@model Learning_site.Pages.managements.IndexModel
+@model Learning_site.Pages.Managements.IndexModel
 
 @{
     ViewData["Title"] = "Index";
@@ -14,25 +14,25 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.management[0].Title)
+                @Html.DisplayNameFor(model => model.Management[0].Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.management[0].Channel)
+                @Html.DisplayNameFor(model => model.Management[0].Channel)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.management[0].Description)
+                @Html.DisplayNameFor(model => model.Management[0].Description)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.management[0].DailyTime)
+                @Html.DisplayNameFor(model => model.Management[0].DailyTime)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.management[0].Days)
+                @Html.DisplayNameFor(model => model.Management[0].Days)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.management) {
+@foreach (var item in Model.Management) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)

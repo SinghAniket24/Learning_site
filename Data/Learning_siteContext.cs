@@ -14,6 +14,6 @@ namespace Learning_site.Data
         {
         }
 
-        public DbSet<Learning_site.Models.management> management { get; set; } = default!;
+        public DbSet<Learning_site.Models.Management> Management { get; set; } = default!;
     }
 }

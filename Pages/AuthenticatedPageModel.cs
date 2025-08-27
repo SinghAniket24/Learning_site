@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace Learning_site.Pages
 {
-    public class videoplayerModel : PageModel
+    public class AuthenticatedPageModel : PageModel
     {
-        private readonly Client _supabase;
+        protected readonly Client _supabase;
 
-        public videoplayerModel(Client supabase)
+        public AuthenticatedPageModel(Client supabase)
         {
             _supabase = supabase;
         }

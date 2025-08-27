@@ -21,7 +21,7 @@ namespace Learning_site.Pages
         }
 
         // 🔹 Search for videos (if channel provided, try to restrict search)
-        public async Task<List<VideoData>> SearchVideosAsync(string topic, string channelName = null, int maxResults = 50)
+        public async Task<List<VideoData>> SearchVideosAsync(string topic, string? channelName = null, int maxResults = 50)
         {
             var youtube = GetService();
             var searchRequest = youtube.Search.List("snippet");
@@ -58,7 +58,7 @@ namespace Learning_site.Pages
                     Title = item.Snippet.Title,
                     Description = item.Snippet.Description,
                     ChannelName = item.Snippet.ChannelTitle,
-                    ThumbnailUrl = item.Snippet.Thumbnails?.Medium?.Url,
+                    ThumbnailUrl = item.Snippet.Thumbnails?.Medium?.Url ?? "",
                     VideoUrl = $"https://www.youtube.com/watch?v={item.Id}",
                     Duration = ParseYouTubeDuration(item.ContentDetails.Duration)
                 });
@@ -68,7 +68,7 @@ namespace Learning_site.Pages
         }
 
         // 🔹 Get Channel ID from channel name
-        private async Task<string> GetChannelIdByNameAsync(string channelName)
+        private async Task<string?> GetChannelIdByNameAsync(string channelName)
         {
             var youtube = GetService();
             var searchChannel = youtube.Search.List("snippet");
@@ -113,17 +113,17 @@ namespace Learning_site.Pages
     // DTOs
     public class VideoData
     {
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public string ChannelName { get; set; }
-        public string ThumbnailUrl { get; set; }
-        public string VideoUrl { get; set; }
-        public string Duration { get; set; }  // Added property for video length
+        public string Title { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public string ChannelName { get; set; } = string.Empty;
+        public string ThumbnailUrl { get; set; } = string.Empty;
+        public string VideoUrl { get; set; } = string.Empty;
+        public string Duration { get; set; } = string.Empty;  // Added property for video length
     }
 
     public class DailyPlan
     {
         public int Day { get; set; }
-        public List<VideoData> Videos { get; set; }
+        public List<VideoData> Videos { get; set; } = new List<VideoData>();
     }
 }

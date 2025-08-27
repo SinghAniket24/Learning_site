@@ -1,4 +1,51 @@
-﻿@page
+@page
 @model Learning_site.Pages.videoplayerModel
 @{
+    ViewData["Title"] = "Video Player";
 }
+
+<div class="row">
+    <!-- Video Player Column -->
+    <div class="col-lg-9">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <!-- Embedded YouTube Player -->
+                <div class="ratio ratio-16x9 mb-3">
+                    <iframe src="https://www.youtube.com/embed/your_video_id_here" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <h3 class="mb-2">Video Title Goes Here</h3>
+                <p class="text-muted">From your "C# Fundamentals" plan.</p>
+
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <a href="#" class="btn btn-outline-secondary"><i class="bi bi-arrow-left-circle me-1"></i> Previous Video</a>
+                    <button class="btn btn-success btn-lg"><i class="bi bi-check-circle-fill me-1"></i> Mark as Complete</button>
+                    <a href="#" class="btn btn-outline-secondary">Next Video <i class="bi bi-arrow-right-circle ms-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checklist Column -->
+    <div class="col-lg-3">
+        <div class="card shadow-sm">
+            <div class="card-header">
+                <h5 class="my-1"><i class="bi bi-list-check me-2"></i> Today's Checklist</h5>
+            </div>
+            <div class="list-group list-group-flush">
+                <label class="list-group-item">
+                    <input class="form-check-input me-2" type="checkbox" value="" checked> C# Variables and Data Types
+                </label>
+                <label class="list-group-item">
+                    <input class="form-check-input me-2" type="checkbox" value=""> C# If/Else Statements
+                </label>
+                <label class="list-group-item">
+                    <input class="form-check-input me-2" type="checkbox" value=""> C# For Loops
+                </label>
+                <label class="list-group-item text-muted">
+                    <input class="form-check-input me-2" type="checkbox" value="" disabled> C# While Loops
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

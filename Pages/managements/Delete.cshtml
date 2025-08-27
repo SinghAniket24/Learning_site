@@ -1,5 +1,5 @@
 ﻿@page
-@model Learning_site.Pages.managements.DeleteModel
+@model Learning_site.Pages.Managements.DeleteModel
 
 @{
     ViewData["Title"] = "Delete";
@@ -9,37 +9,37 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>management</h4>
+    <h4>Management</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.management.Channel)
+            @Html.DisplayNameFor(model => model.Management.Channel)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.management.Channel)
+            @Html.DisplayFor(model => model.Management.Channel)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.management.Description)
+            @Html.DisplayNameFor(model => model.Management.Description)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.management.Description)
+            @Html.DisplayFor(model => model.Management.Description)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.management.DailyTime)
+            @Html.DisplayNameFor(model => model.Management.DailyTime)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.management.DailyTime)
+            @Html.DisplayFor(model => model.Management.DailyTime)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.management.Days)
+            @Html.DisplayNameFor(model => model.Management.Days)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.management.Days)
+            @Html.DisplayFor(model => model.Management.Days)
         </dd>
     </dl>
     
     <form method="post">
-        <input type="hidden" asp-for="management.Title" />
+        <input type="hidden" asp-for="Management.Title" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
         <a asp-page="./Index">Back to List</a>
     </form>

@@ -1,5 +1,5 @@
 ﻿@page
-@model Learning_site.Pages.managements.DetailsModel
+@model Learning_site.Pages.Managements.DetailsModel
 
 @{
     ViewData["Title"] = "Details";
@@ -8,36 +8,36 @@
 <h1>Details</h1>
 
 <div>
-    <h4>management</h4>
+    <h4>Management</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.management.Channel)
+            @Html.DisplayNameFor(model => model.Management.Channel)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.management.Channel)
+            @Html.DisplayFor(model => model.Management.Channel)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.management.Description)
+            @Html.DisplayNameFor(model => model.Management.Description)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.management.Description)
+            @Html.DisplayFor(model => model.Management.Description)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.management.DailyTime)
+            @Html.DisplayNameFor(model => model.Management.DailyTime)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.management.DailyTime)
+            @Html.DisplayFor(model => model.Management.DailyTime)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.management.Days)
+            @Html.DisplayNameFor(model => model.Management.Days)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.management.Days)
+            @Html.DisplayFor(model => model.Management.Days)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.management.Title">Edit</a> |
+    <a asp-page="./Edit" asp-route-id="@Model.Management.Title">Edit</a> |
     <a asp-page="./Index">Back to List</a>
 </div>

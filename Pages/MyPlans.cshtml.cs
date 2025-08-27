@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Supabase;
 using System.Collections.Generic;
-
-
+using System.Threading.Tasks;
 
 //namespace YourAppNamespace.Pages
 namespace Learning_site.Pages
@@ -10,11 +10,24 @@ namespace Learning_site.Pages
 {
     public class MyPlansModel : PageModel
     {
-        // This will hold all the user's study plans
-        public List<StudyPlan> Plans { get; set; }
+        private readonly Client _supabase;
 
-        public void OnGet()
+        public MyPlansModel(Client supabase)
         {
+            _supabase = supabase;
+        }
+
+        // This will hold all the user's study plans
+        public List<StudyPlan> Plans { get; set; } = new List<StudyPlan>();
+
+        public Task<IActionResult> OnGetAsync()
+        {
+            var session = _supabase.Auth.CurrentSession;
+            if (session == null)
+            {
+                return Task.FromResult<IActionResult>(RedirectToPage("/login"));
+            }
+
             // 🔹 For now, let's mock some data (later you’ll fetch from DB)
             Plans = new List<StudyPlan>
             {
@@ -33,6 +46,7 @@ namespace Learning_site.Pages
                     TotalLessons = 12
                 }
             };
+            return Task.FromResult<IActionResult>(Page());
         }
     }
 
@@ -40,8 +54,8 @@ namespace Learning_site.Pages
     public class StudyPlan
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string ChannelAvatarUrl { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string ChannelAvatarUrl { get; set; } = string.Empty;
         public int CompletedLessons { get; set; }
         public int TotalLessons { get; set; }
     }
