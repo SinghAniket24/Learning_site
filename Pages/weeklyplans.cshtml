@@ -1,83 +1,118 @@
-﻿@page
-
-@model Learning_site.Pages.Plans.WeeklyPlansModel
-
+﻿@page "{id:int}"
+@model Learning_site.Pages.WeeklyPlansModel
 @{
-
     ViewData["Title"] = "Weekly Plan";
-
 }
 
+<div class="container mt-5">
+    <h2 class="mb-4 text-center text-primary fw-bold">📅 @Model.PlanTitle</h2>
 
+    @if (Model.DailyPlan == null || !Model.DailyPlan.Any())
+    {
+        <div class="alert alert-warning text-center">No plan data found.</div>
+    }
+    else
+    {
+        @foreach (var day in Model.DailyPlan)
+        {
+            <div class="mb-5 p-3 day-section rounded shadow-sm border">
+                <h4 class="mb-4 text-secondary fw-semibold">Day @day.Day</h4>
 
+                <div class="row g-4">
+                    @foreach (var video in day.Videos)
+                    {
+                        var videoId = video.VideoUrl.Split('=')[1];
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm border-0 position-relative overflow-hidden">
+                                <img src="@video.ThumbnailUrl" class="card-img-top" style="height:180px; object-fit:cover;">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title text-truncate">@video.Title</h5>
+                                    <p class="card-text mb-1"><strong>Duration:</strong> @video.Duration</p>
+                                    <p class="card-text mb-2"><strong>Channel:</strong> @video.ChannelName</p>
 
+                                    <div class="d-flex align-items-center mt-auto">
+                                        <!-- Tick Checkbox -->
+                                        <div class="form-check me-2">
+                                            <input class="form-check-input" type="checkbox"
+                                                   id="tick-@videoId"
+                                                   onclick="markCompleted('@Model.PlanId','@videoId')">
+                                            <label class="form-check-label" for="tick-@videoId">
+                                                Complete
+                                            </label>
+                                        </div>
 
-<h2 class="mb-4">📅 Weekly Study Plan</h2>
+                                        <!-- Watch Button -->
+                                        <a class="btn btn-outline-primary btn-sm ms-auto"
+                                           asp-page="/VideoPlayer"
+                                           asp-route-videoId="@videoId"
+                                           asp-route-planId="@Model.PlanId">
+                                            Watch ▶
+                                        </a>
+                                    </div>
 
-
-
-
-
-@foreach (var day in Model.WeeklyPlan)
-
-{
-
-    <div class="mb-4">
-
-        <h4>@day.Key</h4>
-
-        <div class="list-group">
-
-            @foreach (var task in day.Value)
-
-            {
-
-                <div class="list-group-item d-flex align-items-center">
-
-                    <img src="@task.ThumbnailUrl" class="me-3 rounded" width="100" height="60" />
-
-
-
-
-
-                    <div class="flex-fill">
-
-                        <h6 class="mb-1">@task.Title</h6>
-
-                        <small class="text-muted">@task.ScheduledTime</small>
-
-                    </div>
-
-
-
-
-
-                    <div>
-
-                        @if (task.IsCompleted)
-
-                        {
-
-                            <span class="badge bg-success">Done</span>
-
-                        }
-
-                        else
-
-                        {
-
-                            <span class="badge bg-warning text-dark">Pending</span>
-
-                        }
-
-                    </div>
-
+                                    <!-- Completed Badge -->
+                                    <span id="label-@videoId" class="badge bg-success mt-2 position-absolute top-0 end-0 me-2 mt-2" style="display:none; font-size:0.8rem; padding:0.5em 0.7em;">
+                                        ✔ Completed
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    }
                 </div>
+            </div>
+        }
+    }
 
-            }
+    <a asp-page="/MyPlans" class="btn btn-secondary mt-3">⬅ Back to My Plans</a>
+</div>
 
-        </div>
+<style>
+    .day-section {
+        background-color: #f8f9fa;
+    }
 
-    </div>
+    .card:hover {
+        transform: translateY(-5px);
+        transition: 0.3s;
+    }
 
-}
+    .form-check-input:checked {
+        background-color: #198754;
+        border-color: #198754;
+    }
+
+    .form-check-label {
+        user-select: none;
+    }
+
+    .card-title {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+</style>
+
+<script>
+    function markCompleted(planId, videoId) {
+        window.PlanStorage.markVideoCompleted(planId, videoId);
+        document.getElementById("tick-" + videoId).style.display = "none";
+        document.getElementById("label-" + videoId).style.display = "inline-block";
+
+        localStorage.setItem("updateProgress-" + planId, new Date());
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        @foreach (var day in Model.DailyPlan)
+        {
+                @foreach (var video in day.Videos)
+                {
+                        var vid = video.VideoUrl.Split('=')[1];
+                        <text>
+                            if(window.PlanStorage.isVideoCompleted('@Model.PlanId','@vid')){
+                                document.getElementById("tick-@vid").style.display = "none";
+                                document.getElementById("label-@vid").style.display = "inline-block";
+                            }
+                        </text>
+                }
+        }
+    });
+</script>

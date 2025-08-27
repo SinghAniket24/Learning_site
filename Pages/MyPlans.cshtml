@@ -1,41 +1,89 @@
 ﻿@page
 @model Learning_site.Pages.MyPlansModel
+
 @{
     ViewData["Title"] = "My Plans";
-
 }
 
 <div class="container mt-5">
     <h2 class="mb-4">📚 My Plans</h2>
 
-    <div class="row">
-        @foreach (var plan in Model.Plans)
-        {
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm h-100 plan-card"
-                    onclick="location.href='@Url.Page("weeklyplans", new { id = plan.Id })'">
-                    <div class="card-body d-flex flex-column justify-content-between">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="@plan.ChannelAvatarUrl" class="rounded-circle me-3" width="50" height="50" />
-                            <h5 class="card-title mb-0">@plan.Name</h5>
-                        </div>
+    @if (Model.Plans == null || !Model.Plans.Any())
+    {
+        <div class="alert alert-info">
+            No plans saved yet. <a asp-page="/CreatePlan">Create one now!</a>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var plan in Model.Plans)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-lg h-100 plan-card"
+                         onclick="location.href='@Url.Page("weeklyplans", new { id = plan.Id })'">
+                        <img src="@plan.IconUrl"
+                             class="card-img-top p-3"
+                             alt="Plan Icon"
+                             style="height:120px;object-fit:contain;">
 
-                        <p class="mb-1">Progress: @plan.CompletedLessons / @plan.TotalLessons lessons</p>
-                        <div class="progress mb-3">
-                            <div class="progress-bar bg-success"
-                                style="width:@((plan.CompletedLessons * 100) / plan.TotalLessons)%">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title mb-2">@plan.Name</h5>
+
+                            <p class="mb-1">
+                                Progress:
+                                <span id="completed-@plan.Id">@plan.CompletedLessons</span> /
+                                <span id="total-@plan.Id">@plan.TotalLessons</span> lessons
+                            </p>
+
+                            <div class="progress mb-3">
+                                <div id="progressBar-@plan.Id"
+                                     class="progress-bar bg-success"
+                                     style="width:@(((plan.CompletedLessons * 100) / plan.TotalLessons))%">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="d-flex justify-content-between">
-                            <a asp-page="/Plans/Edit" asp-route-id="@plan.Id" class="btn btn-sm btn-outline-primary">Edit
-                                Plan</a>
-                            <a asp-page="/Plans/Reset" asp-route-id="@plan.Id" class="btn btn-sm btn-outline-danger">Reset
-                                Plan</a>
+                            <div class="d-flex justify-content-between">
+                                <a asp-page="/Plans/Edit"
+                                   asp-route-id="@plan.Id"
+                                   class="btn btn-sm btn-outline-primary">
+                                    Edit
+                                </a>
+
+                                <a asp-page="/Plans/Reset"
+                                   asp-route-id="@plan.Id"
+                                   class="btn btn-sm btn-outline-danger">
+                                    Reset
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        }
-    </div>
+            }
+        </div>
+    }
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        function refreshProgress() {
+            @foreach (var plan in Model.Plans)
+            {
+                    <text>
+                        var progress = window.PlanStorage.getPlanProgress('@plan.Id', @plan.TotalLessons);
+                        document.getElementById("completed-@plan.Id").innerText = progress.completed;
+                        document.getElementById("progressBar-@plan.Id").style.width = (progress.completed * 100 / progress.total) + "%";
+                    </text>
+            }
+        }
+
+        // Initial refresh
+        refreshProgress();
+
+        // Refresh if video completed in another page
+        window.addEventListener("storage", function (e) {
+            if (e.key && e.key.startsWith("updateProgress-")) refreshProgress();
+        });
+    });
+</script>

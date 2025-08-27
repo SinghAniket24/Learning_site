@@ -1,47 +1,49 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
+using System.Linq;
 
-
-
-//namespace YourAppNamespace.Pages
 namespace Learning_site.Pages
-
 {
     public class MyPlansModel : PageModel
     {
-        // This will hold all the user's study plans
         public List<StudyPlan> Plans { get; set; }
 
         public void OnGet()
         {
-            // 🔹 For now, let's mock some data (later you’ll fetch from DB)
-            Plans = new List<StudyPlan>
+            // Load all saved plans from SavedPlansStore
+            Plans = SavedPlansStore.SavedPlans.Select((p, index) => new StudyPlan
             {
-                new StudyPlan {
-                    Id = 1,
-                    Name = "Python for Beginners",
-                    ChannelAvatarUrl = "img/python.png",
-                    CompletedLessons = 3,
-                    TotalLessons = 10
-                },
-                new StudyPlan {
-                    Id = 2,
-                    Name = "Web Development Basics",
-                    ChannelAvatarUrl = "img/web.jpeg",
-                    CompletedLessons = 5,
-                    TotalLessons = 12
-                }
-            };
+                Id = index + 1,
+                Name = p.Item1.Title,
+                IconUrl = GetTopicIcon(p.Item1.Title),
+                CompletedLessons = 0,
+                TotalLessons = p.Item2.Sum(d => d.Videos.Count)
+            }).ToList();
+        }
+
+        // Generate meaningful icon dynamically based on topic name
+        private string GetTopicIcon(string topic)
+        {
+            topic = topic.ToLower();
+
+            // Popular tech/dev topics → use Devicon
+            var techMap = new[] { "python", "java", "javascript", "html", "css", "react", "node", "csharp", "php", "sql" };
+            foreach (var tech in techMap)
+            {
+                if (topic.Contains(tech))
+                    return $"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{tech}/{tech}-original.svg";
+            }
+
+            // Otherwise use Flaticon general education icon
+            return "https://cdn-icons-png.flaticon.com/512/3135/3135715.png";
         }
     }
 
-    // Simple model for now
     public class StudyPlan
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string ChannelAvatarUrl { get; set; }
+        public string IconUrl { get; set; }
         public int CompletedLessons { get; set; }
         public int TotalLessons { get; set; }
     }

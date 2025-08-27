@@ -1,0 +1,156 @@
+﻿@page
+@model CreatePlanModel
+@{
+    ViewData["Title"] = "Create Plan";
+}
+
+<!--
+  Put the banner image at: wwwroot/NewFolder1/study_plan.jpg
+  (or change the src below to the path you use)
+-->
+
+<div class="create-plan-page min-vh-100 d-flex align-items-center justify-content-center py-5">
+    <div class="col-md-8 col-lg-6">
+
+        <!-- Card -->
+        <div class="form-card p-4 p-md-5 rounded-4 shadow-sm">
+
+            <!-- Top: image + heading + two lines (outside the <form>) -->
+            <div class="text-center mb-3">
+                <img src="~/NewFolder1/study_plan.jpg" alt="Study Plan" class="banner-img mb-3" />
+                <h1 class="h3 fw-bold mb-1">Create Your New Learning Plan</h1>
+
+                <!-- two-line subtitle (outside form) -->
+                <p class="mb-0 text-muted">Define your learning goals and available time.</p>
+                <p class="mb-3 text-muted">StudyFlow will generate a personalized schedule for you.</p>
+
+                <div class="mx-auto" style="width:58px; height:4px; background: linear-gradient(90deg,#0072ff,#00c6ff); border-radius:3px;"></div>
+            </div>
+
+            <!-- Form starts here -->
+            <form method="post" novalidate>
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+
+                <!-- Title -->
+                <div class="mb-3">
+                    <label asp-for="Plan.Title" class="form-label fw-semibold">Title</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-light">📘</span>
+                        <input asp-for="Plan.Title" class="form-control form-control-lg rounded-pill" placeholder="Enter plan title (e.g. Learn Flutter)" />
+                    </div>
+                    <span asp-validation-for="Plan.Title" class="text-danger small"></span>
+                </div>
+
+                <!-- Channel -->
+                <div class="mb-3">
+                    <label asp-for="Plan.Channel" class="form-label fw-semibold">Channel / Source</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-light">▶️</span>
+                        <input asp-for="Plan.Channel" class="form-control form-control-lg rounded-pill" placeholder="YouTube / Udemy / Book name" />
+                    </div>
+                    <span asp-validation-for="Plan.Channel" class="text-danger small"></span>
+                </div>
+
+                <!-- Description -->
+                <div class="mb-3">
+                    <label asp-for="Plan.Description" class="form-label fw-semibold">Description</label>
+                    <textarea asp-for="Plan.Description" class="form-control rounded-3" rows="3" placeholder="Brief description of the learning plan"></textarea>
+                    <span asp-validation-for="Plan.Description" class="text-danger small"></span>
+                </div>
+
+                <div class="row gx-2">
+                    <!-- Daily Time -->
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Plan.DailyTime" class="form-label fw-semibold">Daily time</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light">⏰</span>
+                            <input asp-for="Plan.DailyTime" type="time" class="form-control rounded-pill" />
+                        </div>
+                        <span asp-validation-for="Plan.DailyTime" class="text-danger small"></span>
+                    </div>
+
+                    <!-- Days -->
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Plan.Days" class="form-label fw-semibold">Days</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light">📅</span>
+                            <input asp-for="Plan.Days" type="number" min="1" class="form-control rounded-pill" placeholder="e.g. 30" />
+                        </div>
+                        <span asp-validation-for="Plan.Days" class="text-danger small"></span>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="d-grid mt-3">
+                    <button type="submit" class="btn btn-gradient btn-lg rounded-pill fw-bold">
+                        🚀 Create Plan
+                    </button>
+                </div>
+            </form>
+            <!-- Form ends here -->
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<style>
+    /* Page container (keeps the rest of site unaffected) */
+    .create-plan-page {
+        background: linear-gradient(180deg, #f5f9ff 0%, #f0fbff 40%);
+    }
+
+    /* Card */
+    .form-card {
+        background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.98));
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(14,30,37,0.08);
+    }
+
+    /* Banner image: properly sized & shaped */
+    .banner-img {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 18px; /* rounded rectangle — use 50% for circle */
+        box-shadow: 0 8px 18px rgba(7,30,60,0.12);
+        border: 6px solid rgba(255,255,255,0.8);
+    }
+
+    /* Big inputs */
+    .form-control-lg {
+        padding: .75rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    /* Input focus */
+    .form-control:focus, .form-select:focus {
+        border-color: #00b0ff;
+        box-shadow: 0 6px 18px rgba(0,176,255,0.12);
+        outline: none;
+    }
+
+    /* Gradient submit button */
+    .btn-gradient {
+        background: linear-gradient(90deg, #0072ff 0%, #00c6ff 100%);
+        color: #fff;
+        border: none;
+        box-shadow: 0 8px 20px rgba(0,114,255,0.12);
+        transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+        .btn-gradient:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 30px rgba(0,114,255,0.16);
+        }
+
+    /* smaller helper text */
+    .small {
+        font-size: .85rem;
+    }
+</style>

@@ -1,4 +1,50 @@
-﻿@page
-@model Learning_site.Pages.videoplayerModel
+﻿@page "{videoId}"
+@model Learning_site.Pages.VideoPlayerModel
 @{
+    ViewData["Title"] = "Video Player";
 }
+
+<div class="container mt-5">
+    <h2 class="mb-4">@Model.VideoTitle</h2>
+
+    <div class="ratio ratio-16x9 mb-4">
+        <div id="player"></div>
+    </div>
+
+    <p><strong>Channel:</strong> @Model.ChannelName</p>
+    <p><strong>Duration:</strong> @Model.Duration</p>
+
+    <a asp-page="/WeeklyPlans" asp-route-id="@Model.PlanId" class="btn btn-secondary">⬅ Back to Plan</a>
+</div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+    var player;
+    var planId = '@Model.PlanId';
+    var videoId = '@Model.VideoId';
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '360',
+            width: '640',
+            videoId: videoId,
+            playerVars: { 'autoplay': 1, 'rel': 0 },
+            events: {
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+
+    function onPlayerStateChange(event) {
+        // YT.PlayerState.ENDED === 0
+        if (event.data === YT.PlayerState.ENDED) {
+            // Mark video completed in local storage
+            window.PlanStorage.markVideoCompleted(planId, videoId);
+
+            // Trigger MyPlans progress update
+            localStorage.setItem("updateProgress-" + planId, new Date());
+
+            alert("🎉 Video Completed!");
+        }
+    }
+</script>

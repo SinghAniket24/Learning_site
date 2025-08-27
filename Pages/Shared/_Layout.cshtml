@@ -37,12 +37,13 @@
                             <a class="nav-link text-dark" asp-area="" asp-page="/MyPlans">My Plans</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/managements/Create">Create Plans</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/CreatePlan">Create Plan</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Settings">Settings</a>
                         </li>
                      
+
 
 
                     </ul>
@@ -77,5 +78,8 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
+
+    <script src="~/js/planStorage.js"></script>
+
 </body>
 </html>
