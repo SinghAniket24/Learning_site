@@ -26,22 +26,18 @@ namespace Learning_site.Pages
         {
             var youtube = GetService();
 
-            // 1. Try to get playlist-based learning content first
             var playlistVideos = await GetPlaylistBasedVideosAsync(topic, channelName, youtube);
             if (playlistVideos.Any()) return playlistVideos;
 
-            // 2. Otherwise, get curated individual videos
             return await GetCuratedVideosAsync(topic, channelName, youtube, maxResults);
         }
 
-        // 🔹 Fetch Playlist Videos (structured learning)
         private async Task<List<VideoData>> GetPlaylistBasedVideosAsync(string topic, string channelName, YouTubeService youtube)
         {
             string channelId = null;
             if (!string.IsNullOrEmpty(channelName))
                 channelId = await GetChannelIdByNameAsync(channelName);
 
-            // Search for playlists
             var playlistSearch = youtube.Search.List("snippet");
             playlistSearch.Q = topic;
             playlistSearch.Type = "playlist";
@@ -50,28 +46,19 @@ namespace Learning_site.Pages
                 playlistSearch.ChannelId = channelId;
 
             var playlistResponse = await playlistSearch.ExecuteAsync();
-            var playlistIds = playlistResponse.Items
-                                             .Select(p => p.Id.PlaylistId)
-                                             .Take(1)
-                                             .ToList(); // take first playlist only
+            var playlistIds = playlistResponse.Items.Select(p => p.Id.PlaylistId).Take(1).ToList();
+            if (!playlistIds.Any()) return new List<VideoData>();
 
-            if (!playlistIds.Any())
-                return new List<VideoData>();
-
-            // Get videos from playlist
             var playlistItemsRequest = youtube.PlaylistItems.List("snippet,contentDetails");
             playlistItemsRequest.PlaylistId = playlistIds.First();
             playlistItemsRequest.MaxResults = 50;
 
             var playlistItemsResponse = await playlistItemsRequest.ExecuteAsync();
-            var videoIds = playlistItemsResponse.Items
-                                                .Select(v => v.ContentDetails.VideoId)
-                                                .ToList();
+            var videoIds = playlistItemsResponse.Items.Select(v => v.ContentDetails.VideoId).ToList();
 
             return await FetchVideoDetailsAsync(videoIds, youtube);
         }
 
-        // 🔹 Get individual curated videos (if no playlist found)
         private async Task<List<VideoData>> GetCuratedVideosAsync(string topic, string channelName, YouTubeService youtube, int maxResults)
         {
             var searchRequest = youtube.Search.List("snippet");
@@ -95,15 +82,13 @@ namespace Learning_site.Pages
 
             var videos = await FetchVideoDetailsAsync(videoIds, youtube);
 
-            // Filter: remove Shorts (<2 mins) and irrelevant titles
             return videos
                    .Where(v => GetDurationInMinutes(v.Duration) >= 2)
                    .Where(v => !IsIrrelevant(v.Title))
-                   .OrderBy(v => v.Title) // alphabetical to create logical sequence
+                   .OrderBy(v => v.Title)
                    .ToList();
         }
 
-        // 🔹 Fetch video details including duration
         private async Task<List<VideoData>> FetchVideoDetailsAsync(List<string> videoIds, YouTubeService youtube)
         {
             if (!videoIds.Any()) return new List<VideoData>();
@@ -119,12 +104,12 @@ namespace Learning_site.Pages
                 Description = item.Snippet.Description,
                 ChannelName = item.Snippet.ChannelTitle,
                 ThumbnailUrl = item.Snippet.Thumbnails?.Medium?.Url,
-                VideoUrl = $"https://www.youtube.com/watch?v={item.Id}",
-                Duration = ParseYouTubeDuration(item.ContentDetails.Duration)
+                VideoUrl = $"/videoplayer?id={item.Id}", // link to your VideoPlayer page
+                Duration = ParseYouTubeDuration(item.ContentDetails.Duration),
+                StartTime = 0 // default start at beginning
             }).ToList();
         }
 
-        // 🔹 Get Channel ID from name
         private async Task<string> GetChannelIdByNameAsync(string channelName)
         {
             var youtube = GetService();
@@ -137,29 +122,63 @@ namespace Learning_site.Pages
             return response.Items.FirstOrDefault()?.Id?.ChannelId;
         }
 
-        // 🔹 Generate daily structured plan
+        // 🔹 Generate daily structured plan with start times
         public List<DailyPlan> CreateDailyPlan(List<VideoData> videos, int days, double dailyHours)
         {
-            int videosPerDay = (int)Math.Round(dailyHours * 3); // avg 20 min videos
             var dailyPlans = new List<DailyPlan>();
+            double dailyMinutes = dailyHours * 60;
 
-            for (int i = 0; i < days; i++)
+            int day = 1;
+            double usedToday = 0;
+
+            var currentPlan = new DailyPlan { Day = day, Videos = new List<VideoData>() };
+
+            foreach (var video in videos)
             {
-                var dayVideos = videos.Skip(i * videosPerDay).Take(videosPerDay).ToList();
-                if (dayVideos.Any())
+                double videoMinutes = GetDurationInMinutes(video.Duration);
+                double startOffset = 0; // seconds offset for each part
+
+                while (videoMinutes > 0)
                 {
-                    dailyPlans.Add(new DailyPlan
+                    double remainingToday = dailyMinutes - usedToday;
+                    if (remainingToday <= 0)
                     {
-                        Day = i + 1,
-                        Videos = dayVideos
-                    });
+                        dailyPlans.Add(currentPlan);
+                        if (day >= days) return dailyPlans;
+
+                        day++;
+                        usedToday = 0;
+                        currentPlan = new DailyPlan { Day = day, Videos = new List<VideoData>() };
+                        remainingToday = dailyMinutes;
+                    }
+
+                    double watchNow = Math.Min(videoMinutes, remainingToday);
+
+                    var videoPart = new VideoData
+                    {
+                        Title = video.Title + (watchNow < videoMinutes ? $" (Part {day})" : ""),
+                        Description = video.Description,
+                        ChannelName = video.ChannelName,
+                        ThumbnailUrl = video.ThumbnailUrl,
+                        VideoUrl = video.VideoUrl,
+                        Duration = TimeSpan.FromMinutes(watchNow).ToString(@"hh\:mm\:ss"),
+                        StartTime = startOffset // new property
+                    };
+
+                    currentPlan.Videos.Add(videoPart);
+
+                    usedToday += watchNow;
+                    startOffset += watchNow * 60; // convert minutes to seconds for iframe
+                    videoMinutes -= watchNow;
                 }
             }
+
+            if (currentPlan.Videos.Any() && day <= days)
+                dailyPlans.Add(currentPlan);
 
             return dailyPlans;
         }
 
-        // 🔹 Helper: parse ISO 8601 duration to hh:mm:ss
         private string ParseYouTubeDuration(string isoDuration)
         {
             var timeSpan = System.Xml.XmlConvert.ToTimeSpan(isoDuration);
@@ -189,6 +208,7 @@ namespace Learning_site.Pages
         public string ThumbnailUrl { get; set; }
         public string VideoUrl { get; set; }
         public string Duration { get; set; }
+        public double StartTime { get; set; } // seconds offset for starting point
     }
 
     public class DailyPlan

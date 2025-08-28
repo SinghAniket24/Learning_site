@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Linq;
 
@@ -26,13 +26,17 @@ namespace Learning_site.Pages
 
             var video = plan.Item2
                            .SelectMany(d => d.Videos)
-                           .FirstOrDefault(v => v.VideoUrl.Contains(videoId));
+                           .FirstOrDefault(v =>
+                           {
+                               var urlParts = v.VideoUrl.Split("id=");
+                               return urlParts.Length > 1 && urlParts[1] == videoId;
+                           });
 
             if (video == null) return NotFound();
 
             VideoTitle = video.Title;
             ChannelName = video.ChannelName;
-            Duration = video.Duration;
+            Duration = video.Duration; // hh:mm:ss
 
             return Page();
         }

@@ -15,14 +15,14 @@
     {
         @foreach (var day in Model.DailyPlan)
         {
-            <div class="mb-5 p-3 day-section rounded shadow-sm border">
+            <div class="mb-5 p-3 day-section rounded shadow-sm border" id="day-@day.Day">
                 <h4 class="mb-4 text-secondary fw-semibold">Day @day.Day</h4>
 
                 <div class="row g-4">
                     @foreach (var video in day.Videos)
                     {
                         var videoId = video.VideoUrl.Split('=')[1];
-                        <div class="col-md-4">
+                        <div class="col-md-4 video-card" id="video-@videoId">
                             <div class="card h-100 shadow-sm border-0 position-relative overflow-hidden">
                                 <img src="@video.ThumbnailUrl" class="card-img-top" style="height:180px; object-fit:cover;">
                                 <div class="card-body d-flex flex-column">
@@ -42,12 +42,11 @@
                                         </div>
 
                                         <!-- Watch Button -->
-                                        <a class="btn btn-outline-primary btn-sm ms-auto"
-                                           asp-page="/VideoPlayer"
-                                           asp-route-videoId="@videoId"
-                                           asp-route-planId="@Model.PlanId">
+                                        <button class="btn btn-outline-primary btn-sm ms-auto watch-btn"
+                                                data-videoid="@videoId"
+                                                data-planid="@Model.PlanId">
                                             Watch ▶
-                                        </a>
+                                        </button>
                                     </div>
 
                                     <!-- Completed Badge -->
@@ -69,6 +68,11 @@
 <style>
     .day-section {
         background-color: #f8f9fa;
+        transition: background-color 0.5s;
+    }
+
+    .highlight {
+        background-color: #fff3cd !important;
     }
 
     .card:hover {
@@ -96,23 +100,48 @@
         window.PlanStorage.markVideoCompleted(planId, videoId);
         document.getElementById("tick-" + videoId).style.display = "none";
         document.getElementById("label-" + videoId).style.display = "inline-block";
-
         localStorage.setItem("updateProgress-" + planId, new Date());
     }
 
     document.addEventListener("DOMContentLoaded", () => {
+        // Highlight video/day from query param
+        const urlParams = new URLSearchParams(window.location.search);
+        const highlightVideoId = urlParams.get('highlightVideo');
+        if (highlightVideoId) {
+            const videoEl = document.getElementById("video-" + highlightVideoId);
+            if (videoEl) {
+                videoEl.scrollIntoView({ behavior: "smooth", block: "center" });
+                const dayEl = videoEl.closest('.day-section');
+                if (dayEl) dayEl.classList.add("highlight");
+            }
+        }
+
+        // Update completed badges
         @foreach (var day in Model.DailyPlan)
         {
                 @foreach (var video in day.Videos)
                 {
                         var vid = video.VideoUrl.Split('=')[1];
                         <text>
-                            if(window.PlanStorage.isVideoCompleted('@Model.PlanId','@vid')){
+                            if(window.PlanStorage.isVideoCompleted('@Model.PlanId','@vid')) {
                                 document.getElementById("tick-@vid").style.display = "none";
                                 document.getElementById("label-@vid").style.display = "inline-block";
                             }
                         </text>
                 }
         }
+
+        // Add click event to Watch buttons
+        document.querySelectorAll('.watch-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const videoId = btn.getAttribute('data-videoid');
+                const planId = btn.getAttribute('data-planid');
+                const progressKey = `videoProgress-${planId}-${videoId}`;
+                const start = localStorage.getItem(progressKey) || 0;
+
+                // Pass highlightVideo param to return to exact video
+                window.location.href = `/VideoPlayer/${videoId}?planId=${planId}&start=${start}&highlightVideo=${videoId}`;
+            });
+        });
     });
 </script>

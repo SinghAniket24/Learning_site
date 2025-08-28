@@ -23,28 +23,83 @@
     var planId = '@Model.PlanId';
     var videoId = '@Model.VideoId';
 
+    // Planned snippet duration in seconds
+    var plannedDuration = (() => {
+        const parts = "@Model.Duration".split(":").map(Number);
+        if (parts.length === 3) return parts[0]*3600 + parts[1]*60 + parts[2];
+        if (parts.length === 2) return parts[0]*60 + parts[1];
+        return parts[0];
+    })();
+
+    // Last watched time (resume)
+    var storageKey = "videoProgress-" + planId + "-" + videoId;
+    var startSeconds = parseFloat(localStorage.getItem(storageKey)) || 0;
+
     function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
             height: '360',
             width: '640',
             videoId: videoId,
-            playerVars: { 'autoplay': 1, 'rel': 0 },
+            playerVars: {
+                'autoplay': 1,
+                'rel': 0
+            },
             events: {
+                'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
             }
         });
     }
 
+    function onPlayerReady(event) {
+        // Resume from last watched time
+        if (startSeconds > 0) {
+            player.seekTo(startSeconds, true);
+        }
+
+        // Track snippet timing
+        trackSnippet();
+    }
+
+    function trackSnippet() {
+        const interval = setInterval(() => {
+            if (!player || !player.getCurrentTime) return;
+
+            const current = player.getCurrentTime();
+            localStorage.setItem(storageKey, current);
+
+            // Stop at planned snippet duration
+            if (current >= startSeconds + plannedDuration) {
+                player.pauseVideo();
+                window.PlanStorage.markVideoCompleted(planId, videoId);
+                localStorage.setItem("updateProgress-" + planId, new Date());
+                clearInterval(interval);
+
+                alert("🎉 Snippet Completed!");
+
+                // Smoothly go back without full reload
+                if (history.length > 1) {
+                    history.back(); // acts like navigator.pop
+                } else {
+                    window.location.href = '/WeeklyPlans?id=' + planId;
+                }
+            }
+        }, 500);
+    }
+
     function onPlayerStateChange(event) {
-        // YT.PlayerState.ENDED === 0
         if (event.data === YT.PlayerState.ENDED) {
-            // Mark video completed in local storage
+            // Full video watched
             window.PlanStorage.markVideoCompleted(planId, videoId);
-
-            // Trigger MyPlans progress update
             localStorage.setItem("updateProgress-" + planId, new Date());
-
             alert("🎉 Video Completed!");
+
+            // Smooth back
+            if (history.length > 1) {
+                history.back();
+            } else {
+                window.location.href = '/WeeklyPlans?id=' + planId;
+            }
         }
     }
 </script>

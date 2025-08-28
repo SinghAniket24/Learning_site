@@ -50,9 +50,9 @@
                                     Edit
                                 </a>
 
-                                <a asp-page="/Plans/Reset"
-                                   asp-route-id="@plan.Id"
-                                   class="btn btn-sm btn-outline-danger">
+                                <a href="javascript:void(0);"
+                                   class="btn btn-sm btn-outline-danger"
+                                   onclick="resetPlan('@plan.Id')">
                                     Reset
                                 </a>
                             </div>
@@ -70,11 +70,11 @@
         function refreshProgress() {
             @foreach (var plan in Model.Plans)
             {
-                    <text>
-                        var progress = window.PlanStorage.getPlanProgress('@plan.Id', @plan.TotalLessons);
-                        document.getElementById("completed-@plan.Id").innerText = progress.completed;
-                        document.getElementById("progressBar-@plan.Id").style.width = (progress.completed * 100 / progress.total) + "%";
-                    </text>
+                        <text>
+                            var progress = window.PlanStorage.getPlanProgress('@plan.Id', @plan.TotalLessons);
+                            document.getElementById("completed-@plan.Id").innerText = progress.completed;
+                            document.getElementById("progressBar-@plan.Id").style.width = (progress.completed * 100 / progress.total) + "%";
+                        </text>
             }
         }
 
@@ -86,4 +86,11 @@
             if (e.key && e.key.startsWith("updateProgress-")) refreshProgress();
         });
     });
+
+    function resetPlan(planId) {
+        if (confirm("Are you sure you want to reset this plan?")) {
+            window.PlanStorage.resetPlan(planId); // Clear local progress
+            location.reload(); // Reload page to show updated progress
+        }
+    }
 </script>
