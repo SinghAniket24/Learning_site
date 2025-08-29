@@ -89,3 +89,31 @@ main {
 .navbar-toggler {
     margin-left: auto;
 }
+
+
+/* Footer overlap fix — keeps the look exactly the same */
+footer.footer {
+    position: static !important; /* kill any fixed positioning from custom css */
+}
+
+/* Make the layout push the footer to the bottom when content is short */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#main-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+}
+
+#page {
+    flex: 1 0 auto;
+}
+/* this is the wrapper above that grows with content */

@@ -34,5 +34,7 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
+app.MapFallbackToPage("/Index1");  // Start with Splash
+
 
 app.Run();
