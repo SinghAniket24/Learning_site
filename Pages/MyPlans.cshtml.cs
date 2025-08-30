@@ -47,4 +47,5 @@ namespace Learning_site.Pages
         public int CompletedLessons { get; set; }
         public int TotalLessons { get; set; }
     }
+
 }

@@ -4,6 +4,7 @@
     ViewData["Title"] = "Weekly Plan";
 }
 
+@*
 <div class="container mt-5">
     <h2 class="mb-4 text-center text-primary fw-bold">📅 @Model.PlanTitle</h2>
 
@@ -140,6 +141,158 @@
                 const start = localStorage.getItem(progressKey) || 0;
 
                 // Pass highlightVideo param to return to exact video
+                window.location.href = `/VideoPlayer/${videoId}?planId=${planId}&start=${start}&highlightVideo=${videoId}`;
+            });
+        });
+    });
+</script>
+*@
+
+
+
+<div class="container mt-5">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary fw-bold">📅 @Model.PlanTitle</h2>
+        <a asp-page="/MyPlans" class="btn btn-outline-secondary">⬅ Back</a>
+    </div>
+
+    <!-- Overall Progress -->
+    <div class="mb-4">
+        <label class="fw-semibold">Overall Progress</label>
+        <div class="progress" style="height: 20px;">
+            <div id="overall-progress" class="progress-bar bg-success" role="progressbar" style="width:0%">
+                0%
+            </div>
+        </div>
+    </div>
+
+    @if (Model.DailyPlan == null || !Model.DailyPlan.Any())
+    {
+        <div class="alert alert-warning text-center">No plan data found.</div>
+    }
+    else
+    {
+        <div class="accordion" id="weeklyAccordion">
+            @for (int i = 0; i < Model.DailyPlan.Count; i++)
+            {
+                var day = Model.DailyPlan[i];
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-@day.Day">
+                        <button class="accordion-button @(i > 0 ? "collapsed" : "")" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse-@day.Day" aria-expanded="@(i == 0 ? "true" : "false")"
+                            aria-controls="collapse-@day.Day">
+                            Day @day.Day
+                            <span class="badge bg-light text-dark ms-2" id="progress-day-@day.Day">0 / @day.Videos.Count</span>
+                        </button>
+                    </h2>
+                    <div id="collapse-@day.Day" class="accordion-collapse collapse @(i == 0 ? "show" : "")"
+                        aria-labelledby="heading-@day.Day" data-bs-parent="#weeklyAccordion">
+                        <div class="accordion-body">
+                            @foreach (var video in day.Videos)
+                            {
+                                var videoId = video.VideoUrl.Split('=')[1];
+                                <div class="video-item d-flex align-items-center p-2 border rounded mb-2" id="video-@videoId">
+                                    <img src="@video.ThumbnailUrl" class="rounded me-3"
+                                        style="width:120px; height:70px; object-fit:cover;">
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1 text-truncate">@video.Title</h6>
+                                        <small class="text-muted">⏱ @video.Duration | 📺 @video.ChannelName</small>
+                                    </div>
+                                    <div class="d-flex align-items-center ms-3">
+                                        <input type="checkbox" class="form-check-input me-2" id="tick-@videoId"
+                                            onclick="markCompleted('@Model.PlanId','@videoId', @day.Day)">
+                                        <button class="btn btn-sm btn-outline-primary watch-btn" data-videoid="@videoId"
+                                            data-planid="@Model.PlanId">
+                                            ▶ Watch
+                                        </button>
+                                    </div>
+                                    <span id="label-@videoId" class="badge bg-success ms-2" style="display:none;">✔</span>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+<style>
+    .accordion-button {
+        font-weight: 600;
+    }
+
+    .video-item:hover {
+        background: #f9f9f9;
+    }
+
+    .badge {
+        font-size: 0.8rem;
+    }
+</style>
+
+<script>
+    function markCompleted(planId, videoId, day) {
+        window.PlanStorage.markVideoCompleted(planId, videoId);
+        const tick = document.getElementById("tick-" + videoId);
+        tick.checked = true;
+        tick.disabled = true;
+        document.getElementById("label-" + videoId).style.display = "inline-block";
+
+        // Update per-day progress
+        updateDayProgress(day, planId);
+        updateOverallProgress(planId);
+    }
+
+    function updateDayProgress(day, planId) {
+        const total = document.querySelectorAll(`#collapse-${day} .video-item`).length;
+        let completed = 0;
+        document.querySelectorAll(`#collapse-${day} input[type=checkbox]`).forEach(cb => {
+            if (cb.checked) completed++;
+        });
+        document.getElementById("progress-day-" + day).innerText = `${completed} / ${total}`;
+    }
+
+    function updateOverallProgress(planId) {
+        let total = 0, completed = 0;
+        document.querySelectorAll('.video-item input[type=checkbox]').forEach(cb => {
+            total++;
+            if (cb.checked) completed++;
+        });
+        const percent = Math.round((completed / total) * 100);
+        const bar = document.getElementById("overall-progress");
+        bar.style.width = percent + "%";
+        bar.innerText = percent + "%";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // Restore completed state
+        @foreach (var day in Model.DailyPlan)
+            {
+                            @foreach (var video in day.Videos)
+                {
+                    var vid = video.VideoUrl.Split('=')[1];
+                    <text>
+                        if(window.PlanStorage.isVideoCompleted('@Model.PlanId','@vid')) {
+                                                        const tick = document.getElementById("tick-@vid");
+                        tick.checked = true;
+                        tick.disabled = true;
+                        document.getElementById("label-@vid").style.display = "inline-block";
+                                                    }
+                    </text>
+            }
+                <text> updateDayProgress(@day.Day, '@Model.PlanId'); </text>
+        }
+            updateOverallProgress('@Model.PlanId');
+
+        // Watch buttons
+        document.querySelectorAll('.watch-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const videoId = btn.getAttribute('data-videoid');
+                const planId = btn.getAttribute('data-planid');
+                const progressKey = `videoProgress-${planId}-${videoId}`;
+                const start = localStorage.getItem(progressKey) || 0;
                 window.location.href = `/VideoPlayer/${videoId}?planId=${planId}&start=${start}&highlightVideo=${videoId}`;
             });
         });
