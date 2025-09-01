@@ -6,6 +6,10 @@
 
 <div class="dashboard-container">
     <div class="welcome-section">
+        @if (!string.IsNullOrEmpty(Model.UserPictureUrl))
+        {
+            <img src="@Model.UserPictureUrl" alt="Profile Picture" class="profile-picture" />
+        }
         <h1>Hi @Model.UserName, ready to learn today?</h1>
         <button class="start-plan-button">Start a New Plan</button>
     </div>
@@ -60,6 +64,18 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-picture {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+        object-fit: cover;
+        border: 2px solid #007bff;
     }
 
     .welcome-section h1 {
@@ -79,9 +95,9 @@
         transition: background-color 0.3s ease;
     }
 
-    .start-plan-button:hover {
-        background-color: #0056b3;
-    }
+        .start-plan-button:hover {
+            background-color: #0056b3;
+        }
 
     .quote-box {
         text-align: center;

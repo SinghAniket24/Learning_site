@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Authentication
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Authentication.Cookies
+@using Microsoft.AspNetCore.Authentication.OpenIdConnect
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -36,13 +41,18 @@
                 transform: translateY(-2px);
             }
 
-        .btn-outline-danger {
+        .btn-outline-danger, .btn-outline-primary {
             border-width: 2px;
             font-weight: 500;
         }
 
             .btn-outline-danger:hover {
                 background-color: #dc3545;
+                color: #fff;
+            }
+
+            .btn-outline-primary:hover {
+                background-color: #0d6efd;
                 color: #fff;
             }
 
@@ -105,17 +115,30 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-page="/Settings">Settings</a>
                         </li>
-                        <!-- EduBot Nav Item -->
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-page="/ChatBot">EduBot</a>
                         </li>
                     </ul>
 
-                    <!-- Logout Button on Right -->
+                    <!-- Login / Logout Buttons -->
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="btn btn-outline-danger btn-sm" asp-area="" asp-page="/AuthPage">Logout</a>
-                        </li>
+                        @if (User.Identity?.IsAuthenticated ?? false)
+                        {
+                            <li class="nav-item me-2">
+                                <span class="nav-link text-dark">Hello, @User.Identity?.Name 👋</span>
+                            </li>
+                            <li class="nav-item">
+                                <form method="post" asp-page="/Account/Logout">
+                                    <button type="submit" class="btn btn-outline-danger btn-sm">Logout</button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="btn btn-outline-primary btn-sm" asp-page="/Account/Login">Login with Auth0</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
@@ -139,7 +162,6 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
     <script src="~/js/planStorage.js"></script>
-
 </body>
 
 </html>

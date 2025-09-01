@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Net.Http.Json;
+using System.Security.Claims;
 using System.Text.Json.Serialization;
 
 namespace Learning_site.Pages
@@ -27,7 +28,8 @@ namespace Learning_site.Pages
     public class dashboardModel : PageModel
     {
         // Public properties to hold data that the view will display
-        public string UserName { get; set; } = "Alex";
+        public string UserName { get; set; } = "Guest"; // default name if not logged in
+        public string UserPictureUrl { get; set; } // Auth0 profile picture
         public string MotivationalQuote { get; set; }
         public string QuoteAuthor { get; set; }
         public List<LearningPlan> CurrentPlans { get; set; }
@@ -43,6 +45,19 @@ namespace Learning_site.Pages
         // This method runs when the page is requested
         public async Task OnGetAsync()
         {
+            // Set the logged-in user's name and profile picture if available
+            if (User.Identity?.IsAuthenticated ?? false)
+            {
+                UserName = User.FindFirst("name")?.Value
+                           ?? User.FindFirst("nickname")?.Value
+                           ?? User.Identity.Name
+                           ?? "User";
+
+                // Profile picture
+                UserPictureUrl = User.FindFirst("picture")?.Value;
+            }
+
+
             // Fetch the quote from the API
             await GetRandomQuoteAsync();
 
