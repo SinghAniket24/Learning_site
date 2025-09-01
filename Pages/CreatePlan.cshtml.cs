@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Learning_site.Services;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Threading.Tasks;
 
@@ -49,9 +50,5 @@ namespace Learning_site.Pages
     }
 
     // Final storage after user clicks Save
-    public static class SavedPlansStore
-    {
-        public static List<(PlanData Info, List<DailyPlan> Plan)> SavedPlans
-            = new List<(PlanData, List<DailyPlan>)>();
-    }
+   
 }

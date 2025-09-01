@@ -29,53 +29,51 @@ namespace Learning_site.Pages
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (TempPlanStore.PlanInfo != null && TempPlanStore.TempPlan != null)
+            if (TempPlanStore.PlanInfo == null || TempPlanStore.TempPlan == null)
+                return BadRequest("No plan data to save.");
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized();
+
+            // 1️⃣ Insert plan metadata into Supabase
+            var planEntity = new PlanEntity
             {
-                // Auth0 user ID
-                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                if (string.IsNullOrEmpty(userId))
-                    return Unauthorized();
+                UserId = userId,
+                Title = TempPlanStore.PlanInfo.Title,
+                Description = TempPlanStore.PlanInfo.Description,
+                DailyTime = TempPlanStore.PlanInfo.DailyTime,
+                Days = TempPlanStore.PlanInfo.Days
+            };
 
-                // 1️⃣ Insert Plan metadata into Supabase
-                var planEntity = new PlanEntity
+            var insertResponse = await _supabase.Client
+                .From<PlanEntity>()
+                .Insert(planEntity);
+
+            var insertedPlan = insertResponse.Models.Count > 0 ? insertResponse.Models[0] : null;
+            if (insertedPlan == null)
+                return StatusCode(500, "Failed to save plan.");
+
+            // 2️⃣ Insert daily plans
+            foreach (var day in TempPlanStore.TempPlan)
+            {
+                var dailyEntity = new DailyPlanEntity
                 {
-                    UserId = userId,
-                    Title = TempPlanStore.PlanInfo.Title,
-                    Description = TempPlanStore.PlanInfo.Description,
-                    DailyTime = TempPlanStore.PlanInfo.DailyTime,
-                    Days = TempPlanStore.PlanInfo.Days
+                    PlanId = insertedPlan.Id,
+                    Day = day.Day,
+                    Videos = JsonSerializer.Serialize(day.Videos)
                 };
-
-                var insertResponse = await _supabase.Client
-                    .From<PlanEntity>()
-                    .Insert(planEntity);
-
-                // Supabase returns inserted rows in Models list
-                var insertedPlan = insertResponse.Models.Count > 0 ? insertResponse.Models[0] : null;
-                if (insertedPlan == null)
-                    return StatusCode(500, "Failed to save plan.");
-
-                // 2️⃣ Insert daily plans
-                foreach (var day in TempPlanStore.TempPlan)
-                {
-                    var dailyEntity = new DailyPlanEntity
-                    {
-                        PlanId = insertedPlan.Id,
-                        Day = day.Day,
-                        Videos = JsonSerializer.Serialize(day.Videos)
-                    };
-                    await _supabase.Client.From<DailyPlanEntity>().Insert(dailyEntity);
-                }
-
-                // 3️⃣ Keep in-memory copy
-                SavedPlansStore.SavedPlans.Add((TempPlanStore.PlanInfo, TempPlanStore.TempPlan));
-
-                // 4️⃣ Clear temporary storage
-                TempPlanStore.PlanInfo = null;
-                TempPlanStore.TempPlan = null;
-
-                TempData["SuccessMessage"] = "Plan saved successfully!";
+                await _supabase.Client.From<DailyPlanEntity>().Insert(dailyEntity);
             }
+
+            // 3️⃣ Clear temporary storage
+            TempPlanStore.PlanInfo = null;
+            TempPlanStore.TempPlan = null;
+
+            // 4️⃣ Reload user-specific plans from Supabase into SavedPlansStore
+            await SavedPlansStore.LoadUserPlansAsync(_supabase, userId);
+
+            TempData["SuccessMessage"] = "Plan saved successfully!";
 
             return RedirectToPage("/MyPlans");
         }
