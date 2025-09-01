@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.EntityFrameworkCore;
 using Learning_site.Data;
+using Learning_site.Services; // ✅ Add this for SupabaseService
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -46,7 +47,14 @@ builder.Services.AddAuthorization(options =>
     options.FallbackPolicy = options.DefaultPolicy;
 });
 
+// 🔹 Register SupabaseService
+builder.Services.AddSingleton<SupabaseService>();
+
 var app = builder.Build();
+
+// 🔹 Initialize Supabase on startup
+var supabaseService = app.Services.GetRequiredService<SupabaseService>();
+await supabaseService.InitializeAsync();
 
 // Configure HTTP request pipeline
 if (!app.Environment.IsDevelopment())
