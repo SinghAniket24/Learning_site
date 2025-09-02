@@ -5,20 +5,14 @@
 }
 
 <div class="container mt-4">
-    <div class="card shadow-lg">
-        <div class="card-header bg-primary text-white">
-            <h4 class="mb-0">🎓 EduBot — AI Learning Assistant</h4>
+    <div class="card shadow-lg border-0 rounded-4 d-flex flex-column" style="height: 85vh;">
+        <!-- Header -->
+        <div class="card-header bg-primary text-white rounded-top-4">
+            <h4 class="mb-0">🤖 EduBot — AI Learning Assistant</h4>
         </div>
 
         <!-- Chat Window -->
-        <div class="card-body position-relative" style="max-height: 550px; overflow-y: auto;" id="chatBox">
-            <!-- Loading spinner -->
-            <div id="loadingSpinner" class="text-center my-3" style="display:none;">
-                <div class="spinner-border text-primary" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-            </div>
-
+        <div class="card-body flex-grow-1 overflow-auto chat-background" id="chatBox" style="scroll-behavior: smooth;">
             @if (Model.Messages != null && Model.Messages.Count > 0)
             {
                 foreach (var msg in Model.Messages)
@@ -26,18 +20,28 @@
                     if (msg.Role == "user")
                     {
                         <div class="d-flex justify-content-end mb-3">
-                            <div class="p-3 rounded-3 bg-primary text-white shadow-sm" style="max-width: 75%;">
-                                <strong>You</strong><br />
-                                @msg.Text
+                            <div class="chat-bubble user-bubble shadow-sm">
+                                <p class="mb-0">@msg.Text</p>
                             </div>
                         </div>
+
+                        @if (msg == Model.Messages.Last())
+                        {
+                            <!-- Spinner appears just below user's last message -->
+                            <div id="loadingSpinner" class="d-flex justify-content-start mb-3" style="display:none;">
+                                <div class="chat-bubble bot-bubble shadow-sm text-center">
+                                    <div class="spinner-border text-primary" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        }
                     }
                     else
                     {
                         <div class="d-flex justify-content-start mb-3">
-                            <div class="p-3 rounded-3 bg-light border shadow-sm" style="max-width: 75%;">
-                                <strong>EduBot</strong><br />
-                                <div class="mt-2">@Html.Raw(msg.TextFormatted)</div>
+                            <div class="chat-bubble bot-bubble shadow-sm">
+                                <p class="mb-0">@Html.Raw(msg.TextFormatted)</p>
 
                                 @if (msg.YouTubeVideos?.Count > 0)
                                 {
@@ -48,7 +52,7 @@
                                             {
                                                 <div class="col-md-4 mb-2">
                                                     <a href="@vid.Url" target="_blank" class="text-decoration-none">
-                                                        <div class="card h-100">
+                                                        <div class="card h-100 rounded-3 shadow-sm">
                                                             <img src="@vid.Thumbnail" class="card-img-top" alt="@vid.Title" />
                                                             <div class="card-body p-2">
                                                                 <small>@vid.Title</small>
@@ -67,15 +71,17 @@
             }
             else
             {
-                <p class="text-muted">Start by asking me a study-related question! 📚</p>
+                <div class="text-muted text-center mt-5">
+                    <h6>💬 Start by asking me a study-related question!</h6>
+                </div>
             }
         </div>
 
-        <!-- Input -->
-        <div class="card-footer">
+        <!-- Input Area (Always at Bottom) -->
+        <div class="card-footer bg-white border-top rounded-bottom-4">
             <form method="post" class="d-flex" id="chatForm">
-                <input type="text" name="Prompt" class="form-control me-2" placeholder="Type your question..." required />
-                <button type="submit" class="btn btn-success">Ask</button>
+                <input type="text" name="Prompt" class="form-control me-2 rounded-pill px-3" placeholder="Type your question..." required />
+                <button type="submit" class="btn btn-success rounded-pill px-4">Send</button>
             </form>
         </div>
     </div>
@@ -88,11 +94,69 @@
         var form = document.getElementById("chatForm");
 
         // Scroll chat to bottom
-        if (chatBox) chatBox.scrollTop = chatBox.scrollHeight;
+        function scrollToBottom() {
+            if (chatBox) chatBox.scrollTop = chatBox.scrollHeight;
+        }
+        scrollToBottom();
 
-        // Show spinner on submit
+        // Show spinner after last user message
         form.addEventListener("submit", function () {
-            spinner.style.display = "block";
+            if (spinner) spinner.style.display = "flex";
+            setTimeout(scrollToBottom, 200);
         });
     </script>
 }
+
+<style>
+    /* Chat bubbles */
+    .chat-bubble {
+        max-width: 75%;
+        padding: 0.8rem 1rem;
+        border-radius: 1.5rem;
+        word-wrap: break-word;
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .user-bubble {
+        background-color: #007bff;
+        color: white;
+        border-bottom-right-radius: 0.4rem;
+    }
+
+    .bot-bubble {
+        background-color: #f8f9fa;
+        color: #212529;
+        border-bottom-left-radius: 0.4rem;
+    }
+
+    /* Bot background feel */
+    .chat-background {
+        background: url('/images/bot-bg.png') center center no-repeat, linear-gradient(180deg, #eef2f7, #ffffff);
+        background-size: 200px auto, cover;
+    }
+
+    /* Scrollbar styling */
+    #chatBox::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    #chatBox::-webkit-scrollbar-thumb {
+        background: #007bff;
+        border-radius: 4px;
+    }
+
+    /* Input field glow */
+    input:focus {
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+        border-color: #007bff;
+    }
+
+
+
+    .card-body {
+        max-height: 65vh;
+    }
+
+    }
+</style>

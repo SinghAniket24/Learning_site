@@ -1,0 +1,753 @@
+[
+    {
+        "Title": "React tutorial for beginners",
+        "Channel": "Bro Code",
+        "TotalDays": 3,
+        "DailyPlan": [
+            {
+                "Day": 1,
+                "Videos": [
+                    {
+                        "Title": "React tutorial for beginners \u269b\ufe0f",
+                        "Description": "00:00:00 introduction\n00:01:41 installation\n00:02:48 new project\n00:05:00 how to restart dev server\n00:05:36 project folder explanation\n00:08:13 App component\n00:09:14 new Header component\n00:13:30 new Footer component\n00:16:32 new Food component\n00:19:22 conclusion\n\nNode: https://nodejs.org/en\nVSCode: https://code.visualstudio.com/\nReact docs: https://react.dev/",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/hn80mWvP-9g/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=hn80mWvP-9g",
+                        "Duration": "00:20:27",
+                        "RawDuration": "PT20M27S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "React CARD components \ud83c\udccf",
+                        "Description": "Card components = typically used to create a reusable and structured UI element for displaying content.",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/yYiwxYqQ9vg/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=yYiwxYqQ9vg",
+                        "Duration": "00:11:59",
+                        "RawDuration": "PT11M59S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "React js how to add CSS styles \ud83c\udfa8",
+                        "Description": "00:00:00 intro\n00:00:20 Button component\n00:01:32 external CSS\n00:03:25 modular CSS\n00:05:51 inline CSS\n00:07:30 conclusion\n\n// HOW TO STYLE REACT COMPONENTS WITH CSS\n// (not including external frameworks or preprocessors)\n\n// 1. EXTERNAL\n// 2. MODULES\n// 3. INLINE\n\n#reactjs #javascript #tutorial",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/r3SMd0YTSZs/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=r3SMd0YTSZs",
+                        "Duration": "00:08:16",
+                        "RawDuration": "PT8M16S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "PROPS in React explained \ud83d\udce7",
+                        "Description": "#React #JavaScript #tutorial \n\n00:00:00 introduction\n00:00:56 props \n00:04:49 index.css \n00:06:28 multiple components\n00:07:49 propType\n00:10:18 defaultProps \n00:11:47 conclusion\n\n// props =  read-only properties that are shared between components.\n//                A parent component can send data to a child component.\n//                key=value\n\n// propTypes = a mechanism that ensures that the passed value\n//                        is of the correct datatype.\n//                       age: PropTypes.number\n\n// defaultProps = default values for props in case they are not\n//                            passed from the parent component\n//                            name: \"Guest\"",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/uvEAvxWvwOs/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=uvEAvxWvwOs",
+                        "Duration": "00:12:09",
+                        "RawDuration": "PT12M9S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "How to CONDITIONAL RENDER in React \u2753",
+                        "Description": "Conditional rendering = allows you to control what gets rendered in your application based on certain conditions. (ex. show, hide, or change components)",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/XvURBpFxdGw/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=XvURBpFxdGw",
+                        "Duration": "00:10:15",
+                        "RawDuration": "PT10M15S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "How to render LISTS in React \ud83d\udcc3",
+                        "Description": "00:00:00 List component setup\n00:00:36 array of strings\n00:03:33 array of objects\n00:05:21 key.id\n00:07:02 sort objects\n00:09:55 filter objects\n00:12:18 resusable List component\n00:16:28 CSS styling\n00:19:43 conditional rendering\n00:21:44 defaultProps\n00:23:19 propTypes",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/fkl1Kn_QWCI/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=fkl1Kn_QWCI",
+                        "Duration": "00:26:40",
+                        "RawDuration": "PT26M40S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Learn React Click Events \ud83d\udc46",
+                        "Description": "00:00:00 intro\n00:00:15 Button component\n00:01:17 onClick attribute\n00:02:18 onClick with parameters \n00:03:49 onClick + conditions\n00:05:50 events\n00:08:02 onDoubleClick\n00:08:28 ProfilePicture component\n00:11:06 Hide an image on click\n00:11:58 conclusion",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/KpiiKuqNlYw/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=KpiiKuqNlYw",
+                        "Duration": "00:12:21",
+                        "RawDuration": "PT12M21S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "React useState() hook introduction \ud83c\udfa3",
+                        "Description": "#reactjs #course #tutorial \n\n00:00:00 introduction\n00:01:10 setup\n00:01:57 import useState\n00:02:25 update a string\n00:05:38 initial state\n00:05:58 increment a number\n00:07:29 toggle a boolean\n00:09:24 Counter program\n00:13:14 Counter CSS\n00:16:03 conclusion\n\n// React hook = Special function that allows functional components\n//                         to use React features without writing class components \n//                         (useState, useEffect, useContext, useReducer, and more...)                \n\n// useState() = A React hook that allows the creation of a stateful variable\n//                       AND a setter function to update its value in the Virtual DOM.\n//                       [name, setName]",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/SpDG283b4bw/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=SpDG283b4bw",
+                        "Duration": "00:16:33",
+                        "RawDuration": "PT16M33S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Learn the React onChange event handler \ud83d\udea6",
+                        "Description": "#Reactjs #tutorial #course \n\n// onChange = Event handler used primarily with form elements.\n//                       Triggers a function every time the value of the input changes.\n\n00:00:00 introduction\n00:00:35 input text\n00:02:56 input number\n00:05:00 text area\n00:07:18 select options\n00:10:22 radio buttons\n00:14:07 conclusion",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/JhIbXor84Wc/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=JhIbXor84Wc",
+                        "Duration": "00:01:20",
+                        "RawDuration": "PT14M40S",
+                        "StartTime": 0
+                    }
+                ]
+            },
+            {
+                "Day": 2,
+                "Videos": [
+                    {
+                        "Title": "Learn the React onChange event handler \ud83d\udea6",
+                        "Description": "#Reactjs #tutorial #course \n\n// onChange = Event handler used primarily with form elements.\n//                       Triggers a function every time the value of the input changes.\n\n00:00:00 introduction\n00:00:35 input text\n00:02:56 input number\n00:05:00 text area\n00:07:18 select options\n00:10:22 radio buttons\n00:14:07 conclusion",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/JhIbXor84Wc/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=JhIbXor84Wc",
+                        "Duration": "00:13:19",
+                        "RawDuration": "PT14M40S",
+                        "StartTime": 80
+                    },
+                    {
+                        "Title": "Build this color picker app with React! \ud83d\udd8c",
+                        "Description": "#reactjs #tutorial #course \n\nThis program serves as an exercise to practice using the useState hook and the onChange event handler.",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/3hCN3dLHV24/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=3hCN3dLHV24",
+                        "Duration": "00:10:16",
+                        "RawDuration": "PT10M16S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "What are React updater functions? \ud83d\udd04",
+                        "Description": "#reactjs #tutorial #course\n\n// updater function = A function passed as an argument to setState() usually\n//                                  Allow for safe updates based on the previous state\n//                                  Used with multiple state updates and asynchronous functions\n//                                  Good practice to use updater functions",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/nbAaUpNDhRY/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=nbAaUpNDhRY",
+                        "Duration": "00:07:15",
+                        "RawDuration": "PT7M15S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "React JS how to update OBJECTS in state \ud83d\ude97",
+                        "Description": "#reactjs #tutorial #course \n\n\"You can put objects and arrays into state. In React, state is considered read-only, so you should replace it rather than mutate your existing objects. For example, if you have a form object in state, don\u2019t mutate it:\"\n\n Treat any JavaScript object that you put into state as read-only",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/YxQlt3n1ZPA/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=YxQlt3n1ZPA",
+                        "Duration": "00:09:10",
+                        "RawDuration": "PT9M10S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "React JS how to update ARRAYS in state \ud83c\udf4e",
+                        "Description": "#reactjs #tutorial #course \n\n\"You can put objects and arrays into state. In React, state is considered read-only, so you should replace it rather than mutate your existing objects. For example, if you have a form object in state, don\u2019t mutate it:\"",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/A9Bz2YxhAQk/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=A9Bz2YxhAQk",
+                        "Duration": "00:09:01",
+                        "RawDuration": "PT9M1S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "React JS update ARRAY of OBJECTS in state \ud83d\ude98",
+                        "Description": "#reactjs #tutorial #course \n\n\"You can put objects and arrays into state. In React, state is considered read-only, so you should replace it rather than mutate your existing objects. For example, if you have a form object in state, don\u2019t mutate it:\"",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/Y62mbztjmus/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=Y62mbztjmus",
+                        "Duration": "00:12:48",
+                        "RawDuration": "PT12M48S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Build this to-do-list app with React! \u261d",
+                        "Description": "#reactjs #utorial #course \n\nThis is a project you can write using React JS with only using the useState hook. Impress your friends or potential employer!\n\n00:00:00 setup\n00:03:12 HTML\n00:09:26 CSS\n00:16:39 JS functions",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/9wiWzu_tRB0/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=9wiWzu_tRB0",
+                        "Duration": "00:22:35",
+                        "RawDuration": "PT22M35S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "React useEffect() hook introduction \ud83c\udf1f",
+                        "Description": "#react #tutorial #course \n\n00:00:00 introduction\n00:02:00 setup\n00:03:25 no dependencies\n00:04:50 empty dependency array\n00:05:51 1 dependency\n00:07:25 multiple dependencies\n00:09:57 why use useEffect()?\n00:11:33 example 2\n00:15:51 return\n00:17:31 multiple useEffect() hooks\n00:18:52 conclusion\n\n// useEffect()\n// React Hook that tells React to DO THIS CODE WHEN:\n// (pick one) \n// This component re-renders\n// This component mounts\n// The state of a value changes\n\n// useEffect(function, [dependencies])\n\n// USES\n// #1 Event Listeners\n// #2 DOM manipulation\n// #3 Subscriptions (real-time updates)\n// #4 Fetching Data from an API\n// #5 Clean up when a component unmounts",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/L-1sP3Ljhsg/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=L-1sP3Ljhsg",
+                        "Duration": "00:19:52",
+                        "RawDuration": "PT19M52S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Build this digital clock with React! \ud83d\udd52",
+                        "Description": "#reactjs #tutorial #course \n\nThis is a beginner's project using only useState() and useEffect() to create a clock that you can add to your portfolio.\n\n00:00:00 setup\n00:02:23 CSS\n00:07:22 declarations\n00:07:50 useEffect()\n00:10:06 formatTime()\n00:13:25 padZero()\n00:15:28 conclusion",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/AiQ-V_0qvRI/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=AiQ-V_0qvRI",
+                        "Duration": "00:15:43",
+                        "RawDuration": "PT16M",
+                        "StartTime": 0
+                    }
+                ]
+            },
+            {
+                "Day": 3,
+                "Videos": [
+                    {
+                        "Title": "Build this digital clock with React! \ud83d\udd52",
+                        "Description": "#reactjs #tutorial #course \n\nThis is a beginner's project using only useState() and useEffect() to create a clock that you can add to your portfolio.\n\n00:00:00 setup\n00:02:23 CSS\n00:07:22 declarations\n00:07:50 useEffect()\n00:10:06 formatTime()\n00:13:25 padZero()\n00:15:28 conclusion",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/AiQ-V_0qvRI/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=AiQ-V_0qvRI",
+                        "Duration": "00:00:16",
+                        "RawDuration": "PT16M",
+                        "StartTime": 943
+                    },
+                    {
+                        "Title": "React useContext() hook introduction \ud83e\uddd7\u200d\u2642\ufe0f",
+                        "Description": "#reactjs #tutorial #course \n\n00:00:00 intro\n00:00:13 setup\n00:04:39 props\n00:06:01 prop drilling\n00:06:17 useContext\n00:06:27 Provider Component\n00:08:28 Consumer Components\n00:10:11 multiple consumer components\n00:11:10 conclusion\n\n// useContext() = React Hook that allows you to share values\n//                            between multiple levels of components\n//                            without passing props through each level",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/FpNfvbNYPsg/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=FpNfvbNYPsg",
+                        "Duration": "00:11:37",
+                        "RawDuration": "PT11M37S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "React useRef() hook introduction \ud83d\uddf3\ufe0f",
+                        "Description": "#reactjs #tutorial #course \n\n00:00:00 introduction\n00:01:01 setup\n00:03:02 useRef()\n00:05:11 html ref attribute\n00:08:06 multiple useRef()\n00:10:10 useState() vs useRef()\n00:10:28 conclusion\n\n// useState() = Re-renders the component when the state value changes\n// useRef()   = Does not cause re-renders when its value changes.\n//              1. Accessing/Interacting with DOM elements\n//              2. Handling Focus, Animations, and Transitions\n//              3. Managing Timers and Intervals",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/AltU-XcGvuo/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=AltU-XcGvuo",
+                        "Duration": "00:11:18",
+                        "RawDuration": "PT11M18S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Build this stopwatch with React! \u23f1",
+                        "Description": "#reactjs #tutorial #course\n\nThis is a beginner's React project that uses only useState, useEffect, and useRef.\n\n00:00:00 imports/exports\n00:01:17 useState + useRef\n00:02:48 function declarations \n00:03:39 HTML \n00:05:45 CSS\n00:11:45 functions\n00:14:06 useEffect()\n00:16:10 formatTime()\n00:19:19 conclusion",
+                        "ChannelName": "Bro Code",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/jPo0mIcNZfM/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=jPo0mIcNZfM",
+                        "Duration": "00:20:01",
+                        "RawDuration": "PT20M1S",
+                        "StartTime": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Title": "Master Nodejs",
+        "Channel": "Piyush Garg",
+        "TotalDays": 4,
+        "DailyPlan": [
+            {
+                "Day": 1,
+                "Videos": [
+                    {
+                        "Title": "What is NodeJS?",
+                        "Description": "[Prerequisite] Ultimate Javascript Tutorials: https://www.youtube.com/playlist?list=PLinedj3B30sDFRdgPYvjnBs2JsDdHPIMv\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\nQuick Links\nNode.JS Website: https://nodejs.org/en/\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is NodeJS?\nHow does NodeJS Work?\nIntroduction to Node.js: What is it and why use it?\nNode.js 101: A Beginner's Guide\nNode.js in Action: Building Server-Side Applications with JavaScript\nMastering Node.js: Tips and Tricks for Building Scalable Applications\n\nTags\n#nodejs #javascript #developer #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/ohIAiuHMKMI/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=ohIAiuHMKMI",
+                        "Duration": "00:07:45",
+                        "RawDuration": "PT7M45S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Node JS Installation",
+                        "Description": "Hey Everyone, In this video, we will install and set up NodeJS on our machine. We will also understand what versioning means and how it's done by the NodeJS team.\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nQuick Links\nNode.JS Website: https://nodejs.org/en/\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is NodeJS?\nHow does NodeJS Work?\nHow to install NodeJS?\nIntroduction to Node.js: What is it and why use it?\nNode.js 101: A Beginner's Guide\nNode.js in Action: Building Server-Side Applications with JavaScript\nMastering Node.js: Tips and Tricks for Building Scalable Applications\n\nTags\n#nodejs #javascript #developer #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/N6PjgN9licA/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=N6PjgN9licA",
+                        "Duration": "00:06:02",
+                        "RawDuration": "PT6M2S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Hello World NodeJS",
+                        "Description": "Hey Everyone, In this video, we will look at hello world code in NodeJS and how to initialize a project using NPM CLI. \n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nQuick Links\nNode.JS Website: https://nodejs.org/en/\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is NodeJS?\nHow does NodeJS Work?\nHow to install NodeJS?\nIntroduction to Node.js: What is it and why use it?\nNode.js 101: A Beginner's Guide\nNode.js in Action: Building Server-Side Applications with JavaScript\nMastering Node.js: Tips and Tricks for Building Scalable Applications\n\nTags\n#nodejs #javascript #developer #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/XhCs5cTYW_8/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=XhCs5cTYW_8",
+                        "Duration": "00:09:45",
+                        "RawDuration": "PT9M45S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Modules in NodeJS",
+                        "Description": "Hey Everyone, In this video, we will look at modules and require function in NodeJS. We'll see how we can create our own modules and export them.\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nQuick Links\nNode.JS Website: https://nodejs.org/en/\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is NodeJS?\nHow does NodeJS Work?\nModules in NodeJS\nRequire Function in NodeJS\nExports in NodeJS\nNodeJS in Hindi\n\nTags\n#nodejs #javascript #developer #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/FSRo41TaHFU/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=FSRo41TaHFU",
+                        "Duration": "00:15:25",
+                        "RawDuration": "PT15M25S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "File Handling in NodeJS",
+                        "Description": "Hey Everyone, In this video, we will look at file handling in NodeJS. We'll see how to create, write, read and delete files using FS module in NodeJS.\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nQuick Links\nNode.JS Website: https://nodejs.org/en/\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is NodeJS?\nHow does NodeJS Work?\nFile Handing NodeJS\nFS Module NodeJS\nModules in NodeJS\nRequire Function in NodeJS\nExports in NodeJS\nNodeJS in Hindi\n\nTags\n#nodejs #javascript #developer #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/YazJFb_i4A0/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=YazJFb_i4A0",
+                        "Duration": "00:18:17",
+                        "RawDuration": "PT18M17S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "How NodeJS Works?",
+                        "Description": "Hey Everyone, In this video, we will look at the working of nodejs. We'll see the event queue, the event loop, and how threads work in nodejs.\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nHow NodeJS Works?\nWhat is an Event Loop in NodeJS?\nNodejs Architecture\nThread Pool in NodeJS\nEvent Queue in NodeJS\n\nTags\n#nodejs #javascript #developer #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/y0aTs56DJWk/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=y0aTs56DJWk",
+                        "Duration": "00:14:23",
+                        "RawDuration": "PT14M23S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Building HTTP Server in NodeJS",
+                        "Description": "Hey Everyone, In this video, we will create our own HTTP web server using NodeJS and HTTP built-in module in NodeJS\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nQuick Links\nNode.JS Website: https://nodejs.org/en/\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is NodeJS?\nHTTP Server NodeJS\nCreating Web Server in NodeJS\nHTTP Module in NodeJS\nNodeJS Tutorial in Hindi\n\nTags\n#nodejs #javascript #developer #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/ZQsrcayZcSk/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=ZQsrcayZcSk",
+                        "Duration": "00:17:56",
+                        "RawDuration": "PT17M56S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Handling URL's in NodeJS",
+                        "Description": "Hey Everyone, In this video, we will understand what is URL and how to handle URL's in NodeJS Server.\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nQuick Links\nNode.JS Website: https://nodejs.org/en/\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is NodeJS?\nHTTP Server NodeJS\nCreating Web Server in NodeJS\nHTTP Module in NodeJS\nNodeJS Tutorial in Hindi\nURL in NodeJS\nQuery Parameters in NodeJS\nPaths in NodeJS\n\nTags\n#nodejs #javascript #developer #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/Nt-AsZh5woE/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=Nt-AsZh5woE",
+                        "Duration": "00:20:37",
+                        "RawDuration": "PT20M37S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "HTTP METHODS",
+                        "Description": "Hey Everyone, In this video, we will understand all the HTTP Methods i.e GET, POST, PUT, PATCH, and DELETE in this video.\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nQuick Links\nNode.JS Website: https://nodejs.org/en/\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is NodeJS?\nHTTP Server NodeJS\nCreating Web Server in NodeJS\nHTTP METHODS\nHTTP GET\nHTTP POST\nHTTP PUT\nHTTP PATCH\nHTTP DELETE\n\nTags\n#nodejs #javascript #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/kREAjKyPbSI/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=kREAjKyPbSI",
+                        "Duration": "00:09:49",
+                        "RawDuration": "PT13M38S",
+                        "StartTime": 0
+                    }
+                ]
+            },
+            {
+                "Day": 2,
+                "Videos": [
+                    {
+                        "Title": "HTTP METHODS",
+                        "Description": "Hey Everyone, In this video, we will understand all the HTTP Methods i.e GET, POST, PUT, PATCH, and DELETE in this video.\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nQuick Links\nNode.JS Website: https://nodejs.org/en/\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is NodeJS?\nHTTP Server NodeJS\nCreating Web Server in NodeJS\nHTTP METHODS\nHTTP GET\nHTTP POST\nHTTP PUT\nHTTP PATCH\nHTTP DELETE\n\nTags\n#nodejs #javascript #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/kREAjKyPbSI/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=kREAjKyPbSI",
+                        "Duration": "00:03:48",
+                        "RawDuration": "PT13M38S",
+                        "StartTime": 589
+                    },
+                    {
+                        "Title": "Getting Started with Express and NodeJS",
+                        "Description": "Hey Everyone, In this video, we will understand what is Express JS and what problem ExpressJS is trying to solve.\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is NodeJS?\nHTTP Server NodeJS\nWhat is ExpressJS?\nHow to use Express in NodeJS\nExpress NodeJS\n\nTags\n#nodejs #javascript #expressjs #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/N2-FyBBxOZA/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=N2-FyBBxOZA",
+                        "Duration": "00:11:28",
+                        "RawDuration": "PT11M28S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "How Versioning Works in NodeJS?",
+                        "Description": "Hey Everyone, In this video, we will understand version patterns used by Nodejs and Modules of NodeJS. We are going to understand what is breaking, minor and patch fixes.\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is NodeJS?\nHow Does the Version System Work?\nWhat is Versioning?\nHow NodeJS handles versioning?\nVersion System in Package.json\n\nTags\n#nodejs #javascript #expressjs #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/ORmB_ABimjM/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=ORmB_ABimjM",
+                        "Duration": "00:21:10",
+                        "RawDuration": "PT21M10S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "What is REST API?",
+                        "Description": "Hey Everyone, In this video, we will understand what is meant by REST API. What are the best practices while designing a REST API?\n\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is NodeJS?\nWhat is REST API?\nHow to design restful API?\nREST API Best Practices \n\nTags\n#nodejs #javascript #expressjs #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/cJAyEOZQUQY/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=cJAyEOZQUQY",
+                        "Duration": "00:15:41",
+                        "RawDuration": "PT15M41S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Building REST API's using Node and Express.js",
+                        "Description": "Hey Everyone, In this video, we will build our own REST API using Node and Express frameworks.\n\nFake Data API: https://www.mockaroo.com/\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is NodeJS?\nWhat is REST API?\nHow to design restful API?\nREST API Best Practices \n\nTags\n#nodejs #javascript #expressjs #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/uNCrMvkPUAE/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=uNCrMvkPUAE",
+                        "Duration": "00:20:27",
+                        "RawDuration": "PT20M27S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Introduction to POSTMAN for REST API's",
+                        "Description": "Hey Everyone, In this video, we will build our own REST API using Node and Express frameworks.\n\nFake Data API: https://www.mockaroo.com/\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is NodeJS?\nWhat is REST API?\nHow to design restful API?\nREST API Best Practices \n\nTags\n#nodejs #javascript #expressjs #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/7OzNVIxPLH0/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=7OzNVIxPLH0",
+                        "Duration": "00:14:49",
+                        "RawDuration": "PT14M49S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Express Middleware",
+                        "Description": "Hey Everyone, In this video, we will understand and code our own Middleware functions in express\n\nExpress: Documentation: https://expressjs.com/en/guide/using-middleware.html\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is NodeJS?\nWhat is Express Middleware?\nHow to use Express Middleware Functions?\nHow Express Middleware works\n\nTags\n#nodejs #javascript #expressjs #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/n2c0mf1sza4/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=n2c0mf1sza4",
+                        "Duration": "00:19:50",
+                        "RawDuration": "PT19M50S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "What are HTTP Headers in API",
+                        "Description": "Hey Everyone, In this video, we will understand what are headers in API and how we can implement our own custom headers in API using express and NodeJS.\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is NodeJS?\nWhat is Express Middleware?\nHow to use Express Middleware Functions?\nHow Express Middleware works\n\nTags\n#nodejs #javascript #expressjs #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/mhg3Vwsb88M/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=mhg3Vwsb88M",
+                        "Duration": "00:12:46",
+                        "RawDuration": "PT17M38S",
+                        "StartTime": 0
+                    }
+                ]
+            },
+            {
+                "Day": 3,
+                "Videos": [
+                    {
+                        "Title": "What are HTTP Headers in API",
+                        "Description": "Hey Everyone, In this video, we will understand what are headers in API and how we can implement our own custom headers in API using express and NodeJS.\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is NodeJS?\nWhat is Express Middleware?\nHow to use Express Middleware Functions?\nHow Express Middleware works\n\nTags\n#nodejs #javascript #expressjs #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/mhg3Vwsb88M/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=mhg3Vwsb88M",
+                        "Duration": "00:04:51",
+                        "RawDuration": "PT17M38S",
+                        "StartTime": 766
+                    },
+                    {
+                        "Title": "HTTP Status Codes",
+                        "Description": "Hey Everyone, In this video, we will understand HTTP Status Codes and How they are helpful.\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nHTTP Status Codes\nWhat are HTTP Status Codes\nHTTP Status codes in Express\nHTTP Status Codes Nodejs\n\nTags\n#nodejs #javascript #expressjs #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/fLGw2GK884s/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=fLGw2GK884s",
+                        "Duration": "00:15:36",
+                        "RawDuration": "PT15M36S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Getting Started with MongoDB",
+                        "Description": "Hey Everyone, In this video, we are going to start with MongoDB. We'll take a look at what is MongoDB and how we can install and set up MongoDB on our machine. \n\nDownload MongoDB: https://www.mongodb.com/docs/manual/administration/install-community/\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is MongoDB?\nHow to Install MongoDB?\nGetting Started with MongoDB\n\nTags\n#nodejs #javascript #expressjs #mongodb #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/oH0VoYiA8_s/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=oH0VoYiA8_s",
+                        "Duration": "00:08:01",
+                        "RawDuration": "PT8M1S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Connecting NodeJS with MongoDB | Mongoose + Express",
+                        "Description": "Hey Everyone, In this video, we are going to connect our Node application to MongoDB using mongoose.\n\nDownload MongoDB: https://www.mongodb.com/docs/manual/administration/install-community/\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat is MongoDB?\nHow to Install MongoDB?\nGetting Started with MongoDB\nMongoose and MongoDB\nHow to connect nodejs to MongoDB\nwhat is mongoose\n\nTags\n#nodejs #javascript #expressjs #mongodb #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/xrglM8U0Zv8/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=xrglM8U0Zv8",
+                        "Duration": "00:19:18",
+                        "RawDuration": "PT19M18S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Model View Controller in NodeJS | MVC Pattern",
+                        "Description": "Hey Everyone, In this video, we are going to understand and refactor our code according to MVC Pattern. MVC Stands for Model View Controller\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nMVC Pattern\nWhat is Model View Controller\nMVC Pattern in NodeJS\n\nTags\n#nodejs #javascript #expressjs #mongodb #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/JLtXoru-ipo/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=JLtXoru-ipo",
+                        "Duration": "00:23:01",
+                        "RawDuration": "PT23M1S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Create a Custom URL Shortener using Node.JS and MongoDB",
+                        "Description": "\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\n\u25ba Download Source Code: https://www.piyushgarg.dev/files/code/short-url-node.zip\n\nLearn how to build your own URL shortener service using Node.js, Express, and MongoDB. In this video tutorial, we'll show you step-by-step how to set up the server, connect to a MongoDB database, and implement the functionality to shorten and redirect URLs. Perfect for beginners and experienced developers alike!\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nCreate Your Own URL Shortener Service with Node.js, Express, and MongoDB\nMake a URL Shortener App in Node.js and Express - Beginner's Guide\nMaking a URL Shortening Application using Node.js, Express and MongoDB\n\nTags\n#nodejs #javascript #expressjs #mongodb #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/4WvX9dBjiJo/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=4WvX9dBjiJo",
+                        "Duration": "00:23:10",
+                        "RawDuration": "PT23M10S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Server Side Rendering with EJS and Node.JS",
+                        "Description": "\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nIn this video, we take a deep dive into the world of server-side rendering with EJS and Node.js. We'll explore how to set up EJS as a templating engine, and how to use it to create dynamic views for your web application. \n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nCreating Dynamic Templates with EJS in Node.js\nEJS: The Easy Way to Build Dynamic Views in Node.js\nMastering EJS: A Step-by-Step Guide for Node.js Developers\nBuilding Dynamic Websites with EJS and Node.js\n\nTags\n#nodejs #javascript #expressjs #mongodb #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/yy9cbu_e3Xg/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=yy9cbu_e3Xg",
+                        "Duration": "00:25:24",
+                        "RawDuration": "PT25M24S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Building Node.js Authentication from Scratch",
+                        "Description": "\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\n\u25ba  Source Code: https://github.com/piyushgargdev-01/short-url-nodejs\n\nIn this tutorial video, you will learn how to create a secure and robust authentication system for your Node.js application from scratch. We will cover the basics of user authentication and authorization and show you how to implement login and registration functionality using Node.js and MongoDB.\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nSecuring Your Node.js App with User Authentication\nAuthentication 101: Implementing Login in Node.js\nAdding User Login to Your Node.js Application\nAuthentication in NodeJS\n\nTags\n#nodejs #authentication #javascript #expressjs #mongodb #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/OWeruyqhiTo/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=OWeruyqhiTo",
+                        "Duration": "00:00:38",
+                        "RawDuration": "PT39M9S",
+                        "StartTime": 0
+                    }
+                ]
+            },
+            {
+                "Day": 4,
+                "Videos": [
+                    {
+                        "Title": "Building Node.js Authentication from Scratch",
+                        "Description": "\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\n\u25ba  Source Code: https://github.com/piyushgargdev-01/short-url-nodejs\n\nIn this tutorial video, you will learn how to create a secure and robust authentication system for your Node.js application from scratch. We will cover the basics of user authentication and authorization and show you how to implement login and registration functionality using Node.js and MongoDB.\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nSecuring Your Node.js App with User Authentication\nAuthentication 101: Implementing Login in Node.js\nAdding User Login to Your Node.js Application\nAuthentication in NodeJS\n\nTags\n#nodejs #authentication #javascript #expressjs #mongodb #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/OWeruyqhiTo/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=OWeruyqhiTo",
+                        "Duration": "00:38:30",
+                        "RawDuration": "PT39M9S",
+                        "StartTime": 38
+                    },
+                    {
+                        "Title": "JWT Authentication in NodeJS",
+                        "Description": "\u25ba Watch this before: https://youtu.be/OWeruyqhiTo\n\n\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nIn this tutorial video, you will learn how to create a secure and robust authentication system for your Node.js application using JSON WEB TOKENS.\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nSecuring Your Node.js App with User Authentication\nAuthentication 101: Implementing Login in Node.js\nAdding User Login to Your Node.js Application\nAuthentication in NodeJS\n\nTags\n#nodejs #authentication #javascript #expressjs #mongodb #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/mGrVmEex6_g/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=mGrVmEex6_g",
+                        "Duration": "00:14:30",
+                        "RawDuration": "PT14M30S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "What are Cookies in NodeJS?",
+                        "Description": "\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nIn this tutorial video, you will see what are cookies in browsers and two main authentication patterns i.e via Cookies and Headers\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nWhat are Cookies in the Browser?\nCookies in Nodejs?\nAuthorization Headers \nCookie-based Authentication\n\nTags\n#nodejs #authentication #javascript #expressjs #mongodb #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/kMErso06vHo/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=kMErso06vHo",
+                        "Duration": "00:30:35",
+                        "RawDuration": "PT30M35S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Authorization in NodeJS",
+                        "Description": "\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nIn this tutorial video, you will learn how to implement authorization in NodeJS\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\nNode.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows developers to run JavaScript on the server side, creating server-side applications with JavaScript.\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nAuthorization in Nodejs\nJWT Authentication in NodeJS\nAuthorization using JWT in NodeJS\nAdding User Login to Your Node.js Application\nAuthentication in NodeJS\n\nTags\n#nodejs #authentication #javascript #expressjs #mongodb #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/1uxWtBFOrkk/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=1uxWtBFOrkk",
+                        "Duration": "00:19:33",
+                        "RawDuration": "PT19M33S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Creating Discord Bot in NodeJS",
+                        "Description": "\u25ba Master NodeJS Playlist: https://www.youtube.com/playlist?list=PLinedj3B30sDby4Al-i13hQJGQoRQDfPo\n\nIn this tutorial video, you will learn how to create a simple Discord Bot in NodeJS\n\n\u25ba Complete Full Stack Web Developer RoadMap 2023: https://youtu.be/qHy4UY58_Uc\n\n\u25ba My Website: https://www.piyushgarg.dev\n\nMy Gears\n\u25ba My Girlfriend: https://amzn.to/3WD6FRp\n\u25ba Apple MacBook Laptop: https://amzn.to/3WBJgQn\n\u25ba Anker USB Hub: https://amzn.to/3GhZSr0\n\u25ba Blue Yeti Microphone: https://amzn.to/3YKZ9FT\n\u25ba External 27\u201d Monitor: https://amzn.to/3Vp3xaO\n\u25ba Logitech MK295 Wireless Keyboard and Mouse: https://amzn.to/3DuL1bB\n\u25ba Seagate Expansion 1TB External HDD: https://amzn.to/3QMm5Q8\n\u25ba Tripod: https://amzn.to/3S4OwK4\n\u25ba Ring Light: https://amzn.to/3YLf8DR\n\nDisclaimer: All the links above are affiliate links.\n\nSocial Links\n\u25ba Twitter - https://twitter.com/piyushgarg_dev\n\u25ba LinkedIn - https://www.linkedin.com/in/piyushgarg195\n\nVideo Titles\nDiscord Bot in NodeJS\nNodeJS Discord Bot\nDiscord.js Node\n\nTags\n#nodejs #authentication #javascript #expressjs #mongodb #mernstack  #developer #api #https  #server #javascriptinhindi  #webdevelopment #webapp #realtimeapp #serverside #nonblockingio #tech",
+                        "ChannelName": "Piyush Garg",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/5UOMuTWrh6Q/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=5UOMuTWrh6Q",
+                        "Duration": "00:16:51",
+                        "RawDuration": "PT21M45S",
+                        "StartTime": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Title": "Data Analytics",
+        "Channel": "Simplilearn",
+        "TotalDays": 5,
+        "DailyPlan": [
+            {
+                "Day": 1,
+                "Videos": [
+                    {
+                        "Title": "Data Analytics For Beginners | Introduction To Data Analytics | Data Analytics Using R | Simplilearn",
+                        "Description": "\"\ufe0f\ud83d\udd25IBM - Data Analyst - https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=zwasdVPPFFw&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25IITG - Professional Certificate Program in Data Analytics & Generative AI - https://www.simplilearn.com/iitg-generative-ai-data-analytics-program?utm_campaign=zwasdVPPFFw&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Purdue - Professional Certificate in Data Analytics and Generative AI - https://www.simplilearn.com/pgp-data-analytics-certification-training-course?utm_campaign=zwasdVPPFFw&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25PL-300 Microsoft Power BI Certification Training with Exam - https://www.simplilearn.com/power-bi-certification-training-course?utm_campaign=zwasdVPPFFw&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Tableau Desktop Specialist Certification Training - https://www.simplilearn.com/tableau-training-and-data-visualization-course?utm_campaign=zwasdVPPFFw&utm_medium=DescriptionFFF&utm_source=Youtube\"\n\nThis video on Data Analytics for Beginners covers all the basics to advance concepts of data analytics. In this video you will come across the introduction To Data Analytics and you will understand the usage and the need for data analytics. Then, you learn about the different processes in data analytics with some essential tools used to implement data analytics. Also, you will see a case study on how Walmart uses data analytics for running its business. \n\n01:07 What is Data Analytics?  \n04:29 Steps involved in Data Analytics  \n08:05 Tools used for Data Analytics  \n11:58 Data Analytics Applications  \n14:45 Companies using Data Analytics  \n15:22 Walmart Case Study  \n18:09 Use Case Demo  \n\n\u23e9 Check out the Data Analytics Playlist: link: https://www.youtube.com/playlist?list=PLEiEAq2VkUUKgEFXH1tBbHwq38oWYDScU\n\n\u2705Subscribe to our Channel to learn more about the top Technologies: https://bit.ly/2VT4WtH\n\n#DataAnalyticsForBeginners #IntroductionToDataAnalytics #DataAnalytics #DataAnalyticsWithR #DataAnalyticsUsingR #Simplilearn\n\n\u27a1\ufe0f About Post Graduate Program In Data Analytics\nThis Data Analytics Program is ideal for all working professionals and prior programming knowledge is not required. It covers topics like data analysis, data visualization, regression techniques, and supervised learning in-depth via our applied learning model with live sessions by leading practitioners and industry projects.\n\n\u2705 Key Features\n- Post Graduate Program certificate and Alumni Association membership\n- Exclusive hackathons and Ask me Anything sessions by IBM\n- 8X higher live interaction in live online classes by industry experts\n- Capstone from 3 domains and 14+ Data Analytics Projects with Industry datasets from Google PlayStore, Lyft, World Bank etc.\n- Master Classes delivered by Purdue faculty and IBM experts\n- Simplilearn's JobAssist helps you get noticed by top hiring companies\n- Resume preparation and LinkedIn profile building\n- 1:1 mock interview\n- Career accelerator webinars\n\n\u2705 Skills Covered\n- Data Analytics\n- Statistical Analysis using Excel\n- Data Analysis Python and R\n- Data Visualization Tableau and Power BI\n- Linear and logistic regression modules\n- Clustering using kmeans\n- Supervised Learning\n\n\ud83d\udd25Data Analyst Masters Program (Discount Code - YTBE15) - https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=zwasdVPPFFw&utm_medium=Description&utm_source=Youtube",
+                        "ChannelName": "Simplilearn",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/zwasdVPPFFw/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=zwasdVPPFFw",
+                        "Duration": "00:51:24",
+                        "RawDuration": "PT51M24S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Data Analytics Full Course In 5 Hours | Data Analytics For Beginners | Data Analytics | Simplilearn",
+                        "Description": "\"\ufe0f\ud83d\udd25IBM - Data Analyst - https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=oQmxQh92Nh8&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25IITG - Professional Certificate Program in Data Analytics & Generative AI - https://www.simplilearn.com/iitg-generative-ai-data-analytics-program?utm_campaign=oQmxQh92Nh8&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Purdue - Professional Certificate in Data Analytics and Generative AI - https://www.simplilearn.com/pgp-data-analytics-certification-training-course?utm_campaign=oQmxQh92Nh8&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25PL-300 Microsoft Power BI Certification Training with Exam - https://www.simplilearn.com/power-bi-certification-training-course?utm_campaign=oQmxQh92Nh8&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Tableau Desktop Specialist Certification Training - https://www.simplilearn.com/tableau-training-and-data-visualization-course?utm_campaign=oQmxQh92Nh8&utm_medium=DescriptionFFF&utm_source=Youtube\"\n\nData analytics has been rapidly growing, with companies looking to generate insights and drive their business with the help of data. In this Data Analytics Full Course video, you will learn what data analytics is, why data analytics is necessary, the types of data analytics, and the various data analytics applications. You will then understand a case study and perform analysis of data using Python and R. In addition to that; we will see the top 10 data analysis tools and understand the difference between a data scientist and a data analyst. Finally, we\u2019ll see the top interview questions that will help you crack a data analyst interview.\n\nDataset Link - https://drive.google.com/drive/folders/1U8CF0Xx3NivXdfrQvXJ_462tEb26oPuX\n\n00:00:00 What is Data Analytics\n00:05:21 Types of data Analytics\n00:11:58 Why Data Analytics\n00:17:17 Data Analytics using Python\n02:01:29 Data Analytics using R\n02:34:22 Data Analysis Tools\n02:53:20 Data Analytics Jobs, Career and Salary\n03:18:41 Data Scientist vs Data Analyst\n03:30:19 Data Analyst Interview Questions\n\n\u23e9 Check out the Data Analytics Playlist: link: https://www.youtube.com/playlist?list=PLEiEAq2VkUUKgEFXH1tBbHwq38oWYDScU\n\n#DataAnalyticsFullCourse #DataAnalyticsForBeginners #LearnDataAnalytics #DataAnalysis #DataAnalytics #simplilearn \n\n\u27a1\ufe0f About Post Graduate Program In Data Analytics\nThis Data Analytics Program is ideal for all working professionals and prior programming knowledge is not required. It covers topics like data analysis, data visualization, regression techniques, and supervised learning in-depth via our applied learning model with live sessions by leading practitioners and industry projects.\n\n\u2705 Key Features\n- Post Graduate Program certificate and Alumni Association membership\n- Exclusive hackathons and Ask me Anything sessions by IBM\n- 8X higher live interaction in live online classes by industry experts\n- Capstone from 3 domains and 14+ Data Analytics Projects with Industry datasets from Google PlayStore, Lyft, World Bank etc.\n- Master Classes delivered by Purdue faculty and IBM experts\n- Simplilearn's JobAssist helps you get noticed by top hiring companies\n- Resume preparation and LinkedIn profile building\n- 1:1 mock interview\n- Career accelerator webinars\n\n\u2705 Skills Covered\n- Data Analytics\n- Statistical Analysis using Excel\n- Data Analysis Python and R\n- Data Visualization Tableau and Power BI\n- Linear and logistic regression modules\n- Clustering using kmeans\n- Supervised Learning\n\n\ud83d\udc49Learn more at: https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=DataAnalytics&utm_medium=Description&utm_source=youtube",
+                        "ChannelName": "Simplilearn",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/oQmxQh92Nh8/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=oQmxQh92Nh8",
+                        "Duration": "01:08:36",
+                        "RawDuration": "PT4H19M41S",
+                        "StartTime": 0
+                    }
+                ]
+            },
+            {
+                "Day": 2,
+                "Videos": [
+                    {
+                        "Title": "Data Analytics Full Course In 5 Hours | Data Analytics For Beginners | Data Analytics | Simplilearn",
+                        "Description": "\"\ufe0f\ud83d\udd25IBM - Data Analyst - https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=oQmxQh92Nh8&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25IITG - Professional Certificate Program in Data Analytics & Generative AI - https://www.simplilearn.com/iitg-generative-ai-data-analytics-program?utm_campaign=oQmxQh92Nh8&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Purdue - Professional Certificate in Data Analytics and Generative AI - https://www.simplilearn.com/pgp-data-analytics-certification-training-course?utm_campaign=oQmxQh92Nh8&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25PL-300 Microsoft Power BI Certification Training with Exam - https://www.simplilearn.com/power-bi-certification-training-course?utm_campaign=oQmxQh92Nh8&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Tableau Desktop Specialist Certification Training - https://www.simplilearn.com/tableau-training-and-data-visualization-course?utm_campaign=oQmxQh92Nh8&utm_medium=DescriptionFFF&utm_source=Youtube\"\n\nData analytics has been rapidly growing, with companies looking to generate insights and drive their business with the help of data. In this Data Analytics Full Course video, you will learn what data analytics is, why data analytics is necessary, the types of data analytics, and the various data analytics applications. You will then understand a case study and perform analysis of data using Python and R. In addition to that; we will see the top 10 data analysis tools and understand the difference between a data scientist and a data analyst. Finally, we\u2019ll see the top interview questions that will help you crack a data analyst interview.\n\nDataset Link - https://drive.google.com/drive/folders/1U8CF0Xx3NivXdfrQvXJ_462tEb26oPuX\n\n00:00:00 What is Data Analytics\n00:05:21 Types of data Analytics\n00:11:58 Why Data Analytics\n00:17:17 Data Analytics using Python\n02:01:29 Data Analytics using R\n02:34:22 Data Analysis Tools\n02:53:20 Data Analytics Jobs, Career and Salary\n03:18:41 Data Scientist vs Data Analyst\n03:30:19 Data Analyst Interview Questions\n\n\u23e9 Check out the Data Analytics Playlist: link: https://www.youtube.com/playlist?list=PLEiEAq2VkUUKgEFXH1tBbHwq38oWYDScU\n\n#DataAnalyticsFullCourse #DataAnalyticsForBeginners #LearnDataAnalytics #DataAnalysis #DataAnalytics #simplilearn \n\n\u27a1\ufe0f About Post Graduate Program In Data Analytics\nThis Data Analytics Program is ideal for all working professionals and prior programming knowledge is not required. It covers topics like data analysis, data visualization, regression techniques, and supervised learning in-depth via our applied learning model with live sessions by leading practitioners and industry projects.\n\n\u2705 Key Features\n- Post Graduate Program certificate and Alumni Association membership\n- Exclusive hackathons and Ask me Anything sessions by IBM\n- 8X higher live interaction in live online classes by industry experts\n- Capstone from 3 domains and 14+ Data Analytics Projects with Industry datasets from Google PlayStore, Lyft, World Bank etc.\n- Master Classes delivered by Purdue faculty and IBM experts\n- Simplilearn's JobAssist helps you get noticed by top hiring companies\n- Resume preparation and LinkedIn profile building\n- 1:1 mock interview\n- Career accelerator webinars\n\n\u2705 Skills Covered\n- Data Analytics\n- Statistical Analysis using Excel\n- Data Analysis Python and R\n- Data Visualization Tableau and Power BI\n- Linear and logistic regression modules\n- Clustering using kmeans\n- Supervised Learning\n\n\ud83d\udc49Learn more at: https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=DataAnalytics&utm_medium=Description&utm_source=youtube",
+                        "ChannelName": "Simplilearn",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/oQmxQh92Nh8/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=oQmxQh92Nh8",
+                        "Duration": "02:00:00",
+                        "RawDuration": "PT4H19M41S",
+                        "StartTime": 4116
+                    }
+                ]
+            },
+            {
+                "Day": 3,
+                "Videos": [
+                    {
+                        "Title": "Data Analytics Full Course In 5 Hours | Data Analytics For Beginners | Data Analytics | Simplilearn",
+                        "Description": "\"\ufe0f\ud83d\udd25IBM - Data Analyst - https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=oQmxQh92Nh8&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25IITG - Professional Certificate Program in Data Analytics & Generative AI - https://www.simplilearn.com/iitg-generative-ai-data-analytics-program?utm_campaign=oQmxQh92Nh8&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Purdue - Professional Certificate in Data Analytics and Generative AI - https://www.simplilearn.com/pgp-data-analytics-certification-training-course?utm_campaign=oQmxQh92Nh8&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25PL-300 Microsoft Power BI Certification Training with Exam - https://www.simplilearn.com/power-bi-certification-training-course?utm_campaign=oQmxQh92Nh8&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Tableau Desktop Specialist Certification Training - https://www.simplilearn.com/tableau-training-and-data-visualization-course?utm_campaign=oQmxQh92Nh8&utm_medium=DescriptionFFF&utm_source=Youtube\"\n\nData analytics has been rapidly growing, with companies looking to generate insights and drive their business with the help of data. In this Data Analytics Full Course video, you will learn what data analytics is, why data analytics is necessary, the types of data analytics, and the various data analytics applications. You will then understand a case study and perform analysis of data using Python and R. In addition to that; we will see the top 10 data analysis tools and understand the difference between a data scientist and a data analyst. Finally, we\u2019ll see the top interview questions that will help you crack a data analyst interview.\n\nDataset Link - https://drive.google.com/drive/folders/1U8CF0Xx3NivXdfrQvXJ_462tEb26oPuX\n\n00:00:00 What is Data Analytics\n00:05:21 Types of data Analytics\n00:11:58 Why Data Analytics\n00:17:17 Data Analytics using Python\n02:01:29 Data Analytics using R\n02:34:22 Data Analysis Tools\n02:53:20 Data Analytics Jobs, Career and Salary\n03:18:41 Data Scientist vs Data Analyst\n03:30:19 Data Analyst Interview Questions\n\n\u23e9 Check out the Data Analytics Playlist: link: https://www.youtube.com/playlist?list=PLEiEAq2VkUUKgEFXH1tBbHwq38oWYDScU\n\n#DataAnalyticsFullCourse #DataAnalyticsForBeginners #LearnDataAnalytics #DataAnalysis #DataAnalytics #simplilearn \n\n\u27a1\ufe0f About Post Graduate Program In Data Analytics\nThis Data Analytics Program is ideal for all working professionals and prior programming knowledge is not required. It covers topics like data analysis, data visualization, regression techniques, and supervised learning in-depth via our applied learning model with live sessions by leading practitioners and industry projects.\n\n\u2705 Key Features\n- Post Graduate Program certificate and Alumni Association membership\n- Exclusive hackathons and Ask me Anything sessions by IBM\n- 8X higher live interaction in live online classes by industry experts\n- Capstone from 3 domains and 14+ Data Analytics Projects with Industry datasets from Google PlayStore, Lyft, World Bank etc.\n- Master Classes delivered by Purdue faculty and IBM experts\n- Simplilearn's JobAssist helps you get noticed by top hiring companies\n- Resume preparation and LinkedIn profile building\n- 1:1 mock interview\n- Career accelerator webinars\n\n\u2705 Skills Covered\n- Data Analytics\n- Statistical Analysis using Excel\n- Data Analysis Python and R\n- Data Visualization Tableau and Power BI\n- Linear and logistic regression modules\n- Clustering using kmeans\n- Supervised Learning\n\n\ud83d\udc49Learn more at: https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=DataAnalytics&utm_medium=Description&utm_source=youtube",
+                        "ChannelName": "Simplilearn",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/oQmxQh92Nh8/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=oQmxQh92Nh8",
+                        "Duration": "01:11:05",
+                        "RawDuration": "PT4H19M41S",
+                        "StartTime": 11316
+                    },
+                    {
+                        "Title": "Data Analytics With Python | Data Analysis With Python | Data Analytics For Beginners | Simplilearn",
+                        "Description": "\ufe0f\ud83d\udd25IBM - Data Scientist - https://www.simplilearn.com/data-science-course?utm_campaign=W1dzfYW4-KQ&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25IBM - Data Analyst - https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=W1dzfYW4-KQ&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25PL-300 Microsoft Power BI Certification Training with Exam - https://www.simplilearn.com/power-bi-certification-training-course?utm_campaign=W1dzfYW4-KQ&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Tableau Desktop Specialist Certification Training - https://www.simplilearn.com/tableau-training-and-data-visualization-course?utm_campaign=W1dzfYW4-KQ&utm_medium=DescriptionFFF&utm_source=Youtube\n\nData analytics plays a vital role in every company for making crucial decisions and improving the business.  In this video, you'll learn Data Analytics using Python. You will see the different applications of Data Analytics and the various types of Data Analytics. You will understand why Python for Data Analytics and deep dive into learning Data Analytics using NumPy, Pandas, and Matplotlib. \n\n1. What is Data Analytics? - 01:06\n2. Applications of Data Analytics - 01:17\n3. Types of Data Analytics - 04:30\n4. Data Analytics Process Steps - 07:27\n5. Why Python for Data Analytics - 11:00\n6. Use Case Demo - 16:23\n\n\u23e9 Check out the Data Analytics Playlist: link: https://www.youtube.com/playlist?list=PLEiEAq2VkUUKgEFXH1tBbHwq38oWYDScU\n\n\u2705Subscribe to our Channel to learn more about the top Technologies: https://bit.ly/2VT4WtH\n\n#DataAnalyticsWithPython #DataAnalysisWithPython #PythonForDataAnalysis #DataAnalyticsForBeginners #DataAnalyticsTutorial #DataAnalysis #DataAnalytics #Simplilearn\n\n\u27a1\ufe0f About Post Graduate Program In Data Analytics\nThis Data Analytics Program is ideal for all working professionals and prior programming knowledge is not required. It covers topics like data analysis, data visualization, regression techniques, and supervised learning in-depth via our applied learning model with live sessions by leading practitioners and industry projects.\n\n\u2705 Key Features\n- Post Graduate Program certificate and Alumni Association membership\n- Exclusive hackathons and Ask me Anything sessions by IBM\n- 8X higher live interaction in live online classes by industry experts\n- Capstone from 3 domains and 14+ Data Analytics Projects with Industry datasets from Google PlayStore, Lyft, World Bank etc.\n- Master Classes delivered by Purdue faculty and IBM experts\n- Simplilearn's JobAssist helps you get noticed by top hiring companies\n- Resume preparation and LinkedIn profile building\n- 1:1 mock interview\n- Career accelerator webinars\n\n\u2705 Skills Covered\n- Data Analytics\n- Statistical Analysis using Excel\n- Data Analysis Python and R\n- Data Visualization Tableau and Power BI\n- Linear and logistic regression modules\n- Clustering using kmeans\n- Supervised Learning\n\n\ud83d\udd25Data Analyst Masters Program (Discount Code - YTBE15) - https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=W1dzfYW4-KQ&utm_medium=Description&utm_source=Youtube",
+                        "ChannelName": "Simplilearn",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/W1dzfYW4-KQ/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=W1dzfYW4-KQ",
+                        "Duration": "00:48:54",
+                        "RawDuration": "PT1H25M58S",
+                        "StartTime": 0
+                    }
+                ]
+            },
+            {
+                "Day": 4,
+                "Videos": [
+                    {
+                        "Title": "Data Analytics With Python | Data Analysis With Python | Data Analytics For Beginners | Simplilearn",
+                        "Description": "\ufe0f\ud83d\udd25IBM - Data Scientist - https://www.simplilearn.com/data-science-course?utm_campaign=W1dzfYW4-KQ&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25IBM - Data Analyst - https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=W1dzfYW4-KQ&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25PL-300 Microsoft Power BI Certification Training with Exam - https://www.simplilearn.com/power-bi-certification-training-course?utm_campaign=W1dzfYW4-KQ&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Tableau Desktop Specialist Certification Training - https://www.simplilearn.com/tableau-training-and-data-visualization-course?utm_campaign=W1dzfYW4-KQ&utm_medium=DescriptionFFF&utm_source=Youtube\n\nData analytics plays a vital role in every company for making crucial decisions and improving the business.  In this video, you'll learn Data Analytics using Python. You will see the different applications of Data Analytics and the various types of Data Analytics. You will understand why Python for Data Analytics and deep dive into learning Data Analytics using NumPy, Pandas, and Matplotlib. \n\n1. What is Data Analytics? - 01:06\n2. Applications of Data Analytics - 01:17\n3. Types of Data Analytics - 04:30\n4. Data Analytics Process Steps - 07:27\n5. Why Python for Data Analytics - 11:00\n6. Use Case Demo - 16:23\n\n\u23e9 Check out the Data Analytics Playlist: link: https://www.youtube.com/playlist?list=PLEiEAq2VkUUKgEFXH1tBbHwq38oWYDScU\n\n\u2705Subscribe to our Channel to learn more about the top Technologies: https://bit.ly/2VT4WtH\n\n#DataAnalyticsWithPython #DataAnalysisWithPython #PythonForDataAnalysis #DataAnalyticsForBeginners #DataAnalyticsTutorial #DataAnalysis #DataAnalytics #Simplilearn\n\n\u27a1\ufe0f About Post Graduate Program In Data Analytics\nThis Data Analytics Program is ideal for all working professionals and prior programming knowledge is not required. It covers topics like data analysis, data visualization, regression techniques, and supervised learning in-depth via our applied learning model with live sessions by leading practitioners and industry projects.\n\n\u2705 Key Features\n- Post Graduate Program certificate and Alumni Association membership\n- Exclusive hackathons and Ask me Anything sessions by IBM\n- 8X higher live interaction in live online classes by industry experts\n- Capstone from 3 domains and 14+ Data Analytics Projects with Industry datasets from Google PlayStore, Lyft, World Bank etc.\n- Master Classes delivered by Purdue faculty and IBM experts\n- Simplilearn's JobAssist helps you get noticed by top hiring companies\n- Resume preparation and LinkedIn profile building\n- 1:1 mock interview\n- Career accelerator webinars\n\n\u2705 Skills Covered\n- Data Analytics\n- Statistical Analysis using Excel\n- Data Analysis Python and R\n- Data Visualization Tableau and Power BI\n- Linear and logistic regression modules\n- Clustering using kmeans\n- Supervised Learning\n\n\ud83d\udd25Data Analyst Masters Program (Discount Code - YTBE15) - https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=W1dzfYW4-KQ&utm_medium=Description&utm_source=Youtube",
+                        "ChannelName": "Simplilearn",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/W1dzfYW4-KQ/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=W1dzfYW4-KQ",
+                        "Duration": "00:37:03",
+                        "RawDuration": "PT1H25M58S",
+                        "StartTime": 2934
+                    },
+                    {
+                        "Title": "Data Analytics Using R | Introduction To Data Analytics | Data Analytics For Beginners | Simplilearn",
+                        "Description": "\"\ufe0f\ud83d\udd25IBM - Data Analyst - https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=I4NRCN9DPTI&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25IITG - Professional Certificate Program in Data Analytics & Generative AI - https://www.simplilearn.com/iitg-generative-ai-data-analytics-program?utm_campaign=I4NRCN9DPTI&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Purdue - Professional Certificate in Data Analytics and Generative AI - https://www.simplilearn.com/pgp-data-analytics-certification-training-course?utm_campaign=I4NRCN9DPTI&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25PL-300 Microsoft Power BI Certification Training with Exam - https://www.simplilearn.com/power-bi-certification-training-course?utm_campaign=I4NRCN9DPTI&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Tableau Desktop Specialist Certification Training - https://www.simplilearn.com/tableau-training-and-data-visualization-course?utm_campaign=I4NRCN9DPTI&utm_medium=DescriptionFFF&utm_source=Youtube\"\n\nIn this Data Analytics Using R video, you will receive an introduction to data analytics. Here, you will understand why and what data analytics is and go through a hands-on demo on data analytics. In this data analytics for beginners video, you will learn how to analyze a dataset and discover the hidden patterns using the programming language R. \n\nYou will learn the below topics in this Data Analytics Using R video:\n1. Introduction  -   00:00\n2. Why Data Analytics -     1:30\n3. What is Data Analytics -  6:36\n4. Data Analytics Lifecycle -  8:17\n5. Types of Analytics -   15:38\n6. Benefits of using R -  20:35\n7. Demo  -  21:51\n\nFor more videos on Data Analytics, check our playlist: https://www.youtube.com/playlist?list=PLEiEAq2VkUUKgEFXH1tBbHwq38oWYDScU\n\n#DataAnalyticsUsingR #DataAnalyticsForBeginners #DataAnalyticsTutorialForBeginners #DataAnalytics #Simplilearn\n\n\u27a1\ufe0f About Post Graduate Program In Data Analytics\nThis Data Analytics Program is ideal for all working professionals and prior programming knowledge is not required. It covers topics like data analysis, data visualization, regression techniques, and supervised learning in-depth via our applied learning model with live sessions by leading practitioners and industry projects.\n\n\u2705 Key Features\n- Post Graduate Program certificate and Alumni Association membership\n- Exclusive hackathons and Ask me Anything sessions by IBM\n- 8X higher live interaction in live online classes by industry experts\n- Capstone from 3 domains and 14+ Data Analytics Projects with Industry datasets from Google PlayStore, Lyft, World Bank etc.\n- Master Classes delivered by Purdue faculty and IBM experts\n- Simplilearn's JobAssist helps you get noticed by top hiring companies\n- Resume preparation and LinkedIn profile building\n- 1:1 mock interview\n- Career accelerator webinars\n\n\u2705 Skills Covered\n- Data Analytics\n- Statistical Analysis using Excel\n- Data Analysis Python and R\n- Data Visualization Tableau and Power BI\n- Linear and logistic regression modules\n- Clustering using kmeans\n- Supervised Learning\n\n\ud83d\udd25Free Data Analytics Course: https://www.simplilearn.com/learn-data-analytics-for-beginners-skillup?utm_campaign=DataAnalyticsUsingR&utm_medium=Description&utm_source=youtube",
+                        "ChannelName": "Simplilearn",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/I4NRCN9DPTI/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=I4NRCN9DPTI",
+                        "Duration": "00:54:46",
+                        "RawDuration": "PT54M46S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Top 10 Data Analysis Tools | Top Data Analytics tools | Data Analytics | Simplilearn",
+                        "Description": "\"\ufe0f\ud83d\udd25IBM - Data Analyst - https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=mccsmoh2_3c&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25IITG - Professional Certificate Program in Data Analytics & Generative AI - https://www.simplilearn.com/iitg-generative-ai-data-analytics-program?utm_campaign=mccsmoh2_3c&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Purdue - Professional Certificate in Data Analytics and Generative AI - https://www.simplilearn.com/pgp-data-analytics-certification-training-course?utm_campaign=mccsmoh2_3c&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25PL-300 Microsoft Power BI Certification Training with Exam - https://www.simplilearn.com/power-bi-certification-training-course?utm_campaign=mccsmoh2_3c&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Tableau Desktop Specialist Certification Training - https://www.simplilearn.com/tableau-training-and-data-visualization-course?utm_campaign=mccsmoh2_3c&utm_medium=DescriptionFFF&utm_source=Youtube\"\n\nWith data growing at a rapid rate, companies are facing significant challenges to handle their data and derive business values. Implementing the use of Data Analysis tools is the need of the hour. In this video, we'll cover the top 10 data analysis tools that can help you handle your data efficiently, perform different kinds of analytics, build reports, dashboards, and models to make business decisions. You will also learn their essential features and the companies that use them regularly.\n\n\u2705Subscribe to our Channel to learn more about the top Technologies: https://bit.ly/2VT4WtH\n\n\u23e9 Check out the Tableau Training videos: https://www.youtube.com/watch?v=fO7g0pnWaRA&list=PLEiEAq2VkUUJEvrsey26P-Bj4Vk6BLBVC\n\n#Tableau #TableauFullCourse #LearnTableauStepByStepForBeginners #TableauTrainingForBeginners #TableauTutorialForBeginners #TableauTutorial #powerbi #excel #dataanalysis #LearnTableauIn8Hours #DataAnalytics #Simplilearn\n\n\u27a1\ufe0f About Post Graduate Program In Data Analytics\nThis Data Analytics Program is ideal for all working professionals and prior programming knowledge is not required. It covers topics like data analysis, data visualization, regression techniques, and supervised learning in-depth via our applied learning model with live sessions by leading practitioners and industry projects.\n\n\u2705 Key Features\n- Post Graduate Program certificate and Alumni Association membership\n- Exclusive hackathons and Ask me Anything sessions by IBM\n- 8X higher live interaction in live online classes by industry experts\n- Capstone from 3 domains and 14+ Data Analytics Projects with Industry datasets from Google PlayStore, Lyft, World Bank etc.\n- Master Classes delivered by Purdue faculty and IBM experts\n- Simplilearn's JobAssist helps you get noticed by top hiring companies\n- Resume preparation and LinkedIn profile building\n- 1:1 mock interview\n- Career accelerator webinars\n\n\u2705 Skills Covered\n- Data Analytics\n- Statistical Analysis using Excel\n- Data Analysis Python and R\n- Data Visualization Tableau and Power BI\n- Linear and logistic regression modules\n- Clustering using kmeans\n- Supervised Learning\n\n\ud83d\udc49 Learn More at (Discount Code: YTBE15): https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=DataAnalytics-mccsmoh2_3c&utm_medium=Description&utm_source=youtube",
+                        "ChannelName": "Simplilearn",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/mccsmoh2_3c/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=mccsmoh2_3c",
+                        "Duration": "00:26:13",
+                        "RawDuration": "PT26M13S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Top 10 Skills To Become a Data Analyst In 2021 | Data Analyst Skills | Data Analytics | Simplilearn",
+                        "Description": "\"\ufe0f\ud83d\udd25IBM - Data Analyst - https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=SZsZYCPrUlU&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25IITG - Professional Certificate Program in Data Analytics & Generative AI - https://www.simplilearn.com/iitg-generative-ai-data-analytics-program?utm_campaign=SZsZYCPrUlU&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Purdue - Professional Certificate in Data Analytics and Generative AI - https://www.simplilearn.com/pgp-data-analytics-certification-training-course?utm_campaign=SZsZYCPrUlU&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25PL-300 Microsoft Power BI Certification Training with Exam - https://www.simplilearn.com/power-bi-certification-training-course?utm_campaign=SZsZYCPrUlU&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Tableau Desktop Specialist Certification Training - https://www.simplilearn.com/tableau-training-and-data-visualization-course?utm_campaign=SZsZYCPrUlU&utm_medium=DescriptionFFF&utm_source=Youtube\"\n\nThis Simplilearn video on Data Analyst Skills will teach you the different skills that will help you become a data analyst in 2021. Here, we will cover both data analyst technical and soft skills that you should possess.\n\nTopics you will learn in this video are:\n 00:00:00  Who is a Data Analyst?\n 00:00:59  Mathematics\n 00:02:09  Big Data Framework\n 00:03:11  Data Cleaning & Data Wrangling\n 00:04:19  BI Tools \n 00:05:29  Excel and ETL Tools \n 00:06:38  Programming Languages\n 00:07:45  Database and SQL\n 00:09:28  Problem-Solving\n 00:10:51  Business Knowledge\n 00:11:52  Communication and Presentation\n\n\u23e9 Check out the Data Analytics Playlist: link: https://www.youtube.com/playlist?list=PLEiEAq2VkUUKgEFXH1tBbHwq38oWYDScU\n\n\u2705Subscribe to our Channel to learn more about the top Technologies: https://bit.ly/2VT4WtH\n\n#DataAnalystSkills #HowtoBecomeADataAnalyst #TopSkillsToBecomeADataAnalyst #Simplilearn\n\n\u27a1\ufe0f About Post Graduate Program In Data Analytics\nThis Data Analytics Program is ideal for all working professionals and prior programming knowledge is not required. It covers topics like data analysis, data visualization, regression techniques, and supervised learning in-depth via our applied learning model with live sessions by leading practitioners and industry projects.\n\n\u2705 Key Features\n- Post Graduate Program certificate and Alumni Association membership\n- Exclusive hackathons and Ask me Anything sessions by IBM\n- 8X higher live interaction in live online classes by industry experts\n- Capstone from 3 domains and 14+ Data Analytics Projects with Industry datasets from Google PlayStore, Lyft, World Bank etc.\n- Master Classes delivered by Purdue faculty and IBM experts\n- Simplilearn's JobAssist helps you get noticed by top hiring companies\n- Resume preparation and LinkedIn profile building\n- 1:1 mock interview\n- Career accelerator webinars\n\n\u2705 Skills Covered\n- Data Analytics\n- Statistical Analysis using Excel\n- Data Analysis Python and R\n- Data Visualization Tableau and Power BI\n- Linear and logistic regression modules\n- Clustering using kmeans\n- Supervised Learning\n\n\ud83d\udc49 Learn More at (Discount Code: YTBE15): https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=DataAnalystSkills-SZsZYCPrUlU&utm_medium=Description&utm_source=youtube",
+                        "ChannelName": "Simplilearn",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/SZsZYCPrUlU/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=SZsZYCPrUlU",
+                        "Duration": "00:01:57",
+                        "RawDuration": "PT13M59S",
+                        "StartTime": 0
+                    }
+                ]
+            },
+            {
+                "Day": 5,
+                "Videos": [
+                    {
+                        "Title": "Top 10 Skills To Become a Data Analyst In 2021 | Data Analyst Skills | Data Analytics | Simplilearn",
+                        "Description": "\"\ufe0f\ud83d\udd25IBM - Data Analyst - https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=SZsZYCPrUlU&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25IITG - Professional Certificate Program in Data Analytics & Generative AI - https://www.simplilearn.com/iitg-generative-ai-data-analytics-program?utm_campaign=SZsZYCPrUlU&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Purdue - Professional Certificate in Data Analytics and Generative AI - https://www.simplilearn.com/pgp-data-analytics-certification-training-course?utm_campaign=SZsZYCPrUlU&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25PL-300 Microsoft Power BI Certification Training with Exam - https://www.simplilearn.com/power-bi-certification-training-course?utm_campaign=SZsZYCPrUlU&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Tableau Desktop Specialist Certification Training - https://www.simplilearn.com/tableau-training-and-data-visualization-course?utm_campaign=SZsZYCPrUlU&utm_medium=DescriptionFFF&utm_source=Youtube\"\n\nThis Simplilearn video on Data Analyst Skills will teach you the different skills that will help you become a data analyst in 2021. Here, we will cover both data analyst technical and soft skills that you should possess.\n\nTopics you will learn in this video are:\n 00:00:00  Who is a Data Analyst?\n 00:00:59  Mathematics\n 00:02:09  Big Data Framework\n 00:03:11  Data Cleaning & Data Wrangling\n 00:04:19  BI Tools \n 00:05:29  Excel and ETL Tools \n 00:06:38  Programming Languages\n 00:07:45  Database and SQL\n 00:09:28  Problem-Solving\n 00:10:51  Business Knowledge\n 00:11:52  Communication and Presentation\n\n\u23e9 Check out the Data Analytics Playlist: link: https://www.youtube.com/playlist?list=PLEiEAq2VkUUKgEFXH1tBbHwq38oWYDScU\n\n\u2705Subscribe to our Channel to learn more about the top Technologies: https://bit.ly/2VT4WtH\n\n#DataAnalystSkills #HowtoBecomeADataAnalyst #TopSkillsToBecomeADataAnalyst #Simplilearn\n\n\u27a1\ufe0f About Post Graduate Program In Data Analytics\nThis Data Analytics Program is ideal for all working professionals and prior programming knowledge is not required. It covers topics like data analysis, data visualization, regression techniques, and supervised learning in-depth via our applied learning model with live sessions by leading practitioners and industry projects.\n\n\u2705 Key Features\n- Post Graduate Program certificate and Alumni Association membership\n- Exclusive hackathons and Ask me Anything sessions by IBM\n- 8X higher live interaction in live online classes by industry experts\n- Capstone from 3 domains and 14+ Data Analytics Projects with Industry datasets from Google PlayStore, Lyft, World Bank etc.\n- Master Classes delivered by Purdue faculty and IBM experts\n- Simplilearn's JobAssist helps you get noticed by top hiring companies\n- Resume preparation and LinkedIn profile building\n- 1:1 mock interview\n- Career accelerator webinars\n\n\u2705 Skills Covered\n- Data Analytics\n- Statistical Analysis using Excel\n- Data Analysis Python and R\n- Data Visualization Tableau and Power BI\n- Linear and logistic regression modules\n- Clustering using kmeans\n- Supervised Learning\n\n\ud83d\udc49 Learn More at (Discount Code: YTBE15): https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=DataAnalystSkills-SZsZYCPrUlU&utm_medium=Description&utm_source=youtube",
+                        "ChannelName": "Simplilearn",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/SZsZYCPrUlU/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=SZsZYCPrUlU",
+                        "Duration": "00:12:01",
+                        "RawDuration": "PT13M59S",
+                        "StartTime": 117
+                    },
+                    {
+                        "Title": "Data Analytics Career, Jobs, and Salary | Data Analyst Job, Salary | Simplilearn",
+                        "Description": "\"\ufe0f\ud83d\udd25IBM - Data Analyst - https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=vMFh6z1ET7o&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25IITG - Professional Certificate Program in Data Analytics & Generative AI - https://www.simplilearn.com/iitg-generative-ai-data-analytics-program?utm_campaign=vMFh6z1ET7o&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Purdue - Professional Certificate in Data Analytics and Generative AI - https://www.simplilearn.com/pgp-data-analytics-certification-training-course?utm_campaign=vMFh6z1ET7o&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25PL-300 Microsoft Power BI Certification Training with Exam - https://www.simplilearn.com/power-bi-certification-training-course?utm_campaign=vMFh6z1ET7o&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Tableau Desktop Specialist Certification Training - https://www.simplilearn.com/tableau-training-and-data-visualization-course?utm_campaign=vMFh6z1ET7o&utm_medium=DescriptionFFF&utm_source=Youtube\"\n\nThis Data Analytics video talks about the Data Analytics job growth and the top 6 Data Analytics job roles - Data Analyst, Business Analyst, Database Administrator, Data Engineer, Data Scientist, and Machine Learning Engineer. This video will help you have an understanding of the various responsibilities, skills required, and the salary structure of each of the job role. You will also see the multiple companies hiring each of these professionals. Finally, we will show you a sample resume of a Data Analyst. \n\nYou will learn the below topics in this Data Analytics Jobs:\n1. The Growth of Data -   0:30\n 2. Job role of a Data Analyst -  3:30\n 3. Job role of a Business Analyst -  6:43\n 4. Job role of a Database Administrator -   9:43\n 5. Job role of a Data Engineer -  12:21\n 6. Job role of a Data Scientist   -  14:45\n 7.  Job role of a Machine Learning Engineer   -  17:56\n 8.  Resume of a Data Analyst   -  20:42\n\nFor more videos on Data Analytics, check our playlist: https://www.youtube.com/playlist?list=PLEiEAq2VkUUKgEFXH1tBbHwq38oWYDScU\n\n#DataAnalytics #DataAnalyst #DataAnalyticsJob #BusinessAnalyst #DataAnalyticsSalary #DataAnalyticsRolesAndResponsibilities #DataAnalystResume #Simplilearn\n\n\u27a1\ufe0f About Post Graduate Program In Data Analytics\nThis Data Analytics Program is ideal for all working professionals and prior programming knowledge is not required. It covers topics like data analysis, data visualization, regression techniques, and supervised learning in-depth via our applied learning model with live sessions by leading practitioners and industry projects.\n\n\u2705 Key Features\n- Post Graduate Program certificate and Alumni Association membership\n- Exclusive hackathons and Ask me Anything sessions by IBM\n- 8X higher live interaction in live online classes by industry experts\n- Capstone from 3 domains and 14+ Data Analytics Projects with Industry datasets from Google PlayStore, Lyft, World Bank etc.\n- Master Classes delivered by Purdue faculty and IBM experts\n- Simplilearn's JobAssist helps you get noticed by top hiring companies\n- Resume preparation and LinkedIn profile building\n- 1:1 mock interview\n- Career accelerator webinars\n\n\u2705 Skills Covered\n- Data Analytics\n- Statistical Analysis using Excel\n- Data Analysis Python and R\n- Data Visualization Tableau and Power BI\n- Linear and logistic regression modules\n- Clustering using kmeans\n- Supervised Learning\n\nLearn more at: https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=Data-Analytics-Jobs-salary-vMFh6z1ET7o&utm_medium=Description&utm_source=youtube",
+                        "ChannelName": "Simplilearn",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/vMFh6z1ET7o/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=vMFh6z1ET7o",
+                        "Duration": "00:26:01",
+                        "RawDuration": "PT26M1S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "How To Become A Data Analyst? | Data Analyst Skills, Roles And Responsibilities 2021 | Simplilearn",
+                        "Description": "\"\ufe0f\ud83d\udd25IBM - Data Analyst - https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=D15DwYqpJ3o&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25IITG - Professional Certificate Program in Data Analytics & Generative AI - https://www.simplilearn.com/iitg-generative-ai-data-analytics-program?utm_campaign=D15DwYqpJ3o&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Purdue - Professional Certificate in Data Analytics and Generative AI - https://www.simplilearn.com/pgp-data-analytics-certification-training-course?utm_campaign=D15DwYqpJ3o&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25PL-300 Microsoft Power BI Certification Training with Exam - https://www.simplilearn.com/power-bi-certification-training-course?utm_campaign=D15DwYqpJ3o&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Tableau Desktop Specialist Certification Training - https://www.simplilearn.com/tableau-training-and-data-visualization-course?utm_campaign=D15DwYqpJ3o&utm_medium=DescriptionFFF&utm_source=Youtube\"\n\nThis video on How to Become a Data Analyst briefs about a data analyst's job role. Here, you will see who is a data analyst, the various responsibilities of a data analyst, and the skills required to become a data analyst. Finally, you will see how Simplilearn can guide you to become a data analyst! So, let's get started!\n\n1. What is data analytics - 00:00:35\n2. Who is a data analyst - 00:02:28\n3. Responsibilities of a data analyst - 00:03:33\n4. Skills required to become a data analyst - 00:06:00\n5. Avg annual salary of a data analyst - 00:07:40\n6. Companies hiring of a data analyst - 00:08:14\n7. Data Analyst Master's Program by Simplilearn  - 00:08:52\n\nFor more videos on Data Analytics, check our playlist: https://www.youtube.com/playlist?list=PLEiEAq2VkUUKgEFXH1tBbHwq38oWYDScU\n\n#HowToBecomeADataAnalyst #DataAnalystSkills2020 #DataAnalystRolesAndResponsibilities #DataAnalytics #Simplilearn\n\n\u27a1\ufe0f About Post Graduate Program In Data Analytics\nThis Data Analytics Program is ideal for all working professionals and prior programming knowledge is not required. It covers topics like data analysis, data visualization, regression techniques, and supervised learning in-depth via our applied learning model with live sessions by leading practitioners and industry projects.\n\n\u2705 Key Features\n- Post Graduate Program certificate and Alumni Association membership\n- Exclusive hackathons and Ask me Anything sessions by IBM\n- 8X higher live interaction in live online classes by industry experts\n- Capstone from 3 domains and 14+ Data Analytics Projects with Industry datasets from Google PlayStore, Lyft, World Bank etc.\n- Master Classes delivered by Purdue faculty and IBM experts\n- Simplilearn's JobAssist helps you get noticed by top hiring companies\n- Resume preparation and LinkedIn profile building\n- 1:1 mock interview\n- Career accelerator webinars\n\n\u2705 Skills Covered\n- Data Analytics\n- Statistical Analysis using Excel\n- Data Analysis Python and R\n- Data Visualization Tableau and Power BI\n- Linear and logistic regression modules\n- Clustering using kmeans\n- Supervised Learning\n\nLearn more at: https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=How-To-Become-A-Data-Analyst-D15DwYqpJ3o&utm_medium=Description&utm_source=youtube",
+                        "ChannelName": "Simplilearn",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/D15DwYqpJ3o/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=D15DwYqpJ3o",
+                        "Duration": "00:11:08",
+                        "RawDuration": "PT11M8S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Data Scientist vs Data Analyst | Difference Between Data Scientist And Data Analyst | Simplilearn",
+                        "Description": "\ufe0f\ud83d\udd25IBM - Data Scientist - https://www.simplilearn.com/data-science-course?utm_campaign=juZ_Bb9Bpxs&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25IBM - Data Analyst - https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=juZ_Bb9Bpxs&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25PL-300 Microsoft Power BI Certification Training with Exam - https://www.simplilearn.com/power-bi-certification-training-course?utm_campaign=juZ_Bb9Bpxs&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Tableau Desktop Specialist Certification Training - https://www.simplilearn.com/tableau-training-and-data-visualization-course?utm_campaign=juZ_Bb9Bpxs&utm_medium=DescriptionFFF&utm_source=Youtube\n\nThis Simplilearn video on Data Scientist vs. Data Analyst lists the differences between the two most popular job roles today, i.e., data scientist and data analyst. It differentiates between the job descriptions, the responsibilities, and the various skills of a data scientist and a data analyst. So, let's understand the difference between a data scientist and a data analyst!\n\nThe topics covered in this Data Scientist vs. Data Analyst video are:\n00:00:00 Data Scientist vs. Data Analyst basics\n00:01:11 Data Scientist and Data Analyst Job description\n00:02:31 Responsibilities\n00:05:03 Skillset\n00:08:01 Data Analyst and Data Scientist Salary\n00:08:48 Companies hiring\n00:09:33 Job Growth\n\n\u23e9 Check out the Data Analytics Playlist: link: https://bit.ly/2SbDfuY\n\n\u2705Subscribe to our Channel to learn more about the top Technologies: https://bit.ly/2VT4WtH\n\n#DataScientistvsDataAnalyst #DifferenceBetweenDataScientistAndDataAnalyst #DataAnalystvsDataScientist #DataAnalystAndDataScientistDifference #DataScience #DataAnalytics #simplilearn \n\n\u27a1\ufe0f About Post Graduate Program In Data Analytics\nThis Data Analytics Program is ideal for all working professionals and prior programming knowledge is not required. It covers topics like data analysis, data visualization, regression techniques, and supervised learning in-depth via our applied learning model with live sessions by leading practitioners and industry projects.\n\n\u2705 Key Features\n- Post Graduate Program certificate and Alumni Association membership\n- Exclusive hackathons and Ask me Anything sessions by IBM\n- 8X higher live interaction in live online classes by industry experts\n- Capstone from 3 domains and 14+ Data Analytics Projects with Industry datasets from Google PlayStore, Lyft, World Bank etc.\n- Master Classes delivered by Purdue faculty and IBM experts\n- Simplilearn's JobAssist helps you get noticed by top hiring companies\n- Resume preparation and LinkedIn profile building\n- 1:1 mock interview\n- Career accelerator webinars\n\n\u2705 Skills Covered\n- Data Analytics\n- Statistical Analysis using Excel\n- Data Analysis Python and R\n- Data Visualization Tableau and Power BI\n- Linear and logistic regression modules\n- Clustering using kmeans\n- Supervised Learning\n\n\ud83d\udc49Learn more at: https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=Data-Scientist-vs-Data-Analyst-juZ_Bb9Bpxs&utm_medium=Description&utm_source=youtube",
+                        "ChannelName": "Simplilearn",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/juZ_Bb9Bpxs/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=juZ_Bb9Bpxs",
+                        "Duration": "00:12:27",
+                        "RawDuration": "PT12M27S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "Data Analyst Interview Questions And Answers | Data Analytics Interview Questions | Simplilearn",
+                        "Description": "\"\ufe0f\ud83d\udd25IBM - Data Analyst - https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=Y6175TGFuMI&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25IITG - Professional Certificate Program in Data Analytics & Generative AI - https://www.simplilearn.com/iitg-generative-ai-data-analytics-program?utm_campaign=Y6175TGFuMI&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Purdue - Professional Certificate in Data Analytics and Generative AI - https://www.simplilearn.com/pgp-data-analytics-certification-training-course?utm_campaign=Y6175TGFuMI&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25PL-300 Microsoft Power BI Certification Training with Exam - https://www.simplilearn.com/power-bi-certification-training-course?utm_campaign=Y6175TGFuMI&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Tableau Desktop Specialist Certification Training - https://www.simplilearn.com/tableau-training-and-data-visualization-course?utm_campaign=Y6175TGFuMI&utm_medium=DescriptionFFF&utm_source=Youtube\"\n\nThis video on Data Analyst Interview Questions And Answers by Simplilearn, will take you through the most frequently asked data analyst interview questions and answers. Data analysis is one of the trending jobs of the 21st century. This video covers all the important questions that would help you crack a data analyst interview. It has a set of basic questions related to the data analytics field. . It would enrich your theoretical and practical knowledge of data analytics. What you will learn\n\n0:00 Data Analyst Interview Questions And Answers\n00:34 What is the difference between Data Mining and Data Profiling?\n01:38 Define the term Data Wrangling\n02:40 What are the common problems that data analysts encounter during analysis?\n03:09 What are the various steps involved in any analytics project?\n04:03 Which technical tools have you used for analysis and presentation purposes?\n04:50 What are the best practices for data cleaning?\n05:34 How can you handle missing values in a dataset?\n06:54 Define normal Distribution\n07:39 What is Time Series analysis?\n08:31 How is joining different from blending in Tableau?\n09:16 How is overfitting different from underfitting?\n10:01 In MS Excel, A numeric Value can be treated as text value if it precedes with \n10:29 What is the difference between COUNT, COUNTA, COUNTBLANK and COUNTIF in Excel?\n11:29 Explain how VLOOKUP works in Excel?\n13:21 How do you subset or filter data in SQL?\n15:39 What is the difference between WHERE and HAVING clause in SQL?\n17:58 Write the Python code to create an employees dataframe and display the head and summary of it.\n18:46 How will you select the Department and Age columns from an Employees dataframe?\n19:22 What is the criteria to say whether a developed data model is good or not?\n20:08 What is the significance of Exploratory data analysis?\n21:09 Explain descriptive, predictive, and prescriptive analytics.\n23:01 What are the different types of sampling techniques used by data analysts?\n24:45 What are the different types of Hypothesis testing?\n25:42 Describe univariate, bivariate, and multivariate analysis.\n29:56  write a SQL query to find the record with fourth highest market price\n33:36 Create a dual axis chart in Tableau to present Sales\n34:36 Design a view in Tableau to show State wise Sales \n40:39 How do you write a stored procedure in SQL?\n43:01 What is the difference between Tree maps and Heat maps in Tableau\n\n\u23e9 Check out the Data Analytics Playlist: link: https://bit.ly/2SbDfuY\n\n#DataAnalystInterviewQuestionsAndAnswers #DataAnalystInterviewPreparation #DataAnalystInterviewQuestions #DataAnalyst #DataAnalytics #Simplilearn\n\u27a1\ufe0f About Data Analyst Master\u2019s Program\nThis online data analyst course will transform you into a data analytics expert. In this certification course, you will learn the latest analytics tools and techniques, how to work with SQL, the languages of R and Python, the art of creating data visualizations, and how to apply statistics and predictive analytics in a business environment.\n\n\u2705 Key Features\n- Simplilearn's JobAssist helps you get noticed by top hiring companies\n- Industry-recognized Data Analyst Master\u2019s certificate from Simplilearn\n- Dedicated live sessions by faculty of industry experts\n- Masterclasses from IBM experts\n- Industry-recognized IBM certifications for IBM courses\n- Ask-Me-Anything (AMA) sessions with IBM leadership\n- Capstone from 3 domains and 20+ projects\n- Exclusive hackathons conducted by IBM\n- Lifetime access to self-paced learning content\n- Program crafted to initiate your journey as a Data Analyst\n\n\u2705 Skills Covered\n- Data Analytics\n- Statistical Analysis using Excel\n- Data Analysis using Python and R\n- Data Visualization Tableau and Power BI\n- Linear and logistic regression modules\n- Clustering using KMeans\n- Supervised Learning\n- Unsupervised Learning\n\n\n\n\ud83d\udc49 Learn More at: \n\n\ud83d\udd25\ud83d\udd25 Interested in Attending Live Classes? Call Us: IN - 18002127688 / US - +18445327688",
+                        "ChannelName": "Simplilearn",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/Y6175TGFuMI/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=Y6175TGFuMI",
+                        "Duration": "00:49:50",
+                        "RawDuration": "PT49M50S",
+                        "StartTime": 0
+                    },
+                    {
+                        "Title": "R Tutorial For Beginners 2022 | R Programming Full Course In 7 Hours | R Tutorial | Simplilearn",
+                        "Description": "\"\ufe0f\ud83d\udd25Purdue - Professional Certificate in AI and Machine Learning - https://www.simplilearn.com/pgp-ai-machine-learning-certification-training-course?utm_campaign=KlsYCECWEWE&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25IITK - Professional Certificate Course in Generative AI and Machine Learning - https://www.simplilearn.com/iitk-professional-certificate-course-ai-machine-learning?utm_campaign=KlsYCECWEWE&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Microsoft AI Engineer Program - https://www.simplilearn.com/ai-engineer-course?utm_campaign=KlsYCECWEWE&utm_medium=DescriptionFFF&utm_source=Youtube\n\ufe0f\ud83d\udd25Purdue - Applied Generative AI Specialization - https://www.simplilearn.com/applied-ai-course?utm_campaign=KlsYCECWEWE&utm_medium=DescriptionFFF&utm_source=Youtube\"\n\nIn this R Tutorial For Beginners 2022 video, we'll learn about What is R, variables, and data types in R. This R Programming for Beginners is the ideal video for anyone starting with R Programming and Data Analysis. We'll Understand Data Handling, Manipulation, and Visualization in R. So, let's get started with this R Tutorial!\n\nDataset Link - https://drive.google.com/drive/folders/1Wn2TRSbM2CHzxEk-qclzGJcyZT4LHeRV\n\nThis R Programming Full Course Video Covers the following Topics:\n00:00:00 What is R Programming R Tutorial For Beginners 2022\n00:11:48 Variables and Data Types in R - R programming Tutorial For Beginners 2022\n00:21:47 Logical Operators - R programming Tutorial For Beginners 2022\n00:44:58 Vectors - R programming Tutorial For Beginners 2022\n01:00:42 List - R programming Tutorial For Beginners 2022\n01:14:41 Matrix - R programming Tutorial For Beginners 2022\n01:25:58 Data Frame - R programming Tutorial For Beginners 2022\n02:53:49 Flow Control - R programming Tutorial For Beginners 2022\n03:17:37 Functions in R - R programming Tutorial For Beginners 2022\n04:37:19 Data Manipulation in R- dplyr - R programming Tutorial For Beginners 2022\n05:02:59 Data Manipulation in R- tidyr - R programming Tutorial For Beginners 2022\n05:09:57 Data Visualization In R - R programming Tutorial For Beginners 2022\n05:38:42 Time Series Analysis in R - R programming Tutorial For Beginners 2022\n\n\u23e9 Check out the Data Analytics Playlist: link: https://www.youtube.com/playlist?list=PLEiEAq2VkUUKgEFXH1tBbHwq38oWYDScU\n\n\u2705Subscribe to our Channel to learn more about the top Technologies: https://bit.ly/2VT4WtH\n\n#RprogrammingFullCourse #RProgrammingforBeginners #RProgrammingFullTutorial #RTutorial #RTutorialForBeginners #RProgrammingForBeginners #RLanguageTutorial #LearnRProgramming #DataAnalytics #Simplilearn\n\n\u27a1\ufe0f About Artificial Intelligence Engineer\n\nThis Artificial Intelligence Engineer course Created in partnership with IBM, this course introduces students to blended learning and prepares them to be AI and Data Science specialists. In Armonk, New York, IBM is a significant cognitive service and integrated cloud solution firm that provides many technology and consulting solutions.\nIBM is a leader in AI and Machine Learning technology verticals for 2021. This AI masters course will prepare students for Artificial Intelligence and Data Analytics careers.\n\n\u2705 Key Features\n- Add the IBM Advantage to your Learning\n- 25 Industry-relevant Projects and Integrated labs\n- Immersive Learning Experience\n- Simplilearn's JobAssist helps you get noticed by top hiring companies\n\n\u2705 Tools Covered\n- ChatGPT\n- Flask\n- Matplotlib\n- django\n- Python\n- Numpy\n- Pandas\n- SciPy\n- Keras\n- OpenCV\n- And Many More\u2026\n\n\ud83d\udc49Learn more at: https://www.simplilearn.com/data-analyst-certification-course?utm_campaign=DataAnalytics&utm_medium=Description&utm_source=youtube",
+                        "ChannelName": "Simplilearn",
+                        "ThumbnailUrl": "https://i.ytimg.com/vi/KlsYCECWEWE/mqdefault.jpg",
+                        "VideoUrl": "https://www.youtube.com/watch?v=KlsYCECWEWE",
+                        "Duration": "00:08:32",
+                        "RawDuration": "PT6H49M39S",
+                        "StartTime": 0
+                    }
+                ]
+            }
+        ]
+    }
+]

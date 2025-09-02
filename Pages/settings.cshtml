@@ -1,4 +1,57 @@
 ﻿@page
 @model Learning_site.Pages.settingsModel
 @{
+    ViewData["Title"] = "Settings";
+}
+
+<div class="container mt-4">
+    <h2 style="color: #ffffff;
+           text-shadow: 1px 1px 2px rgba(0,0,0,0.7),
+                        -1px -1px 2px rgba(0,0,0,0.7),
+                        1px -1px 2px rgba(0,0,0,0.7),
+                        -1px 1px 2px rgba(0,0,0,0.7);
+           font-weight: 700;">
+        Settings
+    </h2>
+
+    <hr />
+
+    <div class="mb-3">
+        <label class="form-label">Theme</label><br />
+        <button id="themeButton" onclick="toggleTheme()" class="btn btn-primary">
+            Change Theme
+        </button>
+        <span id="currentTheme" class="badge bg-secondary ms-2">Light</span>
+        <small class="text-muted d-block mt-1">Click to cycle through Light, Dark, and Gradient themes</small>
+    </div>
+
+    <!-- Additional settings can be added here -->
+</div>
+
+@section Scripts {
+    <script src="~/js/theme.js"></script>
+    <script>
+        // Update theme badge on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('selectedTheme') || 'light';
+            updateThemeBadge(savedTheme);
+        });
+
+        // Override toggleTheme to update badge
+        const originalToggleTheme = window.toggleTheme;
+        window.toggleTheme = function() {
+            originalToggleTheme();
+            const current = localStorage.getItem('selectedTheme') || 'light';
+            updateThemeBadge(current);
+        };
+
+        function updateThemeBadge(theme) {
+            const badge = document.getElementById('currentTheme');
+            if (!badge) return;
+            badge.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
+            badge.className = 'badge ms-2 ' + (theme === 'light' ? 'bg-secondary' :
+                                               theme === 'dark' ? 'bg-dark text-white' :
+                                               'bg-gradient text-white');
+        }
+    </script>
 }

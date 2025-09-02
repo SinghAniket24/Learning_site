@@ -1,8 +1,5 @@
 ﻿@page
 @model Learning_site.Pages.dashboardModel
-@{
-    // Empty code block as logic is in the code-behind file
-}
 
 <div class="dashboard-container">
     <div class="welcome-section">
@@ -19,168 +16,221 @@
         <p class="quote-author">- @Model.QuoteAuthor</p>
     </div>
 
-    <div class="my-plans-section">
-        <h2>My Current Plans</h2>
+    <div class="recommended-plans-section">
+        <h2>Recommended Plans</h2>
         <div class="plans-list">
-            @if (Model.CurrentPlans != null && Model.CurrentPlans.Any())
+            @if (Model.RecommendedPlans != null && Model.RecommendedPlans.Any())
             {
-                @foreach (var plan in Model.CurrentPlans)
+                @foreach (var plan in Model.RecommendedPlans)
                 {
                     <div class="plan-card">
                         <div class="card-header">
-                            <img src="@plan.ThumbnailUrl" alt="@plan.Title Logo" class="plan-thumbnail" />
+                            <img src="@(plan.DayPlans.FirstOrDefault()?.Videos.FirstOrDefault()?.ThumbnailUrl ?? "/images/default-thumbnail.png")"
+                                 alt="@plan.Title" class="plan-thumbnail" />
                             <h4>@plan.Title</h4>
+                            <p class="plan-channel">by @plan.Channel</p>
+                            <p class="plan-days">Total Days: @plan.TotalDays</p>
                         </div>
-                        <div class="progress-info">
-                            <div class="progress-bar-container">
-                                <div class="progress-bar" style="width: @plan.Progress%;"></div>
-                            </div>
-                            <span class="progress-percentage">@plan.Progress%</span>
-                        </div>
-                        <button class="continue-button">Continue</button>
+                        <form method="get" asp-page="/RecommendedPlanDetails">
+                            <input type="hidden" name="planTitle" value="@plan.Title" />
+                            <button type="submit" class="continue-button">View Plan</button>
+                        </form>
                     </div>
                 }
             }
             else
             {
-                <p>You don't have any active plans. Click "Start a New Plan" to begin!</p>
+                <p>No recommended plans available.</p>
             }
         </div>
     </div>
 </div>
 
 <style>
-    /* Basic CSS for the dashboard layout and components */
     .dashboard-container {
-        padding: 40px;
-        background-color: #f8f9fa;
+        padding: 50px 40px;
+        background-color: #f0f2f5;
         min-height: 100vh;
+        font-family: 'Segoe UI', sans-serif;
     }
 
+    /* Welcome Section */
     .welcome-section {
-        background-color: #ffffff;
-        padding: 60px;
+        background: linear-gradient(135deg, #6b73ff, #000dff);
+        padding: 60px 40px;
         text-align: center;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        margin-bottom: 40px;
+        border-radius: 15px;
+        margin-bottom: 50px;
+        color: #fff;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
     .profile-picture {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
-        margin-bottom: 15px;
         object-fit: cover;
-        border: 2px solid #007bff;
+        border: 3px solid #fff;
     }
 
     .welcome-section h1 {
         font-size: 2.5em;
-        margin-bottom: 20px;
-        color: #333;
+        margin: 0;
     }
 
     .start-plan-button {
-        background-color: #007bff;
-        color: white;
+        background: #ff7a18;
+        color: #fff;
         border: none;
-        padding: 12px 24px;
-        border-radius: 5px;
-        font-size: 1em;
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-weight: bold;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: 0.3s;
     }
 
         .start-plan-button:hover {
-            background-color: #0056b3;
+            background: #ff4c4c;
         }
 
+    /* Quote Box */
     .quote-box {
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
         font-style: italic;
-        color: #555;
+        color: #333;
+        font-size: 1.4em;
+        background: linear-gradient(90deg, #e0eafc, #cfdef3);
+        padding: 25px 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+        .quote-box::before {
+            content: "“";
+            font-size: 3em;
+            position: absolute;
+            left: 15px;
+            top: 10px;
+            color: #007bff;
+        }
+
+        .quote-box::after {
+            content: "”";
+            font-size: 3em;
+            position: absolute;
+            right: 15px;
+            bottom: 10px;
+            color: #007bff;
+        }
+
+    .quote-text {
+        margin: 0 0 10px 0;
     }
 
     .quote-author {
-        font-size: 0.9em;
-        color: #777;
+        font-size: 1.1em;
+        color: #555;
+        margin: 0;
     }
 
-    .my-plans-section h2 {
+    /* Recommended Plans */
+    .recommended-plans-section h2 {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        font-size: 2em;
         color: #333;
     }
 
     .plans-list {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 40px;
     }
 
+    /* Plan Cards */
     .plan-card {
-        background-color: #ffffff;
-        padding: 25px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        background: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 12px 25px rgba(0,0,0,0.15);
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        transition: transform 0.4s, box-shadow 0.4s;
     }
 
+        .plan-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 35px rgba(0,0,0,0.25);
+        }
+
     .card-header {
+        position: relative;
+        width: 100%;
         display: flex;
-        align-items: center;
-        margin-bottom: 15px;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .plan-thumbnail {
-        width: 50px;
-        height: 50px;
-        margin-right: 15px;
-        border-radius: 5px;
-        object-fit: contain;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-bottom: 1px solid #eee;
+        transition: transform 0.3s;
     }
 
-    .progress-info {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
+    .plan-card:hover .plan-thumbnail {
+        transform: scale(1.05);
     }
 
-    .progress-bar-container {
-        flex-grow: 1;
-        background-color: #e0e0e0;
-        height: 10px;
-        border-radius: 5px;
-        overflow: hidden;
+    .card-header h4 {
+        margin: 15px 0 5px;
+        font-size: 1.5em;
+        color: #111;
     }
 
-    .progress-bar {
-        height: 100%;
-        background-color: #4CAF50;
-        transition: width 0.5s ease-in-out;
-    }
-
-    .progress-percentage {
-        font-size: 0.9em;
-        margin-left: 10px;
-        color: #555;
+    .plan-channel, .plan-days {
+        font-size: 1em;
+        color: #666;
+        margin: 2px 0;
     }
 
     .continue-button {
-        background-color: transparent;
-        border: 1px solid #007bff;
-        color: #007bff;
-        padding: 8px 16px;
-        border-radius: 5px;
-        font-size: 0.9em;
+        margin: 15px;
+        background: #007bff;
+        border: none;
+        color: #fff;
+        padding: 12px 22px;
+        border-radius: 10px;
+        font-weight: bold;
         cursor: pointer;
-        align-self: flex-start;
+        transition: background 0.3s;
+    }
+
+        .continue-button:hover {
+            background: #0056b3;
+        }
+
+    /* Responsive */
+   
+
+    .quote-box {
+        font-size: 1.2em;
+        padding: 20px 15px;
+    }
+
+    .plan-thumbnail {
+        height: 200px;
+    }
+
     }
 </style>

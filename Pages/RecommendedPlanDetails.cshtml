@@ -1,0 +1,189 @@
+﻿@page
+@model Learning_site.Pages.RecommendedPlanDetailsModel
+
+<div class="recommended-plan-container">
+    <h1>@Model.PlanTitle</h1>
+
+    @if (Model.DayPlans != null && Model.DayPlans.Any())
+    {
+        @foreach (var day in Model.DayPlans)
+        {
+            <div class="day-section">
+                <h2>Day @day.DayNumber</h2>
+                <div class="videos-list">
+                    @foreach (var video in day.Videos)
+                    {
+                        <div class="video-card">
+                            <div class="thumb-wrapper">
+                                <img src="@video.ThumbnailUrl" alt="@video.Title" class="video-thumb" />
+                                <span class="video-duration">@video.Duration</span>
+                            </div>
+                            <div class="video-info">
+                                <h4 class="video-title">@video.Title</h4>
+                                <p class="video-channel">@video.ChannelName</p>
+                            </div>
+                            <button class="watch-btn btn" data-videourl="@video.VideoUrl">Watch</button>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p>No videos found for this plan.</p>
+    }
+</div>
+
+<!-- Fullscreen Video Overlay (added) -->
+<div id="video-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index:9999; justify-content:center; align-items:center; flex-direction:column;">
+    <button id="close-video" style="position:absolute; top:20px; right:20px; background:#ff4c4c; color:#fff; border:none; padding:10px 15px; border-radius:5px; cursor:pointer; z-index:10000;">✖ Close</button>
+    <div style="width:90%; height:90%;">
+        <iframe id="fullscreen-video" src="" frameborder="0" allowfullscreen allow="autoplay" style="width:100%; height:100%;"></iframe>
+    </div>
+</div>
+
+<style>
+    /* Container */
+    .recommended-plan-container {
+        padding: 50px 40px;
+        background-color: #f4f6f8;
+        min-height: 100vh;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+        .recommended-plan-container h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.2em;
+            color: #222;
+        }
+
+    /* Day Section */
+    .day-section {
+        background: #ffffff;
+        padding: 25px 20px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        transition: transform 0.2s ease-in-out;
+    }
+
+        .day-section:hover {
+            transform: translateY(-3px);
+        }
+
+        .day-section h2 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+    /* Videos Grid */
+    .videos-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    /* Video Card */
+    .video-card {
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+    /* Thumbnail */
+    .thumb-wrapper {
+        position: relative;
+    }
+
+    .video-thumb {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    .video-duration {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        background: rgba(0,0,0,0.75);
+        color: #fff;
+        padding: 3px 8px;
+        font-size: 0.8em;
+        border-radius: 5px;
+    }
+
+    /* Video Info */
+    .video-info {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .video-title {
+        font-size: 1em;
+        font-weight: 600;
+        color: #111;
+        margin: 0;
+    }
+
+    .video-channel {
+        font-size: 0.85em;
+        color: #555;
+        margin: 0;
+    }
+
+    /* Watch Button */
+    .watch-btn {
+        background: #007bff;
+        color: white;
+        text-align: center;
+        padding: 8px 12px;
+        margin: 10px 15px 15px 15px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s;
+        cursor: pointer;
+    }
+
+        .watch-btn:hover {
+            background: #0056b3;
+        }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Fullscreen video logic
+        document.querySelectorAll('.watch-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const videoUrl = btn.getAttribute('data-videourl');
+                const videoId = videoUrl.split('=')[1]; // Extract YouTube video ID
+                const overlay = document.getElementById('video-overlay');
+                const iframe = document.getElementById('fullscreen-video');
+
+                iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                overlay.style.display = 'flex';
+            });
+        });
+
+        document.getElementById('close-video').addEventListener('click', () => {
+            const overlay = document.getElementById('video-overlay');
+            const iframe = document.getElementById('fullscreen-video');
+            iframe.src = ''; // stop video
+            overlay.style.display = 'none';
+        });
+    });
+</script>

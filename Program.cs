@@ -2,20 +2,20 @@
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.EntityFrameworkCore;
 using Learning_site.Data;
-using Learning_site.Services; // ✅ Add this for SupabaseService
+using Learning_site.Services; // ✅ SupabaseService
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container
 builder.Services.AddRazorPages();
 
-// Add your existing DbContext
+// Add your DbContext
 builder.Services.AddDbContext<Learning_siteContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("Learning_siteContext")
         ?? throw new InvalidOperationException("Connection string 'Learning_siteContext' not found.")));
 
-// 👇 Register HttpClient factory
+// HttpClient factory
 builder.Services.AddHttpClient();
 
 // 🔹 Configure Authentication (Auth0 + Cookies)
@@ -37,8 +37,29 @@ builder.Services.AddAuthentication(options =>
     options.Scope.Add("profile");
     options.Scope.Add("email");
 
-    options.CallbackPath = "/signin-auth0";
+    options.CallbackPath = "/signin-auth0"; // login callback
     options.ClaimsIssuer = "Auth0";
+
+    // 🔹 Handle logout redirect
+    options.SignedOutCallbackPath = "/signout-callback-oidc"; // local endpoint for post-logout
+
+    options.Events = new OpenIdConnectEvents
+    {
+        OnRedirectToIdentityProviderForSignOut = context =>
+        {
+            // Tell Auth0 where to send the user after logout
+            var logoutUri = $"https://{builder.Configuration["Auth0:Domain"]}/v2/logout?client_id={builder.Configuration["Auth0:ClientId"]}";
+
+            // Absolute redirect after logout
+            var postLogoutUri = context.Request.Scheme + "://" + context.Request.Host + "/dashboard";
+            logoutUri += $"&returnTo={Uri.EscapeDataString(postLogoutUri)}";
+
+            context.Response.Redirect(logoutUri);
+            context.HandleResponse();
+
+            return Task.CompletedTask;
+        }
+    };
 });
 
 // 🔹 Enforce authentication globally
@@ -47,7 +68,7 @@ builder.Services.AddAuthorization(options =>
     options.FallbackPolicy = options.DefaultPolicy;
 });
 
-// 🔹 Register SupabaseService
+// Supabase service
 builder.Services.AddSingleton<SupabaseService>();
 
 var app = builder.Build();
@@ -67,7 +88,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
-// 🔹 Authentication must come before Authorization
+// Auth before Authorization
 app.UseAuthentication();
 app.UseAuthorization();
 

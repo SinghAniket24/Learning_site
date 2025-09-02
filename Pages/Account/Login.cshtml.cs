@@ -6,11 +6,11 @@ namespace Learning_site.Pages.Account
 {
     public class LoginModel : PageModel
     {
-        public IActionResult OnGet(string returnUrl = "/dashboard")
+        public IActionResult OnPost()
         {
-            // Challenge the user with OpenID Connect (Auth0)
+            // Trigger Auth0 login only when button is clicked
             return Challenge(
-                new AuthenticationProperties { RedirectUri = returnUrl },
+                new AuthenticationProperties { RedirectUri = "/dashboard" },
                 "OpenIdConnect"
             );
         }
