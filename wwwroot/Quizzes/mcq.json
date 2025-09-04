@@ -1,0 +1,2204 @@
+{
+  "Topics": [
+    {
+      "TopicName": "Java",
+      "MCQs": [
+        {
+          "Question": "Which keyword is used to inherit a class in Java?",
+          "Options": [
+            "extends",
+            "implements",
+            "inherit",
+            "super"
+          ],
+          "CorrectAnswer": "extends"
+        },
+        {
+          "Question": "Which method is the entry point of a Java program?",
+          "Options": [
+            "start()",
+            "main()",
+            "run()",
+            "init()"
+          ],
+          "CorrectAnswer": "main()"
+        },
+        {
+          "Question": "Which of these is not a primitive data type in Java?",
+          "Options": [
+            "int",
+            "float",
+            "String",
+            "char"
+          ],
+          "CorrectAnswer": "String"
+        },
+        {
+          "Question": "Which symbol is used to terminate statements in Java?",
+          "Options": [
+            ".",
+            ";",
+            ":",
+            ","
+          ],
+          "CorrectAnswer": ";"
+        },
+        {
+          "Question": "Which keyword is used to define a constant in Java?",
+          "Options": [
+            "final",
+            "static",
+            "const",
+            "define"
+          ],
+          "CorrectAnswer": "final"
+        },
+        {
+          "Question": "Which operator is used for object reference comparison?",
+          "Options": [
+            "==",
+            "equals()",
+            "compareTo()",
+            "==="
+          ],
+          "CorrectAnswer": "=="
+        },
+        {
+          "Question": "Which of these is not part of OOP in Java?",
+          "Options": [
+            "Encapsulation",
+            "Abstraction",
+            "Compilation",
+            "Inheritance"
+          ],
+          "CorrectAnswer": "Compilation"
+        },
+        {
+          "Question": "Which package contains the Scanner class?",
+          "Options": [
+            "java.io",
+            "java.util",
+            "java.lang",
+            "java.text"
+          ],
+          "CorrectAnswer": "java.util"
+        },
+        {
+          "Question": "Which keyword is used to create an object in Java?",
+          "Options": [
+            "make",
+            "new",
+            "create",
+            "build"
+          ],
+          "CorrectAnswer": "new"
+        },
+        {
+          "Question": "What is the default value of a boolean variable in Java?",
+          "Options": [
+            "true",
+            "false",
+            "0",
+            "null"
+          ],
+          "CorrectAnswer": "false"
+        }
+      ]
+    },
+    {
+      "TopicName": "Python",
+      "MCQs": [
+        {
+          "Question": "Which symbol is used for comments in Python?",
+          "Options": [
+            "//",
+            "#",
+            "/* */",
+            "--"
+          ],
+          "CorrectAnswer": "#"
+        },
+        {
+          "Question": "Which function is used to get user input in Python 3?",
+          "Options": [
+            "input()",
+            "scan()",
+            "read()",
+            "get()"
+          ],
+          "CorrectAnswer": "input()"
+        },
+        {
+          "Question": "What is the output type of input() by default?",
+          "Options": [
+            "int",
+            "str",
+            "float",
+            "bool"
+          ],
+          "CorrectAnswer": "str"
+        },
+        {
+          "Question": "Which keyword is used to define a function in Python?",
+          "Options": [
+            "function",
+            "def",
+            "fun",
+            "define"
+          ],
+          "CorrectAnswer": "def"
+        },
+        {
+          "Question": "Which of these is an immutable data type in Python?",
+          "Options": [
+            "list",
+            "set",
+            "dictionary",
+            "tuple"
+          ],
+          "CorrectAnswer": "tuple"
+        },
+        {
+          "Question": "Which operator is used for exponentiation in Python?",
+          "Options": [
+            "^",
+            "**",
+            "exp",
+            "//"
+          ],
+          "CorrectAnswer": "**"
+        },
+        {
+          "Question": "Which built-in function returns the length of a list?",
+          "Options": [
+            "len()",
+            "count()",
+            "size()",
+            "length()"
+          ],
+          "CorrectAnswer": "len()"
+        },
+        {
+          "Question": "Which module is used for regular expressions in Python?",
+          "Options": [
+            "regex",
+            "pyregex",
+            "re",
+            "regexp"
+          ],
+          "CorrectAnswer": "re"
+        },
+        {
+          "Question": "Which collection type stores key-value pairs in Python?",
+          "Options": [
+            "list",
+            "tuple",
+            "dictionary",
+            "set"
+          ],
+          "CorrectAnswer": "dictionary"
+        },
+        {
+          "Question": "What is the output of type(5/2) in Python 3?",
+          "Options": [
+            "int",
+            "float",
+            "double",
+            "long"
+          ],
+          "CorrectAnswer": "float"
+        }
+      ]
+    },
+    {
+      "TopicName": "C++",
+      "MCQs": [
+        {
+          "Question": "Which symbol is used to end a statement in C++?",
+          "Options": [
+            ".",
+            ";",
+            ":",
+            ","
+          ],
+          "CorrectAnswer": ";"
+        },
+        {
+          "Question": "Which of the following is used for input in C++?",
+          "Options": [
+            "cout",
+            "cin",
+            "printf",
+            "scanf"
+          ],
+          "CorrectAnswer": "cin"
+        },
+        {
+          "Question": "Which of these is not a C++ data type?",
+          "Options": [
+            "int",
+            "float",
+            "boolean",
+            "char"
+          ],
+          "CorrectAnswer": "boolean"
+        },
+        {
+          "Question": "Which operator is used for pointer dereferencing?",
+          "Options": [
+            "&",
+            "*",
+            "->",
+            "%"
+          ],
+          "CorrectAnswer": "*"
+        },
+        {
+          "Question": "Which of these is not an access specifier in C++?",
+          "Options": [
+            "public",
+            "private",
+            "protected",
+            "package"
+          ],
+          "CorrectAnswer": "package"
+        },
+        {
+          "Question": "Which concept is used to reuse classes?",
+          "Options": [
+            "Encapsulation",
+            "Inheritance",
+            "Polymorphism",
+            "Abstraction"
+          ],
+          "CorrectAnswer": "Inheritance"
+        },
+        {
+          "Question": "Which header file is needed for cout and cin?",
+          "Options": [
+            "<iostream>",
+            "<stdio.h>",
+            "<conio.h>",
+            "<stdlib.h>"
+          ],
+          "CorrectAnswer": "<iostream>"
+        },
+        {
+          "Question": "Which operator is overloaded for object allocation?",
+          "Options": [
+            "delete",
+            "malloc",
+            "new",
+            "alloc"
+          ],
+          "CorrectAnswer": "new"
+        },
+        {
+          "Question": "Which function is the entry point of a C++ program?",
+          "Options": [
+            "start()",
+            "main()",
+            "execute()",
+            "init()"
+          ],
+          "CorrectAnswer": "main()"
+        },
+        {
+          "Question": "Which binding does virtual function support?",
+          "Options": [
+            "Static Binding",
+            "Dynamic Binding",
+            "Early Binding",
+            "Compile-time Binding"
+          ],
+          "CorrectAnswer": "Dynamic Binding"
+        }
+      ]
+    },
+    {
+      "TopicName": "HTML",
+      "MCQs": [
+        {
+          "Question": "Which tag is used to define a hyperlink in HTML?",
+          "Options": [
+            "<a>",
+            "<link>",
+            "<href>",
+            "<url>"
+          ],
+          "CorrectAnswer": "<a>"
+        },
+        {
+          "Question": "Which tag is used to insert an image?",
+          "Options": [
+            "<img>",
+            "<image>",
+            "<src>",
+            "<picture>"
+          ],
+          "CorrectAnswer": "<img>"
+        },
+        {
+          "Question": "Which attribute specifies the alternate text for an image?",
+          "Options": [
+            "src",
+            "title",
+            "alt",
+            "href"
+          ],
+          "CorrectAnswer": "alt"
+        },
+        {
+          "Question": "Which HTML element is used for the largest heading?",
+          "Options": [
+            "<h6>",
+            "<h1>",
+            "<heading>",
+            "<head>"
+          ],
+          "CorrectAnswer": "<h1>"
+        },
+        {
+          "Question": "Which tag is used to define a table row?",
+          "Options": [
+            "<td>",
+            "<tr>",
+            "<th>",
+            "<row>"
+          ],
+          "CorrectAnswer": "<tr>"
+        },
+        {
+          "Question": "Which attribute is used to open a link in a new window?",
+          "Options": [
+            "target=\"_self\"",
+            "target=\"_new\"",
+            "target=\"_blank\"",
+            "window=\"new\""
+          ],
+          "CorrectAnswer": "target=\"_blank\""
+        },
+        {
+          "Question": "Which tag is used for line breaks?",
+          "Options": [
+            "<lb>",
+            "<br>",
+            "<break>",
+            "<line>"
+          ],
+          "CorrectAnswer": "<br>"
+        },
+        {
+          "Question": "Which doctype declaration is used for HTML5?",
+          "Options": [
+            "<!DOCTYPE HTML>",
+            "<!HTML5>",
+            "<!doctype html5>",
+            "<doctype html>"
+          ],
+          "CorrectAnswer": "<!DOCTYPE HTML>"
+        },
+        {
+          "Question": "Which tag defines a table cell?",
+          "Options": [
+            "<td>",
+            "<th>",
+            "<tr>",
+            "<cell>"
+          ],
+          "CorrectAnswer": "<td>"
+        },
+        {
+          "Question": "Which HTML element is used to define ordered lists?",
+          "Options": [
+            "<ul>",
+            "<ol>",
+            "<list>",
+            "<dl>"
+          ],
+          "CorrectAnswer": "<ol>"
+        }
+      ]
+    },
+    {
+      "TopicName": "CSS",
+      "MCQs": [
+        {
+          "Question": "Which property is used to change text color in CSS?",
+          "Options": [
+            "color",
+            "font-color",
+            "text-color",
+            "background-color"
+          ],
+          "CorrectAnswer": "color"
+        },
+        {
+          "Question": "Which symbol indicates an ID selector in CSS?",
+          "Options": [
+            ".",
+            "#",
+            "*",
+            "&"
+          ],
+          "CorrectAnswer": "#"
+        },
+        {
+          "Question": "Which CSS property controls text size?",
+          "Options": [
+            "font",
+            "font-size",
+            "text-size",
+            "size"
+          ],
+          "CorrectAnswer": "font-size"
+        },
+        {
+          "Question": "Which property changes the background color?",
+          "Options": [
+            "color",
+            "background",
+            "bgcolor",
+            "background-color"
+          ],
+          "CorrectAnswer": "background-color"
+        },
+        {
+          "Question": "Which unit is relative to the root element’s font size?",
+          "Options": [
+            "em",
+            "px",
+            "rem",
+            "%"
+          ],
+          "CorrectAnswer": "rem"
+        },
+        {
+          "Question": "Which property is used to make text bold?",
+          "Options": [
+            "font-style",
+            "text-weight",
+            "font-bold",
+            "font-weight"
+          ],
+          "CorrectAnswer": "font-weight"
+        },
+        {
+          "Question": "Which value is used for absolute positioning?",
+          "Options": [
+            "relative",
+            "static",
+            "absolute",
+            "fixed"
+          ],
+          "CorrectAnswer": "absolute"
+        },
+        {
+          "Question": "Which property affects the space between lines of text?",
+          "Options": [
+            "letter-spacing",
+            "text-indent",
+            "word-spacing",
+            "line-height"
+          ],
+          "CorrectAnswer": "line-height"
+        },
+        {
+          "Question": "Which pseudo-class targets the first child element?",
+          "Options": [
+            ":first",
+            ":first-child",
+            ":first-of-type",
+            ":initial"
+          ],
+          "CorrectAnswer": ":first-child"
+        },
+        {
+          "Question": "Which property is used to hide an element?",
+          "Options": [
+            "visibility",
+            "display",
+            "opacity",
+            "all of the above"
+          ],
+          "CorrectAnswer": "all of the above"
+        }
+      ]
+    },
+    {
+      "TopicName": "JavaScript",
+      "MCQs": [
+        {
+          "Question": "Which symbol is used for single-line comments?",
+          "Options": [
+            "#",
+            "//",
+            "/*",
+            "<!-- -->"
+          ],
+          "CorrectAnswer": "//"
+        },
+        {
+          "Question": "Which keyword declares a block-scoped variable?",
+          "Options": [
+            "var",
+            "let",
+            "const",
+            "both let and const"
+          ],
+          "CorrectAnswer": "both let and const"
+        },
+        {
+          "Question": "Which function is used to display alerts?",
+          "Options": [
+            "alert()",
+            "popup()",
+            "msg()",
+            "prompt()"
+          ],
+          "CorrectAnswer": "alert()"
+        },
+        {
+          "Question": "Which method parses a string to an integer?",
+          "Options": [
+            "Number()",
+            "parseInt()",
+            "toInteger()",
+            "int()"
+          ],
+          "CorrectAnswer": "parseInt()"
+        },
+        {
+          "Question": "What is the default value of an uninitialized variable?",
+          "Options": [
+            "null",
+            "undefined",
+            "0",
+            "false"
+          ],
+          "CorrectAnswer": "undefined"
+        },
+        {
+          "Question": "Which operator is used to check both value and type?",
+          "Options": [
+            "==",
+            "=",
+            "===",
+            "!=="
+          ],
+          "CorrectAnswer": "==="
+        },
+        {
+          "Question": "Which method removes the last element of an array?",
+          "Options": [
+            "shift()",
+            "pop()",
+            "remove()",
+            "delete()"
+          ],
+          "CorrectAnswer": "pop()"
+        },
+        {
+          "Question": "Which function runs code after a delay?",
+          "Options": [
+            "setTimeout()",
+            "wait()",
+            "sleep()",
+            "delay()"
+          ],
+          "CorrectAnswer": "setTimeout()"
+        },
+        {
+          "Question": "Which operator is used for string concatenation?",
+          "Options": [
+            "+",
+            "&",
+            ".",
+            ","
+          ],
+          "CorrectAnswer": "+"
+        },
+        {
+          "Question": "Which loop is executed at least once?",
+          "Options": [
+            "for",
+            "while",
+            "do...while",
+            "foreach"
+          ],
+          "CorrectAnswer": "do...while"
+        }
+      ]
+    },
+    {
+      "TopicName": "SQL",
+      "MCQs": [
+        {
+          "Question": "Which SQL command is used to retrieve data?",
+          "Options": [
+            "GET",
+            "SELECT",
+            "SHOW",
+            "FETCH"
+          ],
+          "CorrectAnswer": "SELECT"
+        },
+        {
+          "Question": "Which clause filters rows before grouping?",
+          "Options": [
+            "WHERE",
+            "HAVING",
+            "GROUP BY",
+            "ORDER BY"
+          ],
+          "CorrectAnswer": "WHERE"
+        },
+        {
+          "Question": "Which keyword sorts results?",
+          "Options": [
+            "SORT",
+            "GROUP",
+            "ORDER BY",
+            "ARRANGE"
+          ],
+          "CorrectAnswer": "ORDER BY"
+        },
+        {
+          "Question": "Which keyword removes a table?",
+          "Options": [
+            "DELETE",
+            "DROP",
+            "TRUNCATE",
+            "REMOVE"
+          ],
+          "CorrectAnswer": "DROP"
+        },
+        {
+          "Question": "Which statement updates data?",
+          "Options": [
+            "UPDATE",
+            "MODIFY",
+            "CHANGE",
+            "ALTER"
+          ],
+          "CorrectAnswer": "UPDATE"
+        },
+        {
+          "Question": "Which function counts rows?",
+          "Options": [
+            "SUM()",
+            "AVG()",
+            "COUNT()",
+            "ROWCOUNT()"
+          ],
+          "CorrectAnswer": "COUNT()"
+        },
+        {
+          "Question": "Which join returns rows common to both tables?",
+          "Options": [
+            "LEFT JOIN",
+            "RIGHT JOIN",
+            "INNER JOIN",
+            "FULL JOIN"
+          ],
+          "CorrectAnswer": "INNER JOIN"
+        },
+        {
+          "Question": "Which command defines a new table?",
+          "Options": [
+            "NEW TABLE",
+            "CREATE TABLE",
+            "ADD TABLE",
+            "INSERT TABLE"
+          ],
+          "CorrectAnswer": "CREATE TABLE"
+        },
+        {
+          "Question": "Which operator finds a pattern?",
+          "Options": [
+            "LIKE",
+            "MATCH",
+            "CONTAINS",
+            "SEARCH"
+          ],
+          "CorrectAnswer": "LIKE"
+        },
+        {
+          "Question": "Which keyword retrieves unique values?",
+          "Options": [
+            "DISTINCT",
+            "UNIQUE",
+            "FILTER",
+            "GROUP"
+          ],
+          "CorrectAnswer": "DISTINCT"
+        }
+      ]
+    },
+    {
+      "TopicName": "Data Structures",
+      "MCQs": [
+        {
+          "Question": "Which data structure works on FIFO principle?",
+          "Options": [
+            "Stack",
+            "Queue",
+            "Tree",
+            "Graph"
+          ],
+          "CorrectAnswer": "Queue"
+        },
+        {
+          "Question": "Which traversal visits root, left, then right in trees?",
+          "Options": [
+            "Inorder",
+            "Preorder",
+            "Postorder",
+            "Level order"
+          ],
+          "CorrectAnswer": "Preorder"
+        },
+        {
+          "Question": "Which data structure uses LIFO?",
+          "Options": [
+            "Queue",
+            "Stack",
+            "Array",
+            "Linked List"
+          ],
+          "CorrectAnswer": "Stack"
+        },
+        {
+          "Question": "Which sorting method is fastest on average?",
+          "Options": [
+            "Bubble Sort",
+            "Quick Sort",
+            "Selection Sort",
+            "Insertion Sort"
+          ],
+          "CorrectAnswer": "Quick Sort"
+        },
+        {
+          "Question": "Which is not a linear data structure?",
+          "Options": [
+            "Array",
+            "Stack",
+            "Queue",
+            "Graph"
+          ],
+          "CorrectAnswer": "Graph"
+        },
+        {
+          "Question": "Which searching is faster for sorted data?",
+          "Options": [
+            "Linear Search",
+            "Binary Search",
+            "Hashing",
+            "DFS"
+          ],
+          "CorrectAnswer": "Binary Search"
+        },
+        {
+          "Question": "Which data structure is used for implementing recursion?",
+          "Options": [
+            "Queue",
+            "Array",
+            "Stack",
+            "Graph"
+          ],
+          "CorrectAnswer": "Stack"
+        },
+        {
+          "Question": "Which operation adds data to a queue?",
+          "Options": [
+            "push",
+            "insert",
+            "enqueue",
+            "append"
+          ],
+          "CorrectAnswer": "enqueue"
+        },
+        {
+          "Question": "Which traversal visits nodes level by level?",
+          "Options": [
+            "Preorder",
+            "Inorder",
+            "Level-order",
+            "Postorder"
+          ],
+          "CorrectAnswer": "Level-order"
+        },
+        {
+          "Question": "What is the time complexity of binary search?",
+          "Options": [
+            "O(1)",
+            "O(n)",
+            "O(log n)",
+            "O(n log n)"
+          ],
+          "CorrectAnswer": "O(log n)"
+        }
+      ]
+    },
+    {
+      "TopicName": "Networking",
+      "MCQs": [
+        {
+          "Question": "What does IP stand for?",
+          "Options": [
+            "Internet Protocol",
+            "Internal Processing",
+            "Inter Process",
+            "Interface Program"
+          ],
+          "CorrectAnswer": "Internet Protocol"
+        },
+        {
+          "Question": "Which layer is responsible for routing?",
+          "Options": [
+            "Transport",
+            "Network",
+            "Session",
+            "Data Link"
+          ],
+          "CorrectAnswer": "Network"
+        },
+        {
+          "Question": "Which protocol is used to transfer web pages?",
+          "Options": [
+            "FTP",
+            "SMTP",
+            "HTTP",
+            "SNMP"
+          ],
+          "CorrectAnswer": "HTTP"
+        },
+        {
+          "Question": "Which address is unique globally?",
+          "Options": [
+            "MAC Address",
+            "IP Address",
+            "Port Number",
+            "Subnet Mask"
+          ],
+          "CorrectAnswer": "IP Address"
+        },
+        {
+          "Question": "Which protocol is used for email transfer?",
+          "Options": [
+            "SMTP",
+            "FTP",
+            "TELNET",
+            "SNMP"
+          ],
+          "CorrectAnswer": "SMTP"
+        },
+        {
+          "Question": "How many bits are in an IPv4 address?",
+          "Options": [
+            "32 bits",
+            "64 bits",
+            "128 bits",
+            "16 bits"
+          ],
+          "CorrectAnswer": "32 bits"
+        },
+        {
+          "Question": "Which device connects different networks?",
+          "Options": [
+            "Hub",
+            "Switch",
+            "Router",
+            "Bridge"
+          ],
+          "CorrectAnswer": "Router"
+        },
+        {
+          "Question": "Which layer ensures reliable data transfer?",
+          "Options": [
+            "Application",
+            "Transport",
+            "Network",
+            "Physical"
+          ],
+          "CorrectAnswer": "Transport"
+        },
+        {
+          "Question": "Which protocol is used by DNS?",
+          "Options": [
+            "TCP",
+            "UDP",
+            "Both TCP and UDP",
+            "ICMP"
+          ],
+          "CorrectAnswer": "Both TCP and UDP"
+        },
+        {
+          "Question": "Which protocol secures web communication?",
+          "Options": [
+            "HTTP",
+            "HTTPS",
+            "FTP",
+            "SNMP"
+          ],
+          "CorrectAnswer": "HTTPS"
+        }
+      ]
+    },
+    {
+      "TopicName": "Operating Systems",
+      "MCQs": [
+        {
+          "Question": "Which OS manages hardware and software resources?",
+          "Options": [
+            "Compiler",
+            "Operating System",
+            "Interpreter",
+            "Loader"
+          ],
+          "CorrectAnswer": "Operating System"
+        },
+        {
+          "Question": "Which scheduling gives CPU to the shortest job?",
+          "Options": [
+            "FCFS",
+            "SJF",
+            "Round Robin",
+            "Priority"
+          ],
+          "CorrectAnswer": "SJF"
+        },
+        {
+          "Question": "Which memory is volatile?",
+          "Options": [
+            "ROM",
+            "Hard Disk",
+            "RAM",
+            "CD"
+          ],
+          "CorrectAnswer": "RAM"
+        },
+        {
+          "Question": "Which is a non-preemptive scheduling method?",
+          "Options": [
+            "FCFS",
+            "Round Robin",
+            "Preemptive Priority",
+            "SRTF"
+          ],
+          "CorrectAnswer": "FCFS"
+        },
+        {
+          "Question": "Which system call creates a new process?",
+          "Options": [
+            "fork()",
+            "create()",
+            "exec()",
+            "spawn()"
+          ],
+          "CorrectAnswer": "fork()"
+        },
+        {
+          "Question": "Which OS operation retrieves data blocks?",
+          "Options": [
+            "File Management",
+            "Memory Management",
+            "Disk Scheduling",
+            "Process Scheduling"
+          ],
+          "CorrectAnswer": "Disk Scheduling"
+        },
+        {
+          "Question": "Which memory management technique allows non-contiguous allocation?",
+          "Options": [
+            "Paging",
+            "Swapping",
+            "Contiguous Allocation",
+            "Segmentation"
+          ],
+          "CorrectAnswer": "Paging"
+        },
+        {
+          "Question": "Which algorithm prevents deadlock by avoiding unsafe states?",
+          "Options": [
+            "FIFO",
+            "Banker’s Algorithm",
+            "LRU",
+            "Round Robin"
+          ],
+          "CorrectAnswer": "Banker’s Algorithm"
+        },
+        {
+          "Question": "Which OS component interacts with hardware?",
+          "Options": [
+            "Shell",
+            "Kernel",
+            "API",
+            "Driver"
+          ],
+          "CorrectAnswer": "Kernel"
+        },
+        {
+          "Question": "Which memory is fastest?",
+          "Options": [
+            "Hard Disk",
+            "RAM",
+            "Cache",
+            "Register"
+          ],
+          "CorrectAnswer": "Register"
+        }
+      ]
+    },
+    {
+      "TopicName": "Machine Learning",
+      "MCQs": [
+        {
+          "Question": "Which ML type uses labeled data?",
+          "Options": [
+            "Supervised",
+            "Unsupervised",
+            "Reinforcement",
+            "Deep"
+          ],
+          "CorrectAnswer": "Supervised"
+        },
+        {
+          "Question": "Which algorithm is used for classification?",
+          "Options": [
+            "K-means",
+            "Naive Bayes",
+            "Apriori",
+            "DBSCAN"
+          ],
+          "CorrectAnswer": "Naive Bayes"
+        },
+        {
+          "Question": "Which is a technique for reducing dimensions?",
+          "Options": [
+            "PCA",
+            "KNN",
+            "SVM",
+            "CNN"
+          ],
+          "CorrectAnswer": "PCA"
+        },
+        {
+          "Question": "Which ML model mimics neurons?",
+          "Options": [
+            "KNN",
+            "Neural Network",
+            "Decision Tree",
+            "Regression"
+          ],
+          "CorrectAnswer": "Neural Network"
+        },
+        {
+          "Question": "Which algorithm is used for clustering?",
+          "Options": [
+            "K-means",
+            "Logistic Regression",
+            "Naive Bayes",
+            "Linear Regression"
+          ],
+          "CorrectAnswer": "K-means"
+        },
+        {
+          "Question": "Which function is used to evaluate regression models?",
+          "Options": [
+            "Accuracy",
+            "RMSE",
+            "Precision",
+            "Recall"
+          ],
+          "CorrectAnswer": "RMSE"
+        },
+        {
+          "Question": "Which algorithm is used in market basket analysis?",
+          "Options": [
+            "Apriori",
+            "KNN",
+            "Linear Regression",
+            "Decision Tree"
+          ],
+          "CorrectAnswer": "Apriori"
+        },
+        {
+          "Question": "Which approach uses rewards for learning?",
+          "Options": [
+            "Supervised",
+            "Unsupervised",
+            "Reinforcement",
+            "Semi-supervised"
+          ],
+          "CorrectAnswer": "Reinforcement"
+        },
+        {
+          "Question": "What does overfitting mean?",
+          "Options": [
+            "Good generalization",
+            "Model performs well on training but poorly on test data",
+            "High accuracy on test set",
+            "None"
+          ],
+          "CorrectAnswer": "Model performs well on training but poorly on test data"
+        },
+        {
+          "Question": "Which ML library is used in Python?",
+          "Options": [
+            "NumPy",
+            "scikit-learn",
+            "Pandas",
+            "Matplotlib"
+          ],
+          "CorrectAnswer": "scikit-learn"
+        }
+      ]
+    },
+    {
+      "TopicName": "Linux",
+      "MCQs": [
+        {
+          "Question": "Which command lists files in Linux?",
+          "Options": [
+            "ls",
+            "list",
+            "dir",
+            "show"
+          ],
+          "CorrectAnswer": "ls"
+        },
+        {
+          "Question": "Which command is used to change directory?",
+          "Options": [
+            "cd",
+            "pwd",
+            "mv",
+            "chdir"
+          ],
+          "CorrectAnswer": "cd"
+        },
+        {
+          "Question": "Which user has complete system access?",
+          "Options": [
+            "superuser",
+            "admin",
+            "root",
+            "sys"
+          ],
+          "CorrectAnswer": "root"
+        },
+        {
+          "Question": "Which command prints working directory?",
+          "Options": [
+            "pwd",
+            "ls",
+            "cwd",
+            "dir"
+          ],
+          "CorrectAnswer": "pwd"
+        },
+        {
+          "Question": "Which command is used to display file content?",
+          "Options": [
+            "cat",
+            "show",
+            "open",
+            "less"
+          ],
+          "CorrectAnswer": "cat"
+        },
+        {
+          "Question": "Which command changes file permissions?",
+          "Options": [
+            "chmod",
+            "chperm",
+            "chown",
+            "permit"
+          ],
+          "CorrectAnswer": "chmod"
+        },
+        {
+          "Question": "Which command is used to move files?",
+          "Options": [
+            "cp",
+            "rm",
+            "mv",
+            "transfer"
+          ],
+          "CorrectAnswer": "mv"
+        },
+        {
+          "Question": "Which command is used to search text in files?",
+          "Options": [
+            "find",
+            "grep",
+            "locate",
+            "search"
+          ],
+          "CorrectAnswer": "grep"
+        },
+        {
+          "Question": "Which command creates directories?",
+          "Options": [
+            "newdir",
+            "mkdir",
+            "makedir",
+            "dircreate"
+          ],
+          "CorrectAnswer": "mkdir"
+        },
+        {
+          "Question": "Which command shows running processes?",
+          "Options": [
+            "top",
+            "ps",
+            "jobs",
+            "proc"
+          ],
+          "CorrectAnswer": "ps"
+        }
+      ]
+    },
+    {
+      "TopicName": "PHP",
+      "MCQs": [
+        {
+          "Question": "Which symbol is used to start PHP code?",
+          "Options": [
+            "<?php",
+            "<%",
+            "<?",
+            "<php>"
+          ],
+          "CorrectAnswer": "<?php"
+        },
+        {
+          "Question": "Which function outputs text in PHP?",
+          "Options": [
+            "print()",
+            "echo",
+            "printf()",
+            "display()"
+          ],
+          "CorrectAnswer": "echo"
+        },
+        {
+          "Question": "Which superglobal holds form data sent with GET?",
+          "Options": [
+            "$_GET",
+            "$_POST",
+            "$_REQUEST",
+            "$_SERVER"
+          ],
+          "CorrectAnswer": "$_GET"
+        },
+        {
+          "Question": "Which function starts a session?",
+          "Options": [
+            "init_session()",
+            "session_start()",
+            "begin_session()",
+            "start_session()"
+          ],
+          "CorrectAnswer": "session_start()"
+        },
+        {
+          "Question": "Which operator is used for string concatenation?",
+          "Options": [
+            "+",
+            "&",
+            ".",
+            ","
+          ],
+          "CorrectAnswer": "."
+        },
+        {
+          "Question": "What is the default file extension for PHP files?",
+          "Options": [
+            ".html",
+            ".php",
+            ".xml",
+            ".js"
+          ],
+          "CorrectAnswer": ".php"
+        },
+        {
+          "Question": "Which function terminates PHP script?",
+          "Options": [
+            "stop()",
+            "break()",
+            "exit()",
+            "end()"
+          ],
+          "CorrectAnswer": "exit()"
+        },
+        {
+          "Question": "Which function connects to MySQL?",
+          "Options": [
+            "mysqli_connect()",
+            "mysql_connect()",
+            "db_connect()",
+            "pdo_connect()"
+          ],
+          "CorrectAnswer": "mysqli_connect()"
+        },
+        {
+          "Question": "Which variable scope is accessible everywhere?",
+          "Options": [
+            "local",
+            "global",
+            "static",
+            "session"
+          ],
+          "CorrectAnswer": "global"
+        },
+        {
+          "Question": "Which function includes another PHP file?",
+          "Options": [
+            "import()",
+            "require()",
+            "include()",
+            "both include() and require()"
+          ],
+          "CorrectAnswer": "both include() and require()"
+        }
+      ]
+    },
+    {
+      "TopicName": "Firebase",
+      "MCQs": [
+        {
+          "Question": "Firebase is mainly used for?",
+          "Options": [
+            "Database & Hosting",
+            "Game Development",
+            "Graphic Design",
+            "Desktop Apps"
+          ],
+          "CorrectAnswer": "Database & Hosting"
+        },
+        {
+          "Question": "Which Firebase database stores JSON?",
+          "Options": [
+            "Realtime Database",
+            "Firestore",
+            "SQL",
+            "SQLite"
+          ],
+          "CorrectAnswer": "Realtime Database"
+        },
+        {
+          "Question": "Which Firebase service provides authentication?",
+          "Options": [
+            "Firestore",
+            "Auth",
+            "Storage",
+            "Functions"
+          ],
+          "CorrectAnswer": "Auth"
+        },
+        {
+          "Question": "Which Firebase service sends push notifications?",
+          "Options": [
+            "Cloud Messaging",
+            "Realtime Database",
+            "Storage",
+            "Hosting"
+          ],
+          "CorrectAnswer": "Cloud Messaging"
+        },
+        {
+          "Question": "Which Firebase service is used for static hosting?",
+          "Options": [
+            "Hosting",
+            "Firestore",
+            "Storage",
+            "Functions"
+          ],
+          "CorrectAnswer": "Hosting"
+        },
+        {
+          "Question": "Which Firebase service is for serverless functions?",
+          "Options": [
+            "Cloud Functions",
+            "Hosting",
+            "Auth",
+            "Firestore"
+          ],
+          "CorrectAnswer": "Cloud Functions"
+        },
+        {
+          "Question": "Which Firebase database is more scalable?",
+          "Options": [
+            "Firestore",
+            "Realtime Database",
+            "SQLite",
+            "MySQL"
+          ],
+          "CorrectAnswer": "Firestore"
+        },
+        {
+          "Question": "Which Firebase feature supports file uploads?",
+          "Options": [
+            "Firestore",
+            "Storage",
+            "Auth",
+            "Hosting"
+          ],
+          "CorrectAnswer": "Storage"
+        },
+        {
+          "Question": "Which Google cloud platform integrates with Firebase?",
+          "Options": [
+            "GCP",
+            "AWS",
+            "Azure",
+            "Oracle"
+          ],
+          "CorrectAnswer": "GCP"
+        },
+        {
+          "Question": "Which Firebase tool monitors app performance?",
+          "Options": [
+            "Analytics",
+            "Performance Monitoring",
+            "Crashlytics",
+            "Cloud Messaging"
+          ],
+          "CorrectAnswer": "Performance Monitoring"
+        }
+      ]
+    },
+    {
+      "TopicName": "Flutter",
+      "MCQs": [
+        {
+          "Question": "Which language is used to build Flutter apps?",
+          "Options": [
+            "Java",
+            "Dart",
+            "Kotlin",
+            "Python"
+          ],
+          "CorrectAnswer": "Dart"
+        },
+        {
+          "Question": "Which widget creates a scrollable list?",
+          "Options": [
+            "ListView",
+            "GridView",
+            "Column",
+            "Row"
+          ],
+          "CorrectAnswer": "ListView"
+        },
+        {
+          "Question": "Which widget is used for layout in a horizontal direction?",
+          "Options": [
+            "Row",
+            "Column",
+            "Stack",
+            "Container"
+          ],
+          "CorrectAnswer": "Row"
+        },
+        {
+          "Question": "Which method runs first in a Flutter app?",
+          "Options": [
+            "build()",
+            "main()",
+            "initState()",
+            "runApp()"
+          ],
+          "CorrectAnswer": "main()"
+        },
+        {
+          "Question": "Which widget is immutable?",
+          "Options": [
+            "StatefulWidget",
+            "StatelessWidget",
+            "Container",
+            "ListView"
+          ],
+          "CorrectAnswer": "StatelessWidget"
+        },
+        {
+          "Question": "Which Flutter widget shows a circular progress?",
+          "Options": [
+            "ProgressBar",
+            "CircularProgressIndicator",
+            "LinearProgressIndicator",
+            "LoadingView"
+          ],
+          "CorrectAnswer": "CircularProgressIndicator"
+        },
+        {
+          "Question": "Which widget is used for user input?",
+          "Options": [
+            "InputBox",
+            "TextField",
+            "FormField",
+            "Label"
+          ],
+          "CorrectAnswer": "TextField"
+        },
+        {
+          "Question": "Which widget arranges children vertically?",
+          "Options": [
+            "Column",
+            "Row",
+            "Stack",
+            "ListView"
+          ],
+          "CorrectAnswer": "Column"
+        },
+        {
+          "Question": "Which Flutter command runs the app?",
+          "Options": [
+            "flutter start",
+            "flutter run",
+            "flutter build",
+            "flutter create"
+          ],
+          "CorrectAnswer": "flutter run"
+        },
+        {
+          "Question": "Which package manager does Flutter use?",
+          "Options": [
+            "Gradle",
+            "Maven",
+            "pub",
+            "npm"
+          ],
+          "CorrectAnswer": "pub"
+        }
+      ]
+    },
+    {
+      "TopicName": "Computer Fundamentals",
+      "MCQs": [
+        {
+          "Question": "Which device is used to input data into a computer?",
+          "Options": [
+            "Monitor",
+            "Keyboard",
+            "Speaker",
+            "Printer"
+          ],
+          "CorrectAnswer": "Keyboard"
+        },
+        {
+          "Question": "What does CPU stand for?",
+          "Options": [
+            "Central Processing Unit",
+            "Computer Personal Unit",
+            "Central Power Unit",
+            "Controlling Processing Unit"
+          ],
+          "CorrectAnswer": "Central Processing Unit"
+        },
+        {
+          "Question": "RAM is what type of memory?",
+          "Options": [
+            "Permanent",
+            "Non-volatile",
+            "Volatile",
+            "Read-only"
+          ],
+          "CorrectAnswer": "Volatile"
+        },
+        {
+          "Question": "Which is an output device?",
+          "Options": [
+            "Mouse",
+            "Keyboard",
+            "Monitor",
+            "Scanner"
+          ],
+          "CorrectAnswer": "Monitor"
+        },
+        {
+          "Question": "Which company developed Windows OS?",
+          "Options": [
+            "Apple",
+            "Google",
+            "Microsoft",
+            "IBM"
+          ],
+          "CorrectAnswer": "Microsoft"
+        },
+        {
+          "Question": "What stores permanent data in a computer?",
+          "Options": [
+            "RAM",
+            "ROM",
+            "Cache",
+            "Registers"
+          ],
+          "CorrectAnswer": "ROM"
+        },
+        {
+          "Question": "Which unit of computer is responsible for calculations?",
+          "Options": [
+            "ALU",
+            "CU",
+            "MU",
+            "PU"
+          ],
+          "CorrectAnswer": "ALU"
+        },
+        {
+          "Question": "A computer virus is...",
+          "Options": [
+            "Hardware",
+            "Software",
+            "Peripheral",
+            "Operating System"
+          ],
+          "CorrectAnswer": "Software"
+        },
+        {
+          "Question": "Which is the smallest unit of data in a computer?",
+          "Options": [
+            "Bit",
+            "Byte",
+            "Nibble",
+            "Kilobyte"
+          ],
+          "CorrectAnswer": "Bit"
+        },
+        {
+          "Question": "Which is not an operating system?",
+          "Options": [
+            "Linux",
+            "Windows",
+            "Oracle",
+            "macOS"
+          ],
+          "CorrectAnswer": "Oracle"
+        },
+        {
+          "Question": "Which is an example of application software?",
+          "Options": [
+            "MS Word",
+            "Monitor",
+            "Mouse",
+            "BIOS"
+          ],
+          "CorrectAnswer": "MS Word"
+        },
+        {
+          "Question": "Who is called the father of computers?",
+          "Options": [
+            "Alan Turing",
+            "Charles Babbage",
+            "Bill Gates",
+            "Steve Jobs"
+          ],
+          "CorrectAnswer": "Charles Babbage"
+        }
+      ]
+    },
+    {
+      "TopicName": "Algorithms",
+      "MCQs": [
+        {
+          "Question": "Which algorithm is used for searching in sorted arrays?",
+          "Options": [
+            "Linear Search",
+            "Binary Search",
+            "Bubble Sort",
+            "Quick Sort"
+          ],
+          "CorrectAnswer": "Binary Search"
+        },
+        {
+          "Question": "What is the time complexity of Bubble Sort?",
+          "Options": [
+            "O(1)",
+            "O(n)",
+            "O(n^2)",
+            "O(log n)"
+          ],
+          "CorrectAnswer": "O(n^2)"
+        },
+        {
+          "Question": "Which algorithm is based on divide and conquer?",
+          "Options": [
+            "Binary Search",
+            "Bubble Sort",
+            "Selection Sort",
+            "Insertion Sort"
+          ],
+          "CorrectAnswer": "Binary Search"
+        },
+        {
+          "Question": "Which algorithm is used to find shortest path in graphs?",
+          "Options": [
+            "Dijkstra's",
+            "Merge Sort",
+            "Prim's",
+            "Quick Sort"
+          ],
+          "CorrectAnswer": "Dijkstra's"
+        },
+        {
+          "Question": "What is the time complexity of Merge Sort?",
+          "Options": [
+            "O(n^2)",
+            "O(n)",
+            "O(log n)",
+            "O(n log n)"
+          ],
+          "CorrectAnswer": "O(n log n)"
+        },
+        {
+          "Question": "Which algorithm finds minimum spanning tree?",
+          "Options": [
+            "Dijkstra's",
+            "Kruskal's",
+            "Merge Sort",
+            "Binary Search"
+          ],
+          "CorrectAnswer": "Kruskal's"
+        },
+        {
+          "Question": "Dynamic programming is used to solve problems with...",
+          "Options": [
+            "Greedy Choice",
+            "Overlapping Subproblems",
+            "Divide and Conquer",
+            "Recursion"
+          ],
+          "CorrectAnswer": "Overlapping Subproblems"
+        },
+        {
+          "Question": "Backtracking is used in which type of problems?",
+          "Options": [
+            "Sorting",
+            "Searching",
+            "Constraint Satisfaction",
+            "Multiprocessing"
+          ],
+          "CorrectAnswer": "Constraint Satisfaction"
+        },
+        {
+          "Question": "Which sorting algorithm is the fastest in practice?",
+          "Options": [
+            "Bubble Sort",
+            "Quick Sort",
+            "Selection Sort",
+            "Insertion Sort"
+          ],
+          "CorrectAnswer": "Quick Sort"
+        },
+        {
+          "Question": "Greedy algorithms always make...",
+          "Options": [
+            "The best local choice",
+            "The worst choice",
+            "Random choice",
+            "No choice"
+          ],
+          "CorrectAnswer": "The best local choice"
+        },
+        {
+          "Question": "Which algorithm technique is used in Tower of Hanoi?",
+          "Options": [
+            "Looping",
+            "Recursion",
+            "Sorting",
+            "Greedy"
+          ],
+          "CorrectAnswer": "Recursion"
+        },
+        {
+          "Question": "NP-complete problems are...",
+          "Options": [
+            "Easy to solve",
+            "Hard to verify",
+            "Difficult to solve in reasonable time",
+            "None of the above"
+          ],
+          "CorrectAnswer": "Difficult to solve in reasonable time"
+        }
+      ]
+    },
+    {
+      "TopicName": "Cloud Computing",
+      "MCQs": [
+        {
+          "Question": "Which is a type of cloud deployment?",
+          "Options": [
+            "Private",
+            "Public",
+            "Hybrid",
+            "All of the above"
+          ],
+          "CorrectAnswer": "All of the above"
+        },
+        {
+          "Question": "Which service model provides a platform for development?",
+          "Options": [
+            "IaaS",
+            "PaaS",
+            "SaaS",
+            "DBaaS"
+          ],
+          "CorrectAnswer": "PaaS"
+        },
+        {
+          "Question": "Which is not a cloud computing platform?",
+          "Options": [
+            "AWS",
+            "Azure",
+            "Google Cloud",
+            "BIOS"
+          ],
+          "CorrectAnswer": "BIOS"
+        },
+        {
+          "Question": "Which is an advantage of cloud computing?",
+          "Options": [
+            "Scalability",
+            "Limited Access",
+            "High Capital Cost",
+            "Fixed Resources"
+          ],
+          "CorrectAnswer": "Scalability"
+        },
+        {
+          "Question": "What does SaaS stand for?",
+          "Options": [
+            "Software as a Service",
+            "System as a Software",
+            "Service Architecture and Scalability",
+            "None"
+          ],
+          "CorrectAnswer": "Software as a Service"
+        },
+        {
+          "Question": "Which layer in cloud provides virtual machines?",
+          "Options": [
+            "Application",
+            "Infrastructure",
+            "Platform",
+            "Service"
+          ],
+          "CorrectAnswer": "Infrastructure"
+        },
+        {
+          "Question": "What is containerization in cloud?",
+          "Options": [
+            "Type of database",
+            "Type of virtual machine",
+            "Packing applications and dependencies",
+            "Cloud billing"
+          ],
+          "CorrectAnswer": "Packing applications and dependencies"
+        },
+        {
+          "Question": "Which cloud computing service saves files online?",
+          "Options": [
+            "IaaS",
+            "PaaS",
+            "SaaS",
+            "Cloud Storage"
+          ],
+          "CorrectAnswer": "Cloud Storage"
+        },
+        {
+          "Question": "Which is a risk in cloud computing?",
+          "Options": [
+            "Vendor Lock-in",
+            "Infinite Scalability",
+            "Unlimited Resources",
+            "All the above"
+          ],
+          "CorrectAnswer": "Vendor Lock-in"
+        },
+        {
+          "Question": "Which is used for data backup over internet?",
+          "Options": [
+            "LAN",
+            "Cloud Storage",
+            "CD",
+            "Floppy"
+          ],
+          "CorrectAnswer": "Cloud Storage"
+        },
+        {
+          "Question": "Public clouds are accessible to...",
+          "Options": [
+            "Only company employees",
+            "Anyone",
+            "Only admins",
+            "Only technical staff"
+          ],
+          "CorrectAnswer": "Anyone"
+        },
+        {
+          "Question": "Which company owns AWS cloud?",
+          "Options": [
+            "Google",
+            "Microsoft",
+            "Amazon",
+            "Apple"
+          ],
+          "CorrectAnswer": "Amazon"
+        }
+      ]
+    },
+    {
+      "TopicName": "Android",
+      "MCQs": [
+        {
+          "Question": "Android is based on which kernel?",
+          "Options": [
+            "Linux",
+            "Windows",
+            "Mac",
+            "FreeBSD"
+          ],
+          "CorrectAnswer": "Linux"
+        },
+        {
+          "Question": "Who developed Android?",
+          "Options": [
+            "Google",
+            "Apple",
+            "Microsoft",
+            "IBM"
+          ],
+          "CorrectAnswer": "Google"
+        },
+        {
+          "Question": "Which language is officially supported for Android development?",
+          "Options": [
+            "Java",
+            "Kotlin",
+            "Python",
+            "C#"
+          ],
+          "CorrectAnswer": "Kotlin"
+        },
+        {
+          "Question": "Which file is the entry point for an Android app?",
+          "Options": [
+            "MainActivity.java",
+            "AndroidManifest.xml",
+            "Layout.xml",
+            "App.java"
+          ],
+          "CorrectAnswer": "AndroidManifest.xml"
+        },
+        {
+          "Question": "Which component is NOT part of Android app?",
+          "Options": [
+            "Activity",
+            "Fragment",
+            "Service",
+            "Dashboard"
+          ],
+          "CorrectAnswer": "Dashboard"
+        },
+        {
+          "Question": "Which tool compiles the app in Android Studio?",
+          "Options": [
+            "Gradle",
+            "Kotlin",
+            "GCC",
+            "Makefile"
+          ],
+          "CorrectAnswer": "Gradle"
+        },
+        {
+          "Question": "What is APK?",
+          "Options": [
+            "Android Package",
+            "App Package",
+            "Apple Package",
+            "Application Keeper"
+          ],
+          "CorrectAnswer": "Android Package"
+        },
+        {
+          "Question": "Which layout arranges elements in rows & columns?",
+          "Options": [
+            "LinearLayout",
+            "RelativeLayout",
+            "GridLayout",
+            "TableLayout"
+          ],
+          "CorrectAnswer": "GridLayout"
+        },
+        {
+          "Question": "Which method starts an activity?",
+          "Options": [
+            "onRun()",
+            "startActivity()",
+            "onCreate()",
+            "launchActivity()"
+          ],
+          "CorrectAnswer": "startActivity()"
+        },
+        {
+          "Question": "Which version is NOT an Android OS?",
+          "Options": [
+            "KitKat",
+            "Jelly Bean",
+            "Mavericks",
+            "Lollipop"
+          ],
+          "CorrectAnswer": "Mavericks"
+        },
+        {
+          "Question": "Which is used for database in Android?",
+          "Options": [
+            "SQLite",
+            "MongoDB",
+            "MySQL",
+            "Firebase"
+          ],
+          "CorrectAnswer": "SQLite"
+        },
+        {
+          "Question": "Which is used to design UI in Android?",
+          "Options": [
+            "XML",
+            "HTML",
+            "CSS",
+            "JS"
+          ],
+          "CorrectAnswer": "XML"
+        }
+      ]
+    },
+    {
+      "TopicName": "Information Security",
+      "MCQs": [
+        {
+          "Question": "Which is an example of malware?",
+          "Options": [
+            "Trojan",
+            "Firewall",
+            "Antivirus",
+            "Router"
+          ],
+          "CorrectAnswer": "Trojan"
+        },
+        {
+          "Question": "Which technique scrambles data?",
+          "Options": [
+            "Decryption",
+            "Encryption",
+            "Compression",
+            "Backup"
+          ],
+          "CorrectAnswer": "Encryption"
+        },
+        {
+          "Question": "A firewall protects against...",
+          "Options": [
+            "Data Backup",
+            "Unauthorized access",
+            "Malware development",
+            "Power Failure"
+          ],
+          "CorrectAnswer": "Unauthorized access"
+        },
+        {
+          "Question": "Phishing is a type of...",
+          "Options": [
+            "Hardware failure",
+            "Social engineering attack",
+            "Malware",
+            "Software update"
+          ],
+          "CorrectAnswer": "Social engineering attack"
+        },
+        {
+          "Question": "What is two-factor authentication?",
+          "Options": [
+            "Single password",
+            "Password & backup",
+            "Password & additional verification",
+            "ID card only"
+          ],
+          "CorrectAnswer": "Password & additional verification"
+        },
+        {
+          "Question": "Which is not a security protocol?",
+          "Options": [
+            "HTTPS",
+            "SSL",
+            "SSH",
+            "HTML"
+          ],
+          "CorrectAnswer": "HTML"
+        },
+        {
+          "Question": "Which threat is related to WiFi?",
+          "Options": [
+            "Man-in-the-middle attack",
+            "Trojan",
+            "Ransomware",
+            "Worm"
+          ],
+          "CorrectAnswer": "Man-in-the-middle attack"
+        },
+        {
+          "Question": "Which is a form of access control?",
+          "Options": [
+            "Authentication",
+            "Formatting",
+            "Scanning",
+            "Designing"
+          ],
+          "CorrectAnswer": "Authentication"
+        },
+        {
+          "Question": "Which is the safest password?",
+          "Options": [
+            "123456",
+            "password",
+            "Complex with letters, numbers & symbols",
+            "Date of birth"
+          ],
+          "CorrectAnswer": "Complex with letters, numbers & symbols"
+        },
+        {
+          "Question": "VPN stands for...",
+          "Options": [
+            "Very Private Network",
+            "Virtual Private Network",
+            "Virtual Public Network",
+            "Verified Protected Network"
+          ],
+          "CorrectAnswer": "Virtual Private Network"
+        },
+        {
+          "Question": "Which tool can detect intrusions?",
+          "Options": [
+            "Antivirus",
+            "IDS",
+            "Firewall",
+            "Router"
+          ],
+          "CorrectAnswer": "IDS"
+        },
+        {
+          "Question": "Social engineering attacks target...",
+          "Options": [
+            "Technology",
+            "Human behavior",
+            "CPU",
+            "Internet"
+          ],
+          "CorrectAnswer": "Human behavior"
+        }
+      ]
+    }
+  ]
+}

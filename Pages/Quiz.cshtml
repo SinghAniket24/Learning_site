@@ -1,0 +1,267 @@
+﻿@page
+@model Learning_site.Pages.QuizModel
+@{
+    ViewData["Title"] = "Quiz Zone";
+}
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+<div class="container quiz-container mt-5 mb-5">
+    <!-- Page Title -->
+    <h1 class="quiz-title text-center mb-3">
+        <i class="bi bi-lightning-charge-fill text-warning"></i> Quiz Zone
+    </h1>
+    <p class="text-center text-muted mb-5 fs-5">
+        Sharpen your knowledge with topic-based quizzes
+    </p>
+
+    <!-- Topic Selection -->
+    <form method="get" class="text-center mb-5 d-flex gap-3 justify-content-center flex-wrap">
+        <select name="topic" class="form-select shadow-sm quiz-select" aria-label="Select quiz topic">
+            <option value="">-- Choose a Topic --</option>
+            @foreach (var topic in Model.Topics)
+            {
+                <option value="@topic" selected="@(Model.SelectedTopic == topic ? "selected" : null)">@topic</option>
+            }
+        </select>
+        <button type="submit" class="btn btn-primary topic-btn">
+            <i class="bi bi-book"></i> Load Quiz
+        </button>
+        @if (!string.IsNullOrEmpty(Model.SelectedTopic))
+        {
+            <a href="/Quiz" class="btn btn-outline-secondary topic-btn">
+                <i class="bi bi-arrow-clockwise"></i> Reset
+            </a>
+        }
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.SelectedTopic))
+    {
+        <form method="post" novalidate>
+            <input type="hidden" name="topic" value="@Model.SelectedTopic" />
+
+            <!-- Result Display -->
+            @if (ViewData["Score"] != null)
+            {
+                <div class="alert alert-info text-center fw-semibold mb-4 fs-5 shadow-sm result-box rounded-4">
+                    <i class="bi bi-award-fill text-warning me-2"></i>
+                    Your Score: <span class="score">@ViewData["Score"]</span> / <span class="total">@Model.CurrentQuiz.Count</span>
+                </div>
+                <div class="text-center mb-4 d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="/Quiz?topic=@Model.SelectedTopic" class="btn btn-success btn-lg d-flex align-items-center gap-2 rounded-pill">
+                        <i class="bi bi-arrow-repeat"></i> Try Again
+                    </a>
+                    <a href="/Quiz" class="btn btn-dark btn-lg d-flex align-items-center gap-2 rounded-pill">
+                        <i class="bi bi-journal-bookmark"></i> Change Topic
+                    </a>
+                </div>
+            }
+
+            <!-- Questions -->
+            @for (int i = 0; i < Model.CurrentQuiz.Count; i++)
+            {
+                var question = Model.CurrentQuiz[i];
+                <div class="card mb-4 shadow question-card rounded-4">
+                    <div class="card-body">
+                        <p class="fw-bold fs-5 mb-4 text-primary-emphasis">Q@(i + 1). @Html.Raw(question.Question)</p>
+                        <div class="row g-3">
+                            @for (int j = 0; j < question.Options.Count; j++)
+                            {
+                                var option = question.Options[j];
+                                var isChecked = Request.HasFormContentType && Request.Form[$"answers[{i}]"].ToString() == option;
+                                var isCorrect = ViewData["Score"] != null && option == question.CorrectAnswer;
+                                var isIncorrect = isChecked && !isCorrect;
+
+                                var optionClass = "option-label p-3 rounded shadow-sm d-flex align-items-center gap-2";
+
+                                if (isCorrect)
+                                    optionClass += " option-correct";
+                                else if (isIncorrect)
+                                    optionClass += " option-incorrect";
+
+                                <div class="col-md-6">
+                                    <label class="@optionClass" tabindex="0">
+                                        <input type="radio"
+                                               name="answers[@i]"
+                                               value="@option"
+                                               class="form-check-input flex-shrink-0"
+                                               aria-checked="@(isChecked.ToString().ToLower())"
+                                               @(isChecked ? "checked" : "")
+                                               @(ViewData["Score"] != null ? "disabled" : "")
+                                               />
+                                        @if (isCorrect)
+                                        {
+                                            <i class="bi bi-check-circle-fill text-success fs-5"></i>
+                                        }
+                                        else if (isIncorrect)
+                                        {
+                                            <i class="bi bi-x-circle-fill text-danger fs-5"></i>
+                                        }
+                                        <span>@Html.Raw(option)</span>
+                                    </label>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <!-- Submit Button -->
+            @if (ViewData["Score"] == null)
+            {
+                <div class="text-center mb-5">
+                    <button type="submit" class="btn btn-gradient quiz-btn rounded-pill shadow-lg d-flex align-items-center gap-2">
+                        <i class="bi bi-clipboard-check fs-5"></i> Submit Answers
+                    </button>
+                </div>
+            }
+        </form>
+    }
+</div>
+
+<style>
+    /* Container */
+    .quiz-container {
+        max-width: 900px;
+    }
+    /* Title */
+    .quiz-title {
+        font-weight: 900;
+        font-size: 2.75rem;
+        color: #0d6efd; /* Bootstrap primary blue */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    /* Select dropdown */
+    .quiz-select {
+        border-radius: 35px;
+        padding: 0.75rem 1.5rem;
+        font-weight: 600;
+        min-width: 230px;
+        border: 2px solid #0d6efd;
+        transition: border-color 0.3s ease;
+    }
+    .quiz-select:focus {
+        border-color: #20c997; /* teal */
+        box-shadow: 0 0 8px #20c997aa;
+        outline: none;
+    }
+    /* Buttons */
+    .topic-btn {
+        border-radius: 35px;
+        padding: 0.55rem 1.75rem;
+        font-weight: 700;
+        font-size: 1.05rem;
+        background: linear-gradient(135deg, #0d6efd, #20c997);
+        border: none;
+        color: white;
+        box-shadow: 0 6px 12px rgba(32, 201, 151, 0.6);
+        transition: all 0.25s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+    }
+    .topic-btn:hover,
+    .topic-btn:focus {
+        background: linear-gradient(135deg, #198754, #0d6efd);
+        box-shadow: 0 6px 20px rgba(13, 110, 253, 0.8);
+        outline: none;
+        transform: scale(1.07);
+    }
+    /* Buttons in result section */
+    .btn-success {
+        background: #20c997;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+    .btn-success:hover {
+        background: #198754;
+    }
+    .btn-dark {
+        transition: background-color 0.3s ease;
+    }
+    .btn-dark:hover {
+        background: #343a40cc;
+        color: white;
+    }
+    /* Result Box */
+    .result-box {
+        background: #e7f1ff;
+        border-left: 6px solid #20c997;
+        border-radius: 16px;
+        color: #095a3f;
+        font-size: 1.25rem;
+    }
+    /* Question cards */
+    .question-card {
+        border-radius: 20px;
+        background: #f8f9fa;
+        box-shadow: 0 16px 30px -12px rgba(0, 123, 255, 0.3);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        color: #212529;
+    }
+    .question-card:hover {
+        border-color: #0d6efd;
+        box-shadow: 0 20px 40px -15px rgba(32, 201, 151, 0.5);
+        transform: translateY(-5px);
+    }
+    /* Option label */
+    .option-label {
+        cursor: pointer;
+        background: #ffffff;
+        border: 2px solid #ced4da;
+        font-weight: 600;
+        color: #212529;
+        transition: all 0.3s ease;
+        padding-left: 0.8rem;
+    }
+    .option-label:hover,
+    .option-label:focus {
+        background: #e9f7ef;
+        border-color: #20c997;
+        outline: none;
+        box-shadow: 0 0 6px #20c997aa;
+    }
+    .option-correct {
+        background-color: #d1e7dd !important;
+        border-color: #198754 !important;
+        color: #0f5132 !important;
+    }
+    .option-incorrect {
+        background-color: #f8d7da !important;
+        border-color: #dc3545 !important;
+        color: #842029 !important;
+    }
+    .form-check-input {
+        margin-top: 0 !important;
+    }
+    /* Submit button */
+    .quiz-btn {
+        background: linear-gradient(135deg, #20c997, #0d6efd);
+        color: white;
+        border: none;
+        padding: 12px 40px;
+        font-size: 1.15rem;
+        font-weight: 700;
+        box-shadow: 0 8px 18px rgba(32, 201, 151, 0.7);
+        transition: all 0.3s ease;
+    }
+    .quiz-btn:hover,
+    .quiz-btn:focus {
+        background: linear-gradient(135deg, #0d6efd, #20c997);
+        box-shadow: 0 10px 25px rgba(13, 110, 253, 0.85);
+        outline: none;
+        transform: scale(1.08);
+    }
+
+
+    
+</style>
+@section Scripts {
+    <script src="~/js/theme.js"></script>
+}
