@@ -7,10 +7,10 @@
 <div class="create-plan-page min-vh-100 d-flex align-items-center justify-content-center py-5">
     <div class="col-md-8 col-lg-6">
 
-        <!-- Card Container -->
+    
         <div class="form-card p-4 p-md-5 rounded-4 shadow-sm">
 
-            <!-- Header with Banner Image -->
+          
             <div class="text-center mb-4">
                 <img src="~/img/study_plan.jpg" alt="Study Plan"
                      style="width: 220px; height: 220px; object-fit: cover; border-radius: 20px;
@@ -28,21 +28,21 @@
             <form method="post" novalidate>
                 <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
-                <!-- Title -->
+          
                 <div class="mb-3">
                     <label asp-for="Plan.Title" class="form-label fw-semibold">Title <span class="text-danger">*</span></label>
                     <input asp-for="Plan.Title" class="form-control form-control-lg rounded-pill" placeholder="Enter plan title (e.g., Learn Flutter)" />
                     <span asp-validation-for="Plan.Title" class="text-danger small"></span>
                 </div>
 
-                <!-- YouTube Channel -->
+                
                 <div class="mb-3">
                     <label asp-for="Plan.Channel" class="form-label fw-semibold">YouTube Channel</label>
                     <input asp-for="Plan.Channel" class="form-control form-control-lg rounded-pill" placeholder="Enter YouTube channel link or name" />
                     <span asp-validation-for="Plan.Channel" class="text-danger small"></span>
                 </div>
 
-                <!-- Description -->
+             
                 <div class="mb-3">
                     <label asp-for="Plan.Description" class="form-label fw-semibold">Description</label>
                     <textarea asp-for="Plan.Description" class="form-control rounded-3" rows="3" placeholder="Brief description of your learning plan"></textarea>
@@ -50,14 +50,14 @@
                 </div>
 
                 <div class="row gx-2">
-                    <!-- Daily Time (as number) -->
+                  
                     <div class="col-md-6 mb-3">
                         <label asp-for="Plan.DailyTime" class="form-label fw-semibold">Daily Time (hours) <span class="text-danger">*</span></label>
                         <input asp-for="Plan.DailyTime" type="number" min="0" step="0.25" class="form-control rounded-pill" placeholder="e.g., 1.5" />
                         <span asp-validation-for="Plan.DailyTime" class="text-danger small"></span>
                     </div>
 
-                    <!-- Days -->
+               
                     <div class="col-md-6 mb-3">
                         <label asp-for="Plan.Days" class="form-label fw-semibold">Days <span class="text-danger">*</span></label>
                         <input asp-for="Plan.Days" type="number" min="1" class="form-control rounded-pill" placeholder="e.g., 30" />
@@ -65,7 +65,6 @@
                     </div>
                 </div>
 
-                <!-- Submit Button -->
                 <div class="d-grid mt-4">
                     <button type="submit" class="btn btn-gradient btn-lg rounded-pill fw-bold">
                         🚀 Create Plan
@@ -87,12 +86,11 @@
 }
 
 <style>
-    /* Page Background */
+  
     .create-plan-page {
         background: linear-gradient(180deg, #f5f9ff 0%, #f0fbff 40%);
     }
 
-    /* Card Styling */
     .form-card {
         background: #fff;
         border-radius: 18px;
@@ -100,7 +98,7 @@
         padding: 2rem;
     }
 
-    /* Input Fields */
+
     .form-control-lg {
         padding: .75rem 1rem;
         font-size: 0.95rem;
@@ -112,7 +110,6 @@
         outline: none;
     }
 
-    /* Gradient Submit Button */
     .btn-gradient {
         background: linear-gradient(90deg, #0072ff 0%, #00c6ff 100%);
         color: #fff;
@@ -126,7 +123,7 @@
             box-shadow: 0 14px 30px rgba(0,114,255,0.16);
         }
 
-    /* Small helper text */
+
     .small {
         font-size: .85rem;
     }

@@ -7,7 +7,7 @@ namespace Learning_site.Models.Entities
     public class PlanEntity : BaseModel
     {
         [PrimaryKey("id")]
-        public int Id { get; set; } // Maps to 'id' in table
+        public int Id { get; set; } 
 
         [Column("user_id")]
         public string UserId { get; set; }
@@ -25,6 +25,6 @@ namespace Learning_site.Models.Entities
         public int Days { get; set; }
 
         [Column("created_at")]
-        public DateTime CreatedAt { get; set; } // Optional
+        public DateTime CreatedAt { get; set; } 
     }
 }

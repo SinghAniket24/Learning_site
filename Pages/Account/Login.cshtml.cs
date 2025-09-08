@@ -8,7 +8,7 @@ namespace Learning_site.Pages.Account
     {
         public IActionResult OnPost()
         {
-            // Trigger Auth0 login only when button is clicked
+           
             return Challenge(
                 new AuthenticationProperties { RedirectUri = "/dashboard" },
                 "OpenIdConnect"

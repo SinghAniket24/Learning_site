@@ -21,7 +21,6 @@ namespace Learning_site.Pages
         public List<QuizQuestion> CurrentQuiz { get; set; } = new List<QuizQuestion>();
         public string SelectedTopic { get; set; }
 
-        // Use wwwroot path dynamically
         private string JsonPath => Path.Combine(_env.WebRootPath, "Quizzes", "mcq.json");
 
         public void OnGet(string topic)

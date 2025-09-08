@@ -8,7 +8,8 @@
             <img src="@Model.UserPictureUrl" alt="Profile Picture" class="profile-picture" />
         }
         <h1>Hi @Model.UserName, ready to learn today?</h1>
-        <button class="start-plan-button">Start a New Plan</button>
+        <a asp-page="/CreatePlan" class="start-plan-button">Start a New Plan</a>
+
     </div>
 
     <div class="quote-box">
@@ -54,7 +55,6 @@
         font-family: 'Segoe UI', sans-serif;
     }
 
-    /* Welcome Section */
     .welcome-section {
         background: linear-gradient(135deg, #6b73ff, #000dff);
         padding: 60px 40px;
@@ -97,7 +97,6 @@
             background: #ff4c4c;
         }
 
-    /* Quote Box */
     .quote-box {
         text-align: center;
         margin-bottom: 50px;
@@ -142,7 +141,7 @@
         margin: 0;
     }
 
-    /* Recommended Plans */
+
     .recommended-plans-section h2 {
         text-align: center;
         margin-bottom: 30px;
@@ -156,7 +155,7 @@
         gap: 40px;
     }
 
-    /* Plan Cards */
+
     .plan-card {
         background: #fff;
         border-radius: 20px;
@@ -220,7 +219,7 @@
             background: #0056b3;
         }
 
-    /* Responsive */
+    
    
 
     .quote-box {

@@ -1,5 +1,5 @@
 ﻿using Learning_site.Models.Entities;
-using Learning_site.Pages; // For DailyPlan, VideoData, PlanData
+using Learning_site.Pages; 
 using Supabase;
 using Postgrest;
 using System.Collections.Generic;
@@ -11,10 +11,9 @@ namespace Learning_site.Services
 {
     public static class SavedPlansStore
     {
-        // Holds all plans in-memory (shared across users!)
+    
         public static List<(PlanData, List<DailyPlan>)> SavedPlans { get; private set; } = new();
 
-        // Loads all plans for a specific user
         public static async Task LoadUserPlansAsync(SupabaseService supabaseService, string userId)
         {
             if (supabaseService == null || string.IsNullOrWhiteSpace(userId))
@@ -22,7 +21,7 @@ namespace Learning_site.Services
 
             SavedPlans.Clear();
 
-            // Fetch plans
+
             var planResponse = await supabaseService.Client
                 .From<PlanEntity>()
                 .Filter("user_id", Operator.Equals, userId)
@@ -33,7 +32,7 @@ namespace Learning_site.Services
 
             foreach (var planEntity in sortedPlans)
             {
-                // Fetch daily plans for each plan
+               
                 var dailyResponse = await supabaseService.Client
                     .From<DailyPlanEntity>()
                     .Filter("plan_id", Operator.Equals, planEntity.Id)
@@ -53,7 +52,7 @@ namespace Learning_site.Services
                     }
                     catch
                     {
-                        // fallback if JSON is invalid
+              
                         videos = new List<VideoData>();
                     }
 
@@ -64,7 +63,7 @@ namespace Learning_site.Services
                     });
                 }
 
-                // Store in memory
+           
                 SavedPlans.Add((
                     new PlanData
                     {
@@ -78,7 +77,6 @@ namespace Learning_site.Services
             }
         }
 
-        // Adds a plan to in-memory store
         public static void AddPlan(PlanData planData, List<DailyPlan> dailyPlans)
         {
             if (planData != null && dailyPlans != null)

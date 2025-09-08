@@ -36,7 +36,6 @@ namespace Learning_site.Pages
             if (string.IsNullOrEmpty(userId))
                 return Unauthorized();
 
-            // 1️⃣ Insert plan metadata into Supabase
             var planEntity = new PlanEntity
             {
                 UserId = userId,
@@ -54,7 +53,7 @@ namespace Learning_site.Pages
             if (insertedPlan == null)
                 return StatusCode(500, "Failed to save plan.");
 
-            // 2️⃣ Insert daily plans
+            
             foreach (var day in TempPlanStore.TempPlan)
             {
                 var dailyEntity = new DailyPlanEntity
@@ -66,11 +65,10 @@ namespace Learning_site.Pages
                 await _supabase.Client.From<DailyPlanEntity>().Insert(dailyEntity);
             }
 
-            // 3️⃣ Clear temporary storage
             TempPlanStore.PlanInfo = null;
             TempPlanStore.TempPlan = null;
 
-            // 4️⃣ Reload user-specific plans from Supabase into SavedPlansStore
+   
             await SavedPlansStore.LoadUserPlansAsync(_supabase, userId);
 
             TempData["SuccessMessage"] = "Plan saved successfully!";

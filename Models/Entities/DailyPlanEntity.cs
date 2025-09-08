@@ -7,15 +7,15 @@ namespace Learning_site.Models.Entities
     public class DailyPlanEntity : BaseModel
     {
         [PrimaryKey("id")]
-        public int Id { get; set; }  // Maps to 'id' column
+        public int Id { get; set; }
 
         [Column("plan_id")]
-        public int PlanId { get; set; } // Foreign key to PlanEntity
+        public int PlanId { get; set; }
 
         [Column("day")]
         public int Day { get; set; }
 
         [Column("videos")]
-        public string Videos { get; set; } // JSON string
+        public string Videos { get; set; }
     }
 }

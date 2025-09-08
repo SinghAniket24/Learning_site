@@ -13,7 +13,7 @@ namespace Learning_site.Pages.Account
             return SignOut(
                 new AuthenticationProperties
                 {
-                    RedirectUri = "http://localhost:5136/dashboard"  // full absolute redirect
+                    RedirectUri = "http://localhost:5136/dashboard" 
                 },
                 CookieAuthenticationDefaults.AuthenticationScheme,
                 "OpenIdConnect"

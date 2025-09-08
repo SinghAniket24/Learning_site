@@ -23,12 +23,11 @@ namespace Learning_site.Pages
             }).ToList();
         }
 
-        // Generate meaningful icon dynamically based on topic name
+      
         private string GetTopicIcon(string topic)
         {
             topic = topic.ToLower();
 
-            // Popular tech/dev topics → use Devicon
             var techMap = new[] { "python", "java", "javascript", "html", "css", "react", "node", "csharp", "php", "sql" };
             foreach (var tech in techMap)
             {

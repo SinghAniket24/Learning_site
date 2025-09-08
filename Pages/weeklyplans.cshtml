@@ -240,7 +240,6 @@
         tick.disabled = true;
         document.getElementById("label-" + videoId).style.display = "inline-block";
 
-        // Update per-day progress
         updateDayProgress(day, planId);
         updateOverallProgress(planId);
     }
@@ -267,7 +266,7 @@
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-        // Restore completed state
+
         @foreach (var day in Model.DailyPlan)
             {
                             @foreach (var video in day.Videos)

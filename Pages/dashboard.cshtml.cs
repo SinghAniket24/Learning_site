@@ -73,7 +73,7 @@ namespace Learning_site.Pages
 
         private async Task GetRandomQuoteAsync()
         {
-            // List of 8 education-focused quotes
+            
             var educationQuotes = new List<ZenQuote>
     {
         new ZenQuote { QuoteText = "Education is the most powerful weapon which you can use to change the world.", Author = "Nelson Mandela" },
@@ -88,7 +88,7 @@ namespace Learning_site.Pages
 
             try
             {
-                // Simulate async work (to keep method signature async)
+ 
                 await Task.Delay(50);
 
                 var random = new Random();
@@ -98,7 +98,7 @@ namespace Learning_site.Pages
             }
             catch
             {
-                // Fallback quote in case something goes wrong
+             
                 MotivationalQuote = "The journey of a thousand miles begins with a single step.";
                 QuoteAuthor = "Lao Tzu";
             }

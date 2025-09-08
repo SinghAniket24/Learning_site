@@ -11,7 +11,7 @@ namespace Learning_site.Pages
     {
         private readonly string apiKey = "AIzaSyDgh-z4T0gc2EdqAPnfWqfNlA-ZFoMNisc";
 
-        // 🔹 Initialize YouTube service
+
         private YouTubeService GetService()
         {
             return new YouTubeService(new BaseClientService.Initializer()
@@ -21,7 +21,6 @@ namespace Learning_site.Pages
             });
         }
 
-        // 🔹 Main Search: prefers playlists (structured learning), falls back to curated videos
         public async Task<List<VideoData>> SearchVideosAsync(string topic, string channelName = null, int maxResults = 50)
         {
             var youtube = GetService();
@@ -104,9 +103,9 @@ namespace Learning_site.Pages
                 Description = item.Snippet.Description,
                 ChannelName = item.Snippet.ChannelTitle,
                 ThumbnailUrl = item.Snippet.Thumbnails?.Medium?.Url,
-                VideoUrl = $"/videoplayer?id={item.Id}", // link to your VideoPlayer page
+                VideoUrl = $"/videoplayer?id={item.Id}", 
                 Duration = ParseYouTubeDuration(item.ContentDetails.Duration),
-                StartTime = 0 // default start at beginning
+                StartTime = 0 
             }).ToList();
         }
 
@@ -122,7 +121,7 @@ namespace Learning_site.Pages
             return response.Items.FirstOrDefault()?.Id?.ChannelId;
         }
 
-        // 🔹 Generate daily structured plan with start times
+       
         public List<DailyPlan> CreateDailyPlan(List<VideoData> videos, int days, double dailyHours)
         {
             var dailyPlans = new List<DailyPlan>();
@@ -136,7 +135,7 @@ namespace Learning_site.Pages
             foreach (var video in videos)
             {
                 double videoMinutes = GetDurationInMinutes(video.Duration);
-                double startOffset = 0; // seconds offset for each part
+                double startOffset = 0; 
 
                 while (videoMinutes > 0)
                 {
@@ -162,13 +161,13 @@ namespace Learning_site.Pages
                         ThumbnailUrl = video.ThumbnailUrl,
                         VideoUrl = video.VideoUrl,
                         Duration = TimeSpan.FromMinutes(watchNow).ToString(@"hh\:mm\:ss"),
-                        StartTime = startOffset // new property
+                        StartTime = startOffset 
                     };
 
                     currentPlan.Videos.Add(videoPart);
 
                     usedToday += watchNow;
-                    startOffset += watchNow * 60; // convert minutes to seconds for iframe
+                    startOffset += watchNow * 60; 
                     videoMinutes -= watchNow;
                 }
             }
@@ -199,7 +198,7 @@ namespace Learning_site.Pages
         }
     }
 
-    // DTOs
+    
     public class VideoData
     {
         public string Title { get; set; }
@@ -208,7 +207,7 @@ namespace Learning_site.Pages
         public string ThumbnailUrl { get; set; }
         public string VideoUrl { get; set; }
         public string Duration { get; set; }
-        public double StartTime { get; set; } // seconds offset for starting point
+        public double StartTime { get; set; } 
     }
 
     public class DailyPlan

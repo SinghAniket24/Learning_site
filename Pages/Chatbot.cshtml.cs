@@ -33,14 +33,13 @@ namespace Learning_site.Pages
             {
                 Messages.Add(new ChatMessage { Role = "user", Text = Prompt });
 
-                // NLP: handle "tell me about X" etc.
+         
                 string processedPrompt = ProcessPrompt(Prompt);
 
-                // Ask AI
                 var aiResponse = await AskGeminiAsync(processedPrompt);
                 string formatted = aiResponse.Replace("\n", "<br/>");
 
-                // Fetch 3 YouTube videos related to the topic
+
                 var ytVideos = await GetYouTubeVideosAsync(processedPrompt);
 
                 Messages.Add(new ChatMessage
@@ -57,7 +56,7 @@ namespace Learning_site.Pages
 
         private string ProcessPrompt(string prompt)
         {
-            // Simple NLP: remove "tell me about", "explain", etc.
+
             string pattern = @"\b(tell me about|explain|what is|give me info on)\b";
             string processed = Regex.Replace(prompt.ToLower(), pattern, "", RegexOptions.IgnoreCase).Trim();
             return string.IsNullOrEmpty(processed) ? prompt : processed;
@@ -167,7 +166,7 @@ namespace Learning_site.Pages
 
     public class ChatMessage
     {
-        public string Role { get; set; } // "user" or "bot"
+        public string Role { get; set; } 
         public string Text { get; set; }
         public string TextFormatted { get; set; }
         public List<YouTubeVideo> YouTubeVideos { get; set; } = new List<YouTubeVideo>();

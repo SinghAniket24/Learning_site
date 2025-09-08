@@ -20,7 +20,7 @@ namespace Learning_site.Pages
             var saved = SavedPlansStore.SavedPlans[id - 1];
             PlanId = id;
             PlanTitle = saved.Item1.Title;
-            DailyPlan = saved.Item2; // ✅ Using DailyPlan directly
+            DailyPlan = saved.Item2;
 
             return Page();
         }
