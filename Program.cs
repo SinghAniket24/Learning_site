@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.EntityFrameworkCore;
@@ -10,12 +11,24 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 // Add your DbContext
+=======
+﻿using Learning_site.Data;
+using Microsoft.EntityFrameworkCore;
+
+var builder = WebApplication.CreateBuilder(args);
+// Add services to the container.
+builder.Services.AddRazorPages();
+>>>>>>> 79a743748de311cf316d63fcc5ffa941cdda5eca
 builder.Services.AddDbContext<Learning_siteContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("Learning_siteContext")
         ?? throw new InvalidOperationException("Connection string 'Learning_siteContext' not found.")));
+<<<<<<< HEAD
 
 // HttpClient factory
+=======
+// 👇 Register HttpClient factory
+>>>>>>> 79a743748de311cf316d63fcc5ffa941cdda5eca
 builder.Services.AddHttpClient();
 
 // 🔹 Configure Authentication (Auth0 + Cookies)
@@ -72,26 +85,39 @@ builder.Services.AddAuthorization(options =>
 builder.Services.AddSingleton<SupabaseService>();
 
 var app = builder.Build();
+<<<<<<< HEAD
 
 // 🔹 Initialize Supabase on startup
 var supabaseService = app.Services.GetRequiredService<SupabaseService>();
 await supabaseService.InitializeAsync();
 
 // Configure HTTP request pipeline
+=======
+// Configure the HTTP request pipeline.
+>>>>>>> 79a743748de311cf316d63fcc5ffa941cdda5eca
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
     app.UseHsts();
 }
-
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+<<<<<<< HEAD
 
 // Auth before Authorization
 app.UseAuthentication();
+=======
+>>>>>>> 79a743748de311cf316d63fcc5ffa941cdda5eca
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+// Redirect root (/) url to /Landing
+app.MapGet("/", context =>
+{
+    context.Response.Redirect("/Landing");
+    return Task.CompletedTask;
+});
 
 app.Run();
