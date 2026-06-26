@@ -11,9 +11,9 @@ It combines video learning, quizzes, and AI chatbot support to make studying mor
 - Dashboard with personalized view  
 - Create & Save Study Plans using YouTube API  
 - My Plans & Progress Tracking  
-- AI Chatbot (Gemini API) for study help  
+- AI Chatbot (Gemini API) for study chat  
 - Quiz Section for self-assessment  
-- Video Player with resume support  
+- Video Player 
 
 ---
 
